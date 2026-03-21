@@ -6,6 +6,7 @@ import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { BreadcrumbNav } from "@/components/ui/BreadcrumbNav";
 import { SchemaScript } from "@/components/ui/SchemaScript";
 import { Button } from "@/components/ui/Button";
+import { MarkdownContent } from "@/components/ui/MarkdownContent";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { getArticleSchema } from "@/lib/schema";
 import { company } from "@/lib/data/company";
@@ -52,32 +53,6 @@ export default async function BlogPostPage({
     url: `${company.url}/blog/${slug}`,
   });
 
-  // Simple markdown-to-paragraphs rendering for blog content
-  const contentLines = post.content.split("\n");
-  const contentElements = contentLines.map((line, i) => {
-    const trimmed = line.trim();
-    if (trimmed === "") return null;
-    if (trimmed.startsWith("## ")) {
-      return (
-        <h2 key={i} className="text-2xl font-bold text-gray-900 mt-8 mb-4">
-          {trimmed.replace("## ", "")}
-        </h2>
-      );
-    }
-    if (trimmed.startsWith("### ")) {
-      return (
-        <h3 key={i} className="text-xl font-bold text-gray-900 mt-6 mb-3">
-          {trimmed.replace("### ", "")}
-        </h3>
-      );
-    }
-    return (
-      <p key={i} className="text-gray-600 leading-relaxed my-3">
-        {trimmed}
-      </p>
-    );
-  });
-
   return (
     <>
       <SchemaScript schema={articleSchema} />
@@ -113,7 +88,7 @@ export default async function BlogPostPage({
             </header>
 
             {/* Blog Content */}
-            <div className="prose-content">{contentElements}</div>
+            <MarkdownContent content={post.content} />
 
             {/* CTA */}
             <div className="mt-12 bg-gray-50 rounded-xl p-8 text-center">
