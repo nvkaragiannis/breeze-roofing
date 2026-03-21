@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
+import { BreadcrumbNav } from "@/components/ui/BreadcrumbNav";
 import { company } from "@/lib/data/company";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "Terms of service for Breeze Roofing NC website.",
+  title: "Terms and Conditions",
+  description:
+    "Terms and conditions for Breeze Roofing services in Wilmington, NC.",
   alternates: {
     canonical: "https://breezeroofingnc.com/terms",
   },
@@ -16,75 +18,85 @@ export default function TermsPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="py-12 md:py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-            Terms of Service
-          </h1>
-
-          <div className="space-y-6 text-gray-600 leading-relaxed">
-            <p className="text-sm text-gray-400">Last updated: January 2025</p>
-
-            <p>
-              Welcome to {company.url}, the website of {company.legalName}. By accessing or using our Site, you agree to these Terms of Service.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Use of Website</h2>
-            <p>
-              This website is provided for informational purposes about our roofing services. The content on this Site does not constitute a contract or guarantee of services.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Instant Estimator</h2>
-            <p>
-              The instant estimator tool provides ballpark estimates based on satellite imagery and general pricing data. These estimates are not binding quotes. Actual pricing may vary based on on-site inspection, material selection, roof complexity, and other factors. A formal written estimate will be provided after an in-person inspection.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Service Agreements</h2>
-            <p>
-              All roofing work performed by {company.legalName} is governed by a separate written service agreement. No work will begin without a signed agreement between the homeowner/property owner and {company.legalName}.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Intellectual Property</h2>
-            <p>
-              All content on this Site — including text, images, logos, and design — is the property of {company.legalName} or its licensors and is protected by copyright law. You may not reproduce, distribute, or use any content without our written permission.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Accuracy of Information</h2>
-            <p>
-              We make reasonable efforts to ensure the information on this Site is accurate and up-to-date. However, we do not guarantee that all information is complete, current, or error-free. Pricing, availability, and service details are subject to change without notice.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Limitation of Liability</h2>
-            <p>
-              {company.legalName} is not liable for any damages arising from your use of this Site or reliance on information provided here. Our liability for roofing services is governed by our separate service agreements and applicable warranties.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Third-Party Links</h2>
-            <p>
-              Our Site may contain links to third-party websites. We are not responsible for the content, privacy practices, or terms of any third-party sites.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Governing Law</h2>
-            <p>
-              These Terms are governed by the laws of the State of North Carolina. Any disputes will be resolved in the courts of New Hanover County, North Carolina.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Changes to Terms</h2>
-            <p>
-              We may update these Terms from time to time. Continued use of the Site after changes are posted constitutes acceptance of the updated Terms.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Contact Us</h2>
-            <p>
-              If you have questions about these Terms, contact us at:
-            </p>
-            <p>
-              {company.legalName}<br />
-              Email: {company.email}<br />
-              Phone: {company.phoneFormatted}
-            </p>
-          </div>
+      <main id="main-content">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BreadcrumbNav
+            items={[{ name: "Home", href: "/" }, { name: "Terms and Conditions" }]}
+          />
         </div>
+
+        <section className="py-12 md:py-16">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              Terms and Conditions
+            </h1>
+            <p className="text-sm text-gray-400 mb-10">Last Updated: 9/22/2025</p>
+
+            <div className="space-y-8 text-gray-600 leading-relaxed">
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Agreement to Terms</h2>
+                <p>By accessing or using the services provided by Breeze Roofing, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our services or website.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Services Offered</h2>
+                <p>Breeze Roofing provides the following services:</p>
+                <ul className="list-disc list-inside mt-2 space-y-1">
+                  <li>Residential and commercial roof installation</li>
+                  <li>Roof repair and maintenance</li>
+                  <li>Emergency roofing services</li>
+                  <li>Roof inspections</li>
+                  <li>Insurance claim assistance</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Estimates and Pricing</h2>
+                <p>All estimates provided by Breeze Roofing are preliminary and subject to change based on actual conditions discovered during inspection or work commencement. Final pricing will be confirmed in a written agreement before work begins. We are committed to transparent pricing with no hidden fees.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Warranties</h2>
+                <p>Warranty coverage varies by service type and materials used. Specific warranty terms will be outlined in your individual service agreement. All warranty claims must be submitted in writing. Manufacturer warranties are separate from and in addition to any workmanship warranty provided by Breeze Roofing.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Payment Terms</h2>
+                <p>Payment methods and financing options vary by contract. Payment schedules are tied to project milestones as outlined in your individual service agreement. Financing is available through our partner, Momnt Financial, subject to credit approval.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Liability and Insurance</h2>
+                <p>Breeze Roofing is fully licensed, bonded, and insured in the state of North Carolina. We maintain general liability insurance and workers&apos; compensation coverage for all crew members. Specific liability limitations are outlined in individual service contracts.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Force Majeure</h2>
+                <p>Breeze Roofing shall not be held liable for delays or failure to perform services resulting from circumstances beyond our reasonable control, including but not limited to: severe weather events, natural disasters, material shortages, supply chain disruptions, or government-imposed restrictions.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Dispute Resolution</h2>
+                <p>Any disputes arising from our services or these terms shall be resolved through binding arbitration in accordance with the laws of the State of North Carolina. Both parties agree to attempt mediation before proceeding to arbitration.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Modifications to Terms</h2>
+                <p>Breeze Roofing reserves the right to modify these terms at any time. Changes will be posted on our website and customers will be notified via email when applicable. Continued use of our services after modifications constitutes acceptance of the updated terms.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Contact Information</h2>
+                <p>If you have questions about these terms, please contact us:</p>
+                <ul className="mt-2 space-y-1">
+                  <li>Email: <a href={`mailto:${company.email}`} className="text-navy hover:text-navy-light transition-colors">{company.email}</a></li>
+                  <li>Phone: <a href={company.phoneTel} className="text-navy hover:text-navy-light transition-colors">{company.phoneFormatted}</a></li>
+                  <li>Location: Wilmington, NC</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
       <MobileCTABar />

@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
+import { BreadcrumbNav } from "@/components/ui/BreadcrumbNav";
 import { company } from "@/lib/data/company";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "Privacy policy for Breeze Roofing NC website.",
+  title: "Consumer Privacy Protection",
+  description:
+    "Privacy protection policy for Breeze Roofing. Learn how we collect, use, and protect your personal information.",
   alternates: {
     canonical: "https://breezeroofingnc.com/privacy-policy",
   },
@@ -16,87 +18,110 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="py-12 md:py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-            Privacy Policy
-          </h1>
-
-          <div className="space-y-6 text-gray-600 leading-relaxed">
-            <p className="text-sm text-gray-400">Last updated: January 2025</p>
-
-            <p>
-              {company.legalName} (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates the website at {company.url} (the &quot;Site&quot;). This Privacy Policy describes how we collect, use, and share information when you use our Site or contact us.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Information We Collect</h2>
-            <p>We may collect the following types of information:</p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              <li><strong>Contact Information:</strong> Name, phone number, email address, and any message you send through our contact form or email.</li>
-              <li><strong>Estimate Information:</strong> Address and roof details you enter into our instant estimator tool.</li>
-              <li><strong>Usage Data:</strong> We use Google Analytics to collect anonymous usage data such as pages visited, time on site, and referring sources.</li>
-              <li><strong>Device Information:</strong> Browser type, operating system, and IP address (collected automatically).</li>
-            </ul>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">How We Use Your Information</h2>
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>To respond to your inquiries and provide estimates</li>
-              <li>To communicate with you about our services</li>
-              <li>To improve our website and services</li>
-              <li>To comply with legal obligations</li>
-            </ul>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Information Sharing</h2>
-            <p>
-              We do not sell your personal information. We may share your information with:
-            </p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>Service providers who assist in operating our website (hosting, analytics, email delivery)</li>
-              <li>Our instant estimator tool provider (Roofr) when you use the estimator feature</li>
-              <li>As required by law or to protect our legal rights</li>
-            </ul>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Cookies</h2>
-            <p>
-              Our Site uses cookies and similar technologies for analytics purposes. You can control cookies through your browser settings. Disabling cookies may affect site functionality.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Third-Party Services</h2>
-            <p>
-              Our Site uses Google Analytics for website analytics and Roofr for the instant estimator feature. These services have their own privacy policies governing their collection and use of data.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Data Security</h2>
-            <p>
-              We take reasonable measures to protect your information. However, no method of transmission over the Internet or electronic storage is 100% secure.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Your Rights</h2>
-            <p>
-              You may request to access, correct, or delete your personal information by contacting us at {company.email} or calling {company.phoneFormatted}.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Children&apos;s Privacy</h2>
-            <p>
-              Our Site is not intended for children under 13. We do not knowingly collect personal information from children under 13.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Changes to This Policy</h2>
-            <p>
-              We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date.
-            </p>
-
-            <h2 className="text-xl font-bold text-gray-900 pt-4">Contact Us</h2>
-            <p>
-              If you have questions about this Privacy Policy, contact us at:
-            </p>
-            <p>
-              {company.legalName}<br />
-              Email: {company.email}<br />
-              Phone: {company.phoneFormatted}
-            </p>
-          </div>
+      <main id="main-content">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BreadcrumbNav
+            items={[{ name: "Home", href: "/" }, { name: "Consumer Privacy Protection" }]}
+          />
         </div>
+
+        <section className="py-12 md:py-16">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              Consumer Privacy Protection
+            </h1>
+            <p className="text-sm text-gray-400 mb-10">Last Updated: 9/22/2025</p>
+
+            <div className="space-y-8 text-gray-600 leading-relaxed">
+              <p>Breeze Roofing is committed to protecting the privacy and security of your personal information. This policy explains how we collect, use, and safeguard your data when you interact with our services.</p>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Information We Collect</h2>
+                <p>We may collect personal information when you:</p>
+                <ul className="list-disc list-inside mt-2 space-y-1">
+                  <li>Request a quote or estimate</li>
+                  <li>Schedule an appointment or service</li>
+                  <li>Contact us by phone, email, or through our website</li>
+                  <li>Apply for financing through our lending partners</li>
+                  <li>Subscribe to updates or communications</li>
+                </ul>
+                <p className="mt-3">This information may include your name, address, phone number, email address, property details, and payment information.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">How We Use Your Information</h2>
+                <p>Your information is used to:</p>
+                <ul className="list-disc list-inside mt-2 space-y-1">
+                  <li>Provide and deliver roofing services</li>
+                  <li>Communicate about your project status and scheduling</li>
+                  <li>Process payments and financing applications</li>
+                  <li>Send service reminders and maintenance notifications</li>
+                  <li>Improve our operations and customer experience</li>
+                  <li>Comply with legal obligations</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Information Sharing</h2>
+                <p>We do not sell, trade, or otherwise transfer your personal information to third parties except:</p>
+                <ul className="list-disc list-inside mt-2 space-y-1">
+                  <li>With your explicit consent</li>
+                  <li>To financing partners (Momnt Financial) when you apply for financing</li>
+                  <li>To insurance companies when assisting with claims on your behalf</li>
+                  <li>When required by law or legal process</li>
+                  <li>To service providers operating under confidentiality agreements</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Third-Party Partners</h2>
+                <p>In the course of providing our services, we may share limited information with the following types of partners:</p>
+                <ul className="list-disc list-inside mt-2 space-y-1">
+                  <li><strong className="text-gray-900">Momnt Financial</strong> — Financing applications and loan processing</li>
+                  <li><strong className="text-gray-900">Insurance Companies</strong> — Claims documentation and coordination</li>
+                  <li><strong className="text-gray-900">Material Suppliers</strong> — Order fulfillment and delivery coordination</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Security Measures</h2>
+                <p>We implement a variety of security measures to protect your personal information, including:</p>
+                <ul className="list-disc list-inside mt-2 space-y-1">
+                  <li>SSL encryption for all data transmission</li>
+                  <li>Limited access to personal information on a need-to-know basis</li>
+                  <li>Regular security assessments</li>
+                  <li>Secure storage of physical and digital records</li>
+                  <li>Employee training on privacy practices</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Cookies and Tracking</h2>
+                <p>Our website uses cookies to remember your preferences, analyze site traffic, improve functionality, and provide relevant content. You can control cookie settings through your browser preferences. Disabling cookies may affect some website functionality.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Data Retention</h2>
+                <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this policy, including ongoing service obligations, warranty periods, legal compliance, and dispute resolution.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Children&apos;s Privacy</h2>
+                <p>Our services are not directed to children under 13 years of age. We do not knowingly collect personal information from children. If we discover that we have inadvertently collected information from a child under 13, we will promptly delete it.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Contact Information</h2>
+                <p>If you have questions about this privacy policy or how your information is handled, please contact us:</p>
+                <ul className="mt-2 space-y-1">
+                  <li>Email: <a href={`mailto:${company.email}`} className="text-navy hover:text-navy-light transition-colors">{company.email}</a></li>
+                  <li>Phone: <a href={company.phoneTel} className="text-navy hover:text-navy-light transition-colors">{company.phoneFormatted}</a></li>
+                  <li>Location: Wilmington, NC</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
       <MobileCTABar />

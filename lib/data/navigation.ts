@@ -48,6 +48,7 @@ export const footerLinks = {
     { label: "FAQ", href: "/faq" },
     { label: "Financing", href: "/financing" },
     { label: "Blog", href: "/blog" },
+    { label: "Evelyn's Leaf Solutions", href: "/leaf-solutions" },
   ],
   services: [
     { label: "Residential Roofing", href: "/services/residential-roofing" },
@@ -58,7 +59,7 @@ export const footerLinks = {
     { label: "Roof Inspection", href: "/services/roof-inspection" },
   ],
   legal: [
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Service", href: "/terms" },
+    { label: "Consumer Privacy Protection", href: "/privacy-policy" },
+    { label: "Terms and Conditions", href: "/terms" },
   ],
 };
