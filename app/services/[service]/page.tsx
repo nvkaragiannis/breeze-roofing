@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MapPin } from "lucide-react";
 import { Header } from "@/components/layout/Header";
@@ -76,9 +77,21 @@ export default async function ServicePage({
         </div>
         <article className="py-12 md:py-16">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               {service.title}
             </h1>
+            {service.image && (
+              <div className="mb-8 rounded-xl overflow-hidden">
+                <Image
+                  src={service.image.src}
+                  alt={service.image.alt}
+                  width={960}
+                  height={540}
+                  className="w-full h-48 sm:h-64 md:h-80 object-cover"
+                  priority
+                />
+              </div>
+            )}
             <MarkdownContent content={service.content} />
           </div>
         </article>
