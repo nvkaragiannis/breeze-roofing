@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
@@ -95,6 +96,17 @@ export default function FinancingPage() {
               <Button href={company.phoneTel} variant="secondary" size="lg">
                 Call Brett: {company.phoneFormatted}
               </Button>
+            </div>
+
+            {/* Momnt Financing Partner Banner */}
+            <div className="mt-12">
+              <Image
+                src="/momnt-web-banner-1650x320-statement.webp"
+                alt="Momnt - Affordable financing options. Pre-qualify for financing today without impacting your credit score."
+                width={825}
+                height={160}
+                className="w-full max-w-2xl rounded-lg"
+              />
             </div>
           </div>
         </section>
