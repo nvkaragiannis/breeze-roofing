@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Clock, Shield } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import Image from "next/image";
 import { company } from "@/lib/data/company";
 import { footerLinks } from "@/lib/data/navigation";
 import Link from "next/link";
@@ -10,16 +11,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
           {/* Column 1: Logo + Tagline + License */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-2.5">
-              <Shield className="w-8 h-8 text-amber" />
-              <div className="flex flex-col leading-none">
-                <span className="text-xl font-extrabold text-white tracking-tight">
-                  BREEZE ROOFING
-                </span>
-                <span className="text-[10px] font-medium tracking-widest uppercase text-white/50">
-                  Simple as a Breeze
-                </span>
-              </div>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/breeze_roofing_logo_white_background.jpeg"
+                alt="Breeze Roofing - Simple as a Breeze"
+                width={200}
+                height={50}
+                className="h-10 w-auto rounded"
+              />
             </Link>
             <p className="mt-3 text-white/70 text-sm leading-relaxed">
               {company.tagline}

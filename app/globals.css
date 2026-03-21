@@ -3,8 +3,8 @@
 :root {
   --color-primary: #1B3A5C;
   --color-primary-light: #2A5298;
-  --color-accent: #E8A020;
-  --color-accent-hover: #C8891A;
+  --color-accent: #C6A355;
+  --color-accent-hover: #B08F3E;
   --color-emergency: #C62828;
   --color-success: #2D7D32;
 }
@@ -14,8 +14,8 @@
   --color-foreground: #212529;
   --color-navy: #1B3A5C;
   --color-navy-light: #2A5298;
-  --color-amber: #E8A020;
-  --color-amber-hover: #C8891A;
+  --color-amber: #C6A355;
+  --color-amber-hover: #B08F3E;
   --color-emergency: #C62828;
   --color-success: #2D7D32;
   --color-gray-50: #F8F9FA;
