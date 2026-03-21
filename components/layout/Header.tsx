@@ -47,7 +47,14 @@ export function Header({ transparent = false }: HeaderProps) {
             : "bg-white shadow-md"
         )}
       >
-        {/* Top Bar */}
+        {/* Emergency Top Bar */}
+        <div className="bg-emergency text-white text-center text-xs sm:text-sm font-medium py-1.5 px-4">
+          <a href={company.phoneTel} className="hover:underline">
+            Available 24/7 for Emergency Services — Call {company.phoneFormatted}
+          </a>
+        </div>
+
+        {/* Main Header Bar */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
@@ -204,14 +211,14 @@ export function Header({ transparent = false }: HeaderProps) {
         </nav>
       </header>
 
-      {/* Spacer: pushes page content below the fixed header */}
+      {/* Spacer: pushes page content below the fixed header + emergency bar */}
       {!transparent && (
-        <div className="h-16 lg:h-[calc(5rem+45px)]" aria-hidden="true" />
+        <div className="h-24 lg:h-[calc(5rem+75px)]" aria-hidden="true" />
       )}
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 top-16 z-40">
+        <div className="lg:hidden fixed inset-0 top-[6.5rem] z-40">
           <div
             className="absolute inset-0 bg-black/30"
             onClick={() => setMobileOpen(false)}
