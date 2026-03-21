@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Phone, Menu, X, ChevronDown, Star } from "lucide-react";
-import Image from "next/image";
+import { Phone, Menu, X, ChevronDown, Star, Shield } from "lucide-react";
 import { company } from "@/lib/data/company";
 import { mainNav } from "@/lib/data/navigation";
 import { cn } from "@/lib/utils";
@@ -50,19 +49,26 @@ export function Header({ transparent = false }: HeaderProps) {
         {/* Top Bar */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
-            <Link href="/" className="shrink-0">
-              <Image
-                src="/breeze_roofing_logo_white_background.jpeg"
-                alt="Breeze Roofing - Simple as a Breeze"
-                width={220}
-                height={55}
-                priority
-                className={cn(
-                  "h-10 lg:h-12 w-auto",
-                  isTransparent && "brightness-0 invert"
-                )}
-              />
+            {/* Logo — swap to <Image> when transparent PNG is available */}
+            <Link href="/" className="flex items-center gap-2.5 shrink-0">
+              <Shield className={cn(
+                "w-8 h-8 lg:w-9 lg:h-9",
+                isTransparent ? "text-amber" : "text-navy"
+              )} />
+              <div className="flex flex-col leading-none">
+                <span className={cn(
+                  "text-lg lg:text-xl font-extrabold tracking-tight",
+                  isTransparent ? "text-white" : "text-navy"
+                )}>
+                  BREEZE ROOFING
+                </span>
+                <span className={cn(
+                  "text-[10px] lg:text-xs font-medium tracking-widest uppercase",
+                  isTransparent ? "text-white/60" : "text-gray-400"
+                )}>
+                  Simple as a Breeze
+                </span>
+              </div>
             </Link>
 
             {/* Desktop: Trust stats + Phone + CTA */}
