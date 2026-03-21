@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #1B3A5C;
-  --color-primary-light: #2A5298;
+  --color-primary: #7BA7BC;
+  --color-primary-light: #8FB8CB;
   --color-accent: #C6A355;
   --color-accent-hover: #B08F3E;
   --color-emergency: #C62828;
@@ -12,8 +12,8 @@
 @theme inline {
   --color-background: #ffffff;
   --color-foreground: #212529;
-  --color-navy: #1B3A5C;
-  --color-navy-light: #2A5298;
+  --color-navy: #7BA7BC;
+  --color-navy-light: #8FB8CB;
   --color-amber: #C6A355;
   --color-amber-hover: #B08F3E;
   --color-emergency: #C62828;
