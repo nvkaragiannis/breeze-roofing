@@ -102,38 +102,65 @@ export default function LeafSolutionsPage() {
               Our Gutter Guard Systems
             </h2>
 
-            <div className="space-y-6">
-              <div className="bg-white rounded-xl p-6 border border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  XTreme Gutter Guard
-                </h3>
-                <p className="text-gray-600">
-                  Strong aluminum design for reliable leaf and debris protection.
-                  Built to withstand the elements and keep your gutters flowing
-                  freely year-round.
-                </p>
+            <div className="space-y-8">
+              <div className="bg-white rounded-xl overflow-hidden border border-gray-200">
+                <Image
+                  src="/SELF+SHEDDING+with+shingles+Xtreme+USE+copy-1920w.webp"
+                  alt="XTreme Gutter Guard — aluminum gutter guard shedding leaves and debris from shingles"
+                  width={960}
+                  height={720}
+                  className="w-full h-56 sm:h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    XTreme Gutter Guard
+                  </h3>
+                  <p className="text-gray-600">
+                    Strong aluminum design for reliable leaf and debris protection.
+                    Built to withstand the elements and keep your gutters flowing
+                    freely year-round.
+                  </p>
+                </div>
               </div>
 
-              <div className="bg-white rounded-xl p-6 border border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Leaf Solution Gutter Guard
-                </h3>
-                <p className="text-gray-600">
-                  Stainless steel mesh blocks debris with lasting durability.
-                  The premium choice for homeowners who want maximum protection
-                  and longevity.
-                </p>
+              <div className="bg-white rounded-xl overflow-hidden border border-gray-200">
+                <Image
+                  src="/Leaf+Solution+SELF+SHED+DEBRIS+USE-1920w.webp"
+                  alt="Leaf Solution Gutter Guard — stainless steel mesh blocking debris while water flows through"
+                  width={960}
+                  height={720}
+                  className="w-full h-56 sm:h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Leaf Solution Gutter Guard
+                  </h3>
+                  <p className="text-gray-600">
+                    Stainless steel mesh blocks debris with lasting durability.
+                    The premium choice for homeowners who want maximum protection
+                    and longevity.
+                  </p>
+                </div>
               </div>
 
-              <div className="bg-white rounded-xl p-6 border border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Leaf Solution New Wave Gutter Guard
-                </h3>
-                <p className="text-gray-600">
-                  Low-profile guard blends seamlessly with your roofline while
-                  ensuring smooth water flow. The best option for homeowners who
-                  want protection without changing the look of their home.
-                </p>
+              <div className="bg-white rounded-xl overflow-hidden border border-gray-200">
+                <Image
+                  src="/56843992-0-new-wave-miter-1-1000x516-1920w.webp"
+                  alt="Leaf Solution New Wave Gutter Guard — low-profile miter corner design blending with roofline"
+                  width={960}
+                  height={500}
+                  className="w-full h-56 sm:h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Leaf Solution New Wave Gutter Guard
+                  </h3>
+                  <p className="text-gray-600">
+                    Low-profile guard blends seamlessly with your roofline while
+                    ensuring smooth water flow. The best option for homeowners who
+                    want protection without changing the look of their home.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
