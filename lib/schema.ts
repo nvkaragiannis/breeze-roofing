@@ -1,4 +1,6 @@
 import { company } from "./data/company";
+import type { Service } from "./data/services";
+import type { Review } from "./data/reviews";
 
 export function getLocalBusinessSchema() {
   return {
@@ -109,6 +111,54 @@ export function getArticleSchema(article: {
     datePublished: article.datePublished,
     dateModified: article.dateModified || article.datePublished,
   };
+}
+
+export function getServiceSchema(service: Service) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.shortTitle,
+    description: service.description,
+    provider: {
+      "@type": "RoofingContractor",
+      name: company.name,
+      url: company.url,
+      telephone: `+1${company.phone}`,
+    },
+    areaServed: [
+      { "@type": "City", name: "Wilmington" },
+      { "@type": "City", name: "Hampstead" },
+      { "@type": "City", name: "Leland" },
+      { "@type": "City", name: "Carolina Beach" },
+      { "@type": "City", name: "Wrightsville Beach" },
+      { "@type": "City", name: "Southport" },
+      { "@type": "City", name: "Topsail Island" },
+      { "@type": "City", name: "Surf City" },
+    ],
+    url: `${company.url}/services/${service.slug}`,
+  };
+}
+
+export function getReviewSchema(reviews: Review[]) {
+  return reviews.map((review) => ({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.rating,
+      bestRating: 5,
+    },
+    author: {
+      "@type": "Person",
+      name: review.name,
+    },
+    reviewBody: review.text,
+    itemReviewed: {
+      "@type": "RoofingContractor",
+      name: company.name,
+      url: company.url,
+    },
+  }));
 }
 
 export function getBreadcrumbSchema(items: { name: string; url: string }[]) {

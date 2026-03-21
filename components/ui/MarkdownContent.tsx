@@ -42,14 +42,20 @@ export function MarkdownContent({ content, className }: MarkdownContentProps) {
           strong: ({ children }) => (
             <strong className="font-semibold text-gray-900">{children}</strong>
           ),
-          a: ({ href, children }) => (
-            <a
-              href={href}
-              className="text-navy underline hover:text-navy-light transition-colors"
-            >
-              {children}
-            </a>
-          ),
+          a: ({ href, children }) => {
+            const isExternal = href?.startsWith("http");
+            return (
+              <a
+                href={href}
+                className="text-navy underline hover:text-navy-light transition-colors"
+                {...(isExternal
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+              >
+                {children}
+              </a>
+            );
+          },
           table: ({ children }) => (
             <div className="my-6 overflow-x-auto">
               <table className="min-w-full border border-gray-200 rounded-lg text-sm">

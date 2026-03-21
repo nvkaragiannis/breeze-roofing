@@ -43,6 +43,9 @@ export function Hero({
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 w-full">
         <div className="max-w-3xl">
+          <p className="text-sm md:text-base text-white/60 font-medium tracking-wide mb-4">
+            4.9 Stars &middot; 50+ Google Reviews &middot; NC Licensed &middot; Fortified Certified
+          </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
             {headline}
           </h1>

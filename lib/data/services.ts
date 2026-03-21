@@ -1,3 +1,8 @@
+export interface ServiceFAQ {
+  question: string;
+  answer: string;
+}
+
 export interface Service {
   slug: string;
   title: string;
@@ -9,6 +14,7 @@ export interface Service {
   metaTitle: string;
   metaDescription: string;
   content: string;
+  faqs: ServiceFAQ[];
 }
 
 export const services: Service[] = [
@@ -39,6 +45,20 @@ Standard roofing practices from inland areas don't hold up on the coast. Salt ai
 - **Metal Roofing** — Standing seam and exposed fastener systems for maximum longevity
 - **Impact-Resistant Shingles** — Class 4 rated for hail and storm protection
 - **IBHS Fortified-Rated Systems** — Full Fortified Roof designation for insurance savings`,
+    faqs: [
+      {
+        question: "How long does a residential roof replacement take?",
+        answer: "Most residential replacements take 1-3 days depending on the size of the home and complexity of the roof. Homeowners often ask us this expecting weeks of disruption, but our crews work efficiently to minimize your downtime. Weather can occasionally push a timeline, but we keep you updated every step of the way.",
+      },
+      {
+        question: "What materials do you recommend for coastal NC homes?",
+        answer: "For coastal NC, we typically recommend architectural asphalt shingles rated for 130+ mph winds or standing seam metal roofing for maximum longevity. The salt air, humidity, and hurricane exposure here are tough on standard materials, so we always spec products designed for these conditions. We are happy to walk you through the options during your free estimate.",
+      },
+      {
+        question: "Do you handle permits and HOA approvals for residential roofing?",
+        answer: "Yes. Homeowners often ask us about the paperwork side of things. We pull all necessary permits and can work within HOA material and color guidelines. Communities like Landfall and Wrightsville Beach have specific requirements, and we are experienced navigating those.",
+      },
+    ],
   },
   {
     slug: "commercial-roofing",
@@ -60,6 +80,16 @@ Standard roofing practices from inland areas don't hold up on the coast. Salt ai
 ## Maintenance Programs
 
 Regular maintenance extends your commercial roof's lifespan by years. We offer scheduled inspection programs that catch small issues before they become expensive problems.`,
+    faqs: [
+      {
+        question: "What types of commercial roofing systems do you install?",
+        answer: "Homeowners often ask us this on behalf of their businesses. We install TPO single-ply membrane, EPDM rubber roofing, standing seam metal, and modified bitumen systems. The best choice depends on your building type, budget, and energy efficiency goals. We will assess your property and recommend the right system.",
+      },
+      {
+        question: "How often should a commercial flat roof be inspected?",
+        answer: "We recommend at least twice a year, ideally in spring and fall, plus after any major storm. Flat roofs are more susceptible to ponding water and membrane damage than sloped roofs, so catching issues early saves significant money. Our maintenance programs include scheduled inspections.",
+      },
+    ],
   },
   {
     slug: "roof-replacement",
@@ -88,6 +118,20 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
 5. **Installation** — Professional crew with daily cleanup
 6. **Final Inspection** — Brett personally inspects every completed job
 7. **Warranty Documentation** — Manufacturer warranty registration and paperwork`,
+    faqs: [
+      {
+        question: "How much does a roof replacement cost in Wilmington, NC?",
+        answer: "Homeowners often ask us for a ballpark before scheduling an estimate. A typical residential roof replacement in Wilmington costs between $8,000 and $20,000, depending on size, materials, and complexity. Architectural shingles are the most popular choice, while Fortified Roof installations and metal roofing are at the higher end.",
+      },
+      {
+        question: "Can I stay in my home during a roof replacement?",
+        answer: "Yes, absolutely. Most homeowners stay in their homes during the entire process. There will be noise during the day while our crew works, but we clean up daily and take care to protect your landscaping and property. The whole project usually wraps in 1-3 days.",
+      },
+      {
+        question: "Will a new roof increase my home's value?",
+        answer: "It is one of the best investments you can make. Homeowners often ask us this when they are preparing to sell. A new roof removes a major buyer objection, speeds up the sale, and national data shows an average return of 60-70% of the cost at resale. In coastal NC, a Fortified Roof designation adds even more value.",
+      },
+    ],
   },
   {
     slug: "roof-repair",
@@ -107,6 +151,16 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
 - **Ridge Cap Replacement** — High-wind areas where ridge caps blow off
 - **Gutter Repair** — Sagging, leaking, or damaged gutters
 - **Vent and Pipe Boot Replacement** — Common leak source on aging roofs`,
+    faqs: [
+      {
+        question: "How do I know if my roof can be repaired instead of replaced?",
+        answer: "Homeowners often ask us this, and it is a great question. Generally, if the damage is localized, your roof is under 15 years old, and the underlying deck is sound, a repair is the right call. Brett will give you an honest assessment during a free inspection. We never push a replacement when a repair will solve the problem.",
+      },
+      {
+        question: "How quickly can you fix a roof leak?",
+        answer: "For active leaks, we offer same-day emergency service. For non-emergency repairs, we typically schedule within a few days. Homeowners often ask us about turnaround time, and we prioritize getting leaks stopped fast to prevent interior damage.",
+      },
+    ],
   },
   {
     slug: "emergency-repair",
@@ -135,6 +189,16 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
 - Roof sections missing after a storm
 - Visible structural sagging
 - Ceiling collapse or buckling`,
+    faqs: [
+      {
+        question: "Do you offer 24/7 emergency roof repair?",
+        answer: "Yes. Homeowners often ask us if they will reach a real person. When you call (910) 665-5277, Brett answers directly, not a call center. We respond to emergencies around the clock, including nights, weekends, and during storms.",
+      },
+      {
+        question: "What should I do while waiting for emergency roof repair?",
+        answer: "Place buckets under active leaks, move valuables away from water, and take photos for insurance documentation. Do not climb on the roof yourself, especially during storms. We will get to you as quickly as possible and handle the tarping and temporary repair.",
+      },
+    ],
   },
   {
     slug: "storm-damage",
@@ -168,6 +232,20 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
 - **Hail Damage** — Bruised or cracked shingles, dented flashing
 - **Fallen Trees/Debris** — Structural impact damage
 - **Water Intrusion** — Leak repair and water damage from compromised roofing`,
+    faqs: [
+      {
+        question: "Will my insurance cover storm damage to my roof?",
+        answer: "In most cases, yes. Homeowners often ask us this first. Homeowner's insurance typically covers sudden storm damage like wind, hail, and fallen trees. Brett meets with your adjuster on-site to ensure nothing is missed. We handle the documentation and supplement filing if the initial assessment falls short.",
+      },
+      {
+        question: "How do I avoid storm chaser roofing scams after a hurricane?",
+        answer: "Homeowners often ask us how to tell the difference. Stick with local, licensed contractors who have a physical presence in the area. Be wary of door-to-door solicitations after storms, especially from out-of-state trucks. Always verify NC licensing, insurance, and references before signing anything.",
+      },
+      {
+        question: "How soon after a storm should I get my roof inspected?",
+        answer: "As soon as it is safe. Call us right away even if you do not see obvious damage from the ground. Many storm damage issues, like bruised shingles or lifted flashing, are not visible without a close inspection. Early detection prevents secondary water damage.",
+      },
+    ],
   },
   {
     slug: "roof-inspection",
@@ -195,6 +273,16 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
 - If your roof is 15+ years old
 - If you notice interior signs of roof issues (stains, mold, light)
 - Before your insurance renewal (especially if considering Fortified upgrade)`,
+    faqs: [
+      {
+        question: "Is a roof inspection really free?",
+        answer: "Yes, 100% free with no obligation. Homeowners often ask us if there is a catch. There is not. Brett inspects your roof, gives you an honest assessment, and you decide what, if anything, to do next. We use drone photography so you can see exactly what we see.",
+      },
+      {
+        question: "How long does a roof inspection take?",
+        answer: "A typical inspection takes about 30-45 minutes. Homeowners often ask us if they need to be home. We prefer you to be there so we can walk you through the findings in person, but we can also send a detailed written report with drone photos if needed.",
+      },
+    ],
   },
   {
     slug: "new-construction",
@@ -213,6 +301,16 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
 - **Code Compliance** — Built to current NC building codes for coastal zones
 - **Fortified Roof Options** — Offer your buyers built-in insurance savings
 - **Warranty Support** — We stand behind our work with manufacturer warranty registration`,
+    faqs: [
+      {
+        question: "Do you work with custom home builders in Wilmington?",
+        answer: "Yes, we work with builders across the Wilmington, Hampstead, and Leland areas on custom and spec homes. Homeowners often ask us about builder partnerships. We offer competitive volume pricing, reliable scheduling, and Fortified Roof options that add real value for new home buyers.",
+      },
+      {
+        question: "Can a new construction roof be Fortified from the start?",
+        answer: "Absolutely, and it is the best time to do it. Building Fortified from day one is more cost-effective than retrofitting later. Homeowners often ask us about this when planning a custom build. We coordinate with your builder to integrate Fortified specifications from the design phase.",
+      },
+    ],
   },
   {
     slug: "fortified-roof",
@@ -258,6 +356,20 @@ Once the roof is complete, IBHS-certified inspectors verify the installation. Br
 ## The Bottom Line
 
 A Fortified Roof costs somewhat more than a standard installation — typically 10-20% more. But when you factor in the insurance savings over 10-20 years, most homeowners find it pays for itself. And you get a better roof.`,
+    faqs: [
+      {
+        question: "How much can a Fortified Roof save on my insurance?",
+        answer: "Homeowners often ask us for specific numbers. In coastal NC, Fortified Roof homeowners have reported savings of 20-40% annually on their homeowner's insurance premium. The exact discount depends on your insurer and location, but for many families the savings pay for the upgrade within a few years.",
+      },
+      {
+        question: "What is the difference between Fortified Roof, Silver, and Gold?",
+        answer: "Fortified Roof covers the roof system only and is the most common and practical starting point for most homeowners. Silver adds window and door protection, and Gold is a whole-home designation. Homeowners often ask us which level to choose. For re-roofing projects, Fortified Roof gives you the best return on investment.",
+      },
+      {
+        question: "Is Breeze Roofing a certified Fortified installer?",
+        answer: "Yes. Brett is IBHS Fortified certified, meaning we are trained and approved to install Fortified Roof systems to IBHS standards. We handle the entire process, including the third-party inspection and the certification paperwork for your insurer.",
+      },
+    ],
   },
   {
     slug: "maintenance",
@@ -283,6 +395,16 @@ A Fortified Roof costs somewhat more than a standard installation — typically 
 - Humidity promotes algae and moss growth on shingles
 - Storm debris accumulates in valleys and behind penetrations
 - Small wind-lifted shingles become leak points if not caught early`,
+    faqs: [
+      {
+        question: "How much does a roof maintenance program cost?",
+        answer: "Homeowners often ask us if maintenance is worth the cost. Our annual maintenance visits start around $300, which is a fraction of the cost of a premature roof replacement. Think of it as an insurance policy for your existing roof. The visit pays for itself by catching small issues before they become expensive repairs.",
+      },
+      {
+        question: "What happens if you find damage during a maintenance visit?",
+        answer: "If we find something that needs attention, we document it with photos and give you a clear recommendation and estimate. Minor repairs like resealing a pipe boot or replacing a few shingles are often handled on the spot. Homeowners often ask us if they are committed to repairs by signing up for maintenance. You are not. The decision is always yours.",
+      },
+    ],
   },
 ];
 

@@ -26,6 +26,7 @@ export function ContactForm() {
       phone: formData.get("phone") as string,
       email: formData.get("email") as string,
       message: formData.get("message") as string,
+      website: formData.get("website") as string,
     };
 
     try {
@@ -71,6 +72,16 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      {/* Honeypot field — hidden from real users, traps bots */}
+      <input
+        type="text"
+        name="website"
+        aria-hidden="true"
+        tabIndex={-1}
+        autoComplete="off"
+        style={{ position: "absolute", left: "-9999px", opacity: 0 }}
+      />
+
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-1">
           Name <span className="text-amber">*</span>

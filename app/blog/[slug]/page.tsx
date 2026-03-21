@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -10,6 +11,52 @@ import { MarkdownContent } from "@/components/ui/MarkdownContent";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { getArticleSchema } from "@/lib/schema";
 import { company } from "@/lib/data/company";
+import { services } from "@/lib/data/services";
+
+function getRelatedServices(tags?: string[]) {
+  if (!tags || tags.length === 0) {
+    return services.filter((s) =>
+      ["residential-roofing", "fortified-roof", "storm-damage"].includes(s.slug)
+    );
+  }
+
+  const tagStr = tags.join(" ").toLowerCase();
+
+  const scored = services.map((s) => {
+    const keywords = [
+      s.shortTitle.toLowerCase(),
+      s.slug.replace(/-/g, " "),
+      s.description.toLowerCase(),
+    ].join(" ");
+
+    let score = 0;
+    for (const tag of tags) {
+      if (keywords.includes(tag.toLowerCase())) score += 2;
+      for (const word of tag.toLowerCase().split(/\s+/)) {
+        if (word.length > 3 && keywords.includes(word)) score += 1;
+      }
+    }
+    if (tagStr.includes(s.slug.replace(/-/g, " "))) score += 5;
+
+    return { service: s, score };
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+
+  const matched = scored.filter((s) => s.score > 0).slice(0, 3);
+  if (matched.length >= 3) return matched.map((s) => s.service);
+
+  const fallbackSlugs = ["residential-roofing", "fortified-roof", "storm-damage"];
+  const result = matched.map((s) => s.service);
+  for (const slug of fallbackSlugs) {
+    if (result.length >= 3) break;
+    const svc = services.find((s) => s.slug === slug);
+    if (svc && !result.find((r) => r.slug === svc.slug)) {
+      result.push(svc);
+    }
+  }
+  return result.slice(0, 3);
+}
 
 export function generateStaticParams() {
   const posts = getAllPosts();
@@ -84,6 +131,8 @@ export default async function BlogPostPage({
                 <span>By {post.author}</span>
                 <span>&middot;</span>
                 <time dateTime={post.date}>{post.date}</time>
+                <span>&middot;</span>
+                <span>{post.readingTime} min read</span>
               </div>
             </header>
 
@@ -101,6 +150,29 @@ export default async function BlogPostPage({
               <Button href="/estimate" variant="primary" size="lg">
                 Get Free Estimate
               </Button>
+            </div>
+
+            {/* Related Services */}
+            <div className="mt-12">
+              <h2 className="text-xl font-bold text-gray-900 mb-4">
+                Related Services
+              </h2>
+              <div className="grid sm:grid-cols-3 gap-4">
+                {getRelatedServices(post.tags).map((svc) => (
+                  <Link
+                    key={svc.slug}
+                    href={`/services/${svc.slug}`}
+                    className="block bg-white border border-gray-200 rounded-lg p-5 hover:border-navy hover:shadow-md transition-all duration-200 group"
+                  >
+                    <h3 className="font-semibold text-gray-900 group-hover:text-navy transition-colors mb-1">
+                      {svc.shortTitle}
+                    </h3>
+                    <p className="text-sm text-gray-600 line-clamp-2">
+                      {svc.description}
+                    </p>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </article>

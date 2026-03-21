@@ -4,6 +4,7 @@ interface BlogCardProps {
   date: string;
   slug: string;
   category?: string;
+  readingTime?: number;
 }
 
 export function BlogCard({
@@ -12,6 +13,7 @@ export function BlogCard({
   date,
   slug,
   category,
+  readingTime,
 }: BlogCardProps) {
   return (
     <a
@@ -29,7 +31,15 @@ export function BlogCard({
       <p className="text-gray-600 text-sm flex-1 mb-4 line-clamp-3">
         {description}
       </p>
-      <time className="text-sm text-gray-600">{date}</time>
+      <div className="flex items-center gap-2 text-sm text-gray-600">
+        <time>{date}</time>
+        {readingTime && (
+          <>
+            <span>&middot;</span>
+            <span>{readingTime} min read</span>
+          </>
+        )}
+      </div>
     </a>
   );
 }

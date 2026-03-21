@@ -9,6 +9,8 @@ export interface BlogPost {
   date: string;
   author: string;
   category?: string;
+  tags?: string[];
+  readingTime: number;
   content: string;
 }
 
@@ -34,6 +36,9 @@ export function getAllPosts(): BlogPost[] {
       const fileContent = fs.readFileSync(filePath, "utf-8");
       const { data, content } = matter(fileContent);
 
+      const wordCount = content.trim().split(/\s+/).length;
+      const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+
       return {
         slug,
         title: (data.title as string) || slug,
@@ -41,6 +46,8 @@ export function getAllPosts(): BlogPost[] {
         date: (data.date as string) || "",
         author: (data.author as string) || "Brett, Breeze Roofing",
         category: (data.category as string) || undefined,
+        tags: (data.tags as string[]) || undefined,
+        readingTime,
         content,
       };
     });

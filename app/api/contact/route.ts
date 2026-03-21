@@ -17,10 +17,65 @@ function escapeHtml(str: string): string {
     .replace(/'/g, "&#039;");
 }
 
+/* ── Rate Limiting ────────────────────────────────────────────── */
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+const MAX_REQUESTS_PER_WINDOW = 5;
+
+const rateLimitMap = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const timestamps = rateLimitMap.get(ip) ?? [];
+
+  // Remove entries older than the window
+  const recent = timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+  rateLimitMap.set(ip, recent);
+
+  if (recent.length >= MAX_REQUESTS_PER_WINDOW) {
+    return true;
+  }
+
+  recent.push(now);
+  rateLimitMap.set(ip, recent);
+  return false;
+}
+
+// Periodically clean up stale entries every 10 minutes
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, timestamps] of rateLimitMap.entries()) {
+    const recent = timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+    if (recent.length === 0) {
+      rateLimitMap.delete(ip);
+    } else {
+      rateLimitMap.set(ip, recent);
+    }
+  }
+}, 10 * 60 * 1000);
+
+/* ── Email Validation ─────────────────────────────────────────── */
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export async function POST(request: Request) {
   try {
+    // Rate limiting by IP
+    const forwarded = request.headers.get("x-forwarded-for");
+    const ip = forwarded?.split(",")[0]?.trim() ?? "unknown";
+
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: "Too many requests. Please try again later." },
+        { status: 429 }
+      );
+    }
+
     const body = await request.json();
-    const { name, phone, email, message } = body;
+    const { name, phone, email, message, website } = body;
+
+    // Honeypot check — bots fill hidden fields. Return fake success.
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
 
     // Validate required fields
     if (!name || !phone || !message) {
@@ -34,6 +89,14 @@ export async function POST(request: Request) {
     if (name.length > 200 || phone.length > 50 || message.length > 5000) {
       return NextResponse.json(
         { error: "One or more fields exceed maximum length." },
+        { status: 400 }
+      );
+    }
+
+    // Email format validation (if provided)
+    if (email && !EMAIL_REGEX.test(email)) {
+      return NextResponse.json(
+        { error: "Please enter a valid email address." },
         { status: 400 }
       );
     }

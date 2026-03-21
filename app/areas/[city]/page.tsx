@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import {
+  Home,
+  Building2,
+  RefreshCcw,
+  Wrench,
+  Clock,
+  CloudLightning,
+  Search,
+  HardHat,
+  Award,
+  Settings,
+} from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
@@ -11,6 +23,19 @@ import { areas, getAreaBySlug } from "@/lib/data/areas";
 import { services } from "@/lib/data/services";
 import { getBreadcrumbSchema } from "@/lib/schema";
 import { company } from "@/lib/data/company";
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Home,
+  Building2,
+  RefreshCcw,
+  Wrench,
+  Clock,
+  CloudLightning,
+  Search,
+  HardHat,
+  Award,
+  Settings,
+};
 
 export function generateStaticParams() {
   return areas.map((area) => ({ city: area.slug }));
@@ -103,24 +128,25 @@ export default async function CityPage({
               </section>
             )}
 
-            {/* Services Available */}
+            {/* Our Services in City */}
             <section className="mb-10">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Services Available in {area.city}
+                Our Services in {area.city}
               </h2>
               <div className="grid sm:grid-cols-2 gap-3">
-                {services.map((s) => (
-                  <Link
-                    key={s.slug}
-                    href={`/services/${s.slug}`}
-                    className="flex items-center gap-2 text-sm text-gray-700 hover:text-navy transition-colors p-2 rounded-lg hover:bg-gray-50"
-                  >
-                    <svg className="w-4 h-4 text-amber shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    {s.shortTitle}
-                  </Link>
-                ))}
+                {services.map((s) => {
+                  const Icon = iconMap[s.icon];
+                  return (
+                    <Link
+                      key={s.slug}
+                      href={`/services/${s.slug}`}
+                      className="flex items-center gap-3 text-sm text-gray-700 hover:text-navy transition-colors p-3 rounded-lg hover:bg-gray-50 border border-gray-100"
+                    >
+                      {Icon && <Icon className="w-5 h-5 text-amber shrink-0" />}
+                      {s.shortTitle}
+                    </Link>
+                  );
+                })}
               </div>
             </section>
 

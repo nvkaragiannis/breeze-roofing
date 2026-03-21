@@ -51,6 +51,7 @@ export default function BlogPage() {
                     date={post.date}
                     slug={post.slug}
                     category={post.category}
+                    readingTime={post.readingTime}
                   />
                 ))}
               </div>

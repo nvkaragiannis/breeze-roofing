@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import { MapPin } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
@@ -9,7 +11,8 @@ import { MarkdownContent } from "@/components/ui/MarkdownContent";
 import { EmergencyCTA } from "@/components/sections/EmergencyCTA";
 import { EstimateSection } from "@/components/sections/EstimateSection";
 import { services, getServiceBySlug } from "@/lib/data/services";
-import { getBreadcrumbSchema } from "@/lib/schema";
+import { areas } from "@/lib/data/areas";
+import { getBreadcrumbSchema, getFAQSchema, getServiceSchema } from "@/lib/schema";
 import { company } from "@/lib/data/company";
 
 export function generateStaticParams() {
@@ -52,9 +55,14 @@ export default async function ServicePage({
     { name: service.shortTitle, url: `${company.url}/services/${slug}` },
   ]);
 
+  const serviceSchema = getServiceSchema(service);
+  const faqSchema = service.faqs.length > 0 ? getFAQSchema(service.faqs) : null;
+
   return (
     <>
       <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={serviceSchema} />
+      {faqSchema && <SchemaScript schema={faqSchema} />}
       <Header />
       <main id="main-content">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,6 +82,61 @@ export default async function ServicePage({
             <MarkdownContent content={service.content} />
           </div>
         </article>
+
+        {/* We Serve These Areas */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              We Serve These Areas
+            </h2>
+            <div className="flex flex-wrap gap-3">
+              {areas.map((area) => (
+                <Link
+                  key={area.slug}
+                  href={`/areas/${area.slug}`}
+                  className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm font-medium hover:border-navy hover:text-navy transition-colors"
+                >
+                  <MapPin className="w-4 h-4 text-amber shrink-0" />
+                  {area.city}, {area.state}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        {service.faqs.length > 0 && (
+          <section className="py-12 md:py-16">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-4">
+                {service.faqs.map((faq) => (
+                  <details
+                    key={faq.question}
+                    className="group bg-white rounded-lg border border-gray-200 shadow-sm"
+                  >
+                    <summary className="flex items-center justify-between cursor-pointer px-6 py-4 font-medium text-gray-900 hover:text-navy transition-colors">
+                      <span className="pr-4">{faq.question}</span>
+                      <svg
+                        className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform shrink-0"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </summary>
+                    <div className="px-6 pb-4 text-gray-600 leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {service.showEmergency && <EmergencyCTA />}
         <EstimateSection />
