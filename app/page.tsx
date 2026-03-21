@@ -15,9 +15,11 @@ import { BlogPreview } from "@/components/sections/BlogPreview";
 import { SchemaScript } from "@/components/ui/SchemaScript";
 import { getReviewSchema } from "@/lib/schema";
 import { reviews } from "@/lib/data/reviews";
+import { getRecentPosts } from "@/lib/blog";
 
 export default function HomePage() {
   const reviewSchemas = getReviewSchema(reviews);
+  const recentPosts = getRecentPosts(3);
 
   return (
     <>
@@ -36,7 +38,7 @@ export default function HomePage() {
         <ServiceAreasMap />
         <CoastalExpertise />
         <EstimateSection />
-        <BlogPreview posts={[]} />
+        <BlogPreview posts={recentPosts} />
       </main>
       <Footer />
       <MobileCTABar />
