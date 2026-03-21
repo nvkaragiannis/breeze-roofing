@@ -21,7 +21,7 @@ export function BreadcrumbNav({ items }: BreadcrumbNavProps) {
   return (
     <>
       <SchemaScript schema={getBreadcrumbSchema(schemaItems)} />
-      <nav aria-label="Breadcrumb" className="py-3">
+      <nav aria-label="Breadcrumb" className="pt-4 pb-2">
         <ol className="flex items-center gap-1 text-sm text-gray-600 flex-wrap">
           {items.map((item, index) => {
             const isLast = index === items.length - 1;

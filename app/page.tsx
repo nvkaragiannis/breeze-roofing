@@ -15,7 +15,7 @@ import { BlogPreview } from "@/components/sections/BlogPreview";
 export default function HomePage() {
   return (
     <>
-      <Header />
+      <Header transparent />
       <main id="main-content">
         <Hero />
         <TrustBar />

@@ -1,13 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Phone, Menu, X, ChevronDown, Star } from "lucide-react";
+import { Phone, Menu, X, ChevronDown, Star, Shield } from "lucide-react";
 import { company } from "@/lib/data/company";
 import { mainNav } from "@/lib/data/navigation";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-export function Header() {
+interface HeaderProps {
+  /** true = transparent over hero (homepage). false = solid white (inner pages) */
+  transparent?: boolean;
+}
+
+export function Header({ transparent = false }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -29,136 +34,189 @@ export function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "bg-white shadow-md" : "bg-transparent"
-      )}
-    >
-      {/* Top Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <span className="text-xl lg:text-2xl font-bold tracking-tight text-navy">
-              BREEZE ROOFING
-            </span>
-          </Link>
+  const isTransparent = transparent && !scrolled;
 
-          {/* Desktop: Trust stats + Phone + CTA */}
-          <div className="hidden lg:flex items-center gap-6">
-            <div className="flex items-center gap-1 text-sm text-gray-600">
-              <Star className="w-4 h-4 text-amber fill-amber" />
-              <span className="font-semibold text-gray-900">
-                {company.reviewRating}
-              </span>
-              <span>({company.reviewCount}+ reviews)</span>
+  return (
+    <>
+      <header
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          isTransparent
+            ? "bg-transparent"
+            : "bg-white shadow-md"
+        )}
+      >
+        {/* Top Bar */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2.5 shrink-0">
+              <Shield className={cn(
+                "w-8 h-8 lg:w-9 lg:h-9",
+                isTransparent ? "text-amber" : "text-navy"
+              )} />
+              <div className="flex flex-col leading-none">
+                <span className={cn(
+                  "text-lg lg:text-xl font-extrabold tracking-tight",
+                  isTransparent ? "text-white" : "text-navy"
+                )}>
+                  BREEZE ROOFING
+                </span>
+                <span className={cn(
+                  "text-[10px] lg:text-xs font-medium tracking-widest uppercase",
+                  isTransparent ? "text-white/60" : "text-gray-400"
+                )}>
+                  Wilmington, NC
+                </span>
+              </div>
+            </Link>
+
+            {/* Desktop: Trust stats + Phone + CTA */}
+            <div className="hidden lg:flex items-center gap-6">
+              <div className={cn(
+                "flex items-center gap-1.5 text-sm",
+                isTransparent ? "text-white/70" : "text-gray-600"
+              )}>
+                <Star className="w-4 h-4 text-amber fill-amber" />
+                <span className={cn(
+                  "font-semibold",
+                  isTransparent ? "text-white" : "text-gray-900"
+                )}>
+                  {company.reviewRating}
+                </span>
+                <span>({company.reviewCount}+ reviews)</span>
+              </div>
+
+              <div className={cn(
+                "w-px h-6",
+                isTransparent ? "bg-white/20" : "bg-gray-200"
+              )} />
+
+              <a
+                href={company.phoneTel}
+                className={cn(
+                  "flex items-center gap-2 font-semibold transition-colors",
+                  isTransparent
+                    ? "text-white hover:text-amber"
+                    : "text-navy hover:text-navy-light"
+                )}
+              >
+                <Phone className="w-4 h-4" />
+                {company.phoneFormatted}
+              </a>
+
+              <Link
+                href="/estimate"
+                className="bg-amber text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-amber-hover transition-all shadow-md hover:shadow-lg"
+              >
+                Get Free Estimate
+              </Link>
             </div>
 
-            <a
-              href={company.phoneTel}
-              className="flex items-center gap-2 font-semibold text-navy"
-            >
-              <Phone className="w-4 h-4" />
-              {company.phoneFormatted}
-            </a>
-
-            <Link
-              href="/estimate"
-              className="bg-amber text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-amber-hover transition-all shadow-md hover:shadow-lg"
-            >
-              Get Free Estimate
-            </Link>
-          </div>
-
-          {/* Mobile: Phone + CTA + Hamburger */}
-          <div className="flex lg:hidden items-center gap-2">
-            <a
-              href={company.phoneTel}
-              className="w-10 h-10 flex items-center justify-center rounded-lg text-navy"
-              aria-label="Call us"
-            >
-              <Phone className="w-5 h-5" />
-            </a>
-            <Link
-              href="/estimate"
-              className="bg-amber text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-amber-hover transition-all"
-            >
-              Estimate
-            </Link>
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="w-10 h-10 flex items-center justify-center rounded-lg text-navy"
-              aria-label={mobileOpen ? "Close menu" : "Open menu"}
-              aria-expanded={mobileOpen}
-            >
-              {mobileOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
+            {/* Mobile: Phone + CTA + Hamburger */}
+            <div className="flex lg:hidden items-center gap-2">
+              <a
+                href={company.phoneTel}
+                className={cn(
+                  "w-10 h-10 flex items-center justify-center rounded-lg",
+                  isTransparent ? "text-white" : "text-navy"
+                )}
+                aria-label="Call us"
+              >
+                <Phone className="w-5 h-5" />
+              </a>
+              <Link
+                href="/estimate"
+                className="bg-amber text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-amber-hover transition-all"
+              >
+                Estimate
+              </Link>
+              <button
+                onClick={() => setMobileOpen(!mobileOpen)}
+                className={cn(
+                  "w-10 h-10 flex items-center justify-center rounded-lg",
+                  isTransparent ? "text-white" : "text-navy"
+                )}
+                aria-label={mobileOpen ? "Close menu" : "Open menu"}
+                aria-expanded={mobileOpen}
+              >
+                {mobileOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Desktop Navigation */}
-      <nav
-        className={cn(
-          "hidden lg:block border-t transition-colors",
-          scrolled
-            ? "border-gray-100 bg-white"
-            : "border-white/10 bg-white/95"
-        )}
-        aria-label="Main navigation"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ul className="flex items-center gap-1">
-            {mainNav.map((item) => (
-              <li
-                key={item.label}
-                className="relative group"
-                onMouseEnter={() =>
-                  item.children ? setOpenDropdown(item.label) : undefined
-                }
-                onMouseLeave={() => setOpenDropdown(null)}
-              >
-                <Link
-                  href={item.href}
-                  className="flex items-center gap-1 px-4 py-3 text-sm font-medium text-gray-700 hover:text-navy transition-colors"
+        {/* Desktop Navigation */}
+        <nav
+          className={cn(
+            "hidden lg:block border-t transition-colors",
+            isTransparent
+              ? "border-white/10 bg-navy/30 backdrop-blur-sm"
+              : "border-gray-100 bg-white"
+          )}
+          aria-label="Main navigation"
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ul className="flex items-center gap-0.5">
+              {mainNav.map((item) => (
+                <li
+                  key={item.label}
+                  className="relative group"
+                  onMouseEnter={() =>
+                    item.children ? setOpenDropdown(item.label) : undefined
+                  }
+                  onMouseLeave={() => setOpenDropdown(null)}
                 >
-                  {item.label}
-                  {item.children && (
-                    <ChevronDown className="w-3.5 h-3.5 opacity-50" />
-                  )}
-                </Link>
-
-                {item.children && (
-                  <div
+                  <Link
+                    href={item.href}
                     className={cn(
-                      "absolute top-full left-0 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2 transition-all duration-200",
-                      openDropdown === item.label
-                        ? "opacity-100 visible translate-y-0"
-                        : "opacity-0 invisible -translate-y-2"
+                      "flex items-center gap-1 px-3.5 py-3 text-sm font-medium transition-colors rounded-md",
+                      isTransparent
+                        ? "text-white/80 hover:text-white hover:bg-white/10"
+                        : "text-gray-700 hover:text-navy hover:bg-gray-50"
                     )}
                   >
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-navy transition-colors"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
+                    {item.label}
+                    {item.children && (
+                      <ChevronDown className="w-3.5 h-3.5 opacity-50" />
+                    )}
+                  </Link>
+
+                  {item.children && (
+                    <div
+                      className={cn(
+                        "absolute top-full left-0 w-56 bg-white rounded-lg shadow-xl border border-gray-100 py-2 transition-all duration-200",
+                        openDropdown === item.label
+                          ? "opacity-100 visible translate-y-0"
+                          : "opacity-0 invisible -translate-y-2"
+                      )}
+                    >
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-navy transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      {/* Spacer: pushes page content below the fixed header */}
+      {!transparent && (
+        <div className="h-16 lg:h-[calc(5rem+45px)]" aria-hidden="true" />
+      )}
 
       {/* Mobile Drawer */}
       {mobileOpen && (
@@ -244,6 +302,6 @@ export function Header() {
           </nav>
         </div>
       )}
-    </header>
+    </>
   );
 }
