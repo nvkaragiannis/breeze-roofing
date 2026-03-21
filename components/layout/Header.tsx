@@ -44,8 +44,11 @@ export function Header({ transparent = false }: HeaderProps) {
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isTransparent
             ? "bg-transparent"
-            : "bg-white shadow-md"
+            : "shadow-md"
         )}
+        style={!isTransparent ? {
+          background: "linear-gradient(to right, #7BA7BC, #A3C4D4, #d4e5ec, #ffffff)"
+        } : undefined}
       >
         {/* Emergency Top Bar */}
         <div className="bg-emergency text-white text-center text-xs sm:text-sm font-medium py-1.5 px-4">
@@ -154,7 +157,7 @@ export function Header({ transparent = false }: HeaderProps) {
             "hidden lg:block border-t transition-colors",
             isTransparent
               ? "border-white/10 bg-navy/30 backdrop-blur-sm"
-              : "border-gray-100 bg-white"
+              : "border-white/50 bg-white/80 backdrop-blur-sm"
           )}
           aria-label="Main navigation"
         >

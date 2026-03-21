@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #7BA7BC;
-  --color-primary-light: #8FB8CB;
+  --color-primary: #2A6895;
+  --color-primary-light: #3A7DAD;
   --color-accent: #C6A355;
   --color-accent-hover: #B08F3E;
   --color-emergency: #A91A1E;
@@ -12,8 +12,10 @@
 @theme inline {
   --color-background: #ffffff;
   --color-foreground: #212529;
-  --color-navy: #7BA7BC;
-  --color-navy-light: #8FB8CB;
+  --color-navy: #2A6895;
+  --color-navy-light: #3A7DAD;
+  --color-sky: #7BA7BC;
+  --color-sky-light: #A3C4D4;
   --color-amber: #C6A355;
   --color-amber-hover: #B08F3E;
   --color-emergency: #A91A1E;
