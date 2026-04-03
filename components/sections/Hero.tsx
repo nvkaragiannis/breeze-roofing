@@ -15,18 +15,24 @@ interface HeroProps {
   backgroundImage?: string;
 }
 
-function Cloud({ className }: { className?: string }) {
+function Cloud({ variant = 0, className }: { variant?: number; className?: string }) {
+  const paths = [
+    // Wispy cumulus
+    "M20,55 Q25,52 30,48 Q38,30 55,28 Q65,15 82,22 Q95,10 115,18 Q130,8 148,20 Q168,15 175,30 Q190,35 185,48 Q192,55 180,60 Q175,65 160,62 Q140,70 120,64 Q100,72 80,65 Q60,70 45,62 Q30,66 20,55 Z",
+    // Flat-bottomed fluffy
+    "M15,58 Q20,50 35,45 Q40,25 60,22 Q70,10 90,18 Q105,5 125,15 Q140,8 155,20 Q170,12 180,28 Q195,32 190,45 Q198,55 185,58 Q170,60 150,58 Q130,62 110,58 Q90,62 70,58 Q50,62 35,58 Q25,60 15,58 Z",
+    // Tall billowy
+    "M18,60 Q22,55 28,50 Q30,35 45,28 Q50,15 68,20 Q78,8 95,15 Q105,5 120,12 Q135,8 148,18 Q158,12 168,25 Q180,20 185,35 Q195,40 188,52 Q195,58 182,60 Q165,63 145,60 Q125,65 105,60 Q85,65 65,60 Q45,65 30,60 Q22,62 18,60 Z",
+  ];
+
   return (
     <svg
-      viewBox="0 0 200 80"
+      viewBox="0 0 200 70"
       fill="currentColor"
       className={className}
       aria-hidden="true"
     >
-      <ellipse cx="70" cy="50" rx="50" ry="25" />
-      <ellipse cx="100" cy="35" rx="40" ry="25" />
-      <ellipse cx="130" cy="50" rx="50" ry="25" />
-      <ellipse cx="90" cy="55" rx="60" ry="20" />
+      <path d={paths[variant % paths.length]} />
     </svg>
   );
 }
@@ -59,11 +65,11 @@ export function Hero({
 
       {/* Animated drifting clouds */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <Cloud className="absolute text-white/[0.03] w-64 top-[10%] animate-[drift_35s_linear_infinite]" />
-        <Cloud className="absolute text-white/[0.05] w-48 top-[25%] animate-[drift_45s_linear_infinite_5s]" />
-        <Cloud className="absolute text-white/[0.03] w-72 top-[50%] animate-[drift_55s_linear_infinite_12s]" />
-        <Cloud className="absolute text-white/[0.04] w-40 top-[70%] animate-[drift_40s_linear_infinite_20s]" />
-        <Cloud className="absolute text-white/[0.03] w-56 top-[15%] animate-[drift_50s_linear_infinite_28s]" />
+        <Cloud variant={0} className="absolute text-white/[0.03] w-64 top-[10%] animate-[drift_35s_linear_infinite]" />
+        <Cloud variant={1} className="absolute text-white/[0.05] w-48 top-[25%] animate-[drift_45s_linear_infinite_5s]" />
+        <Cloud variant={2} className="absolute text-white/[0.03] w-72 top-[50%] animate-[drift_55s_linear_infinite_12s]" />
+        <Cloud variant={0} className="absolute text-white/[0.04] w-40 top-[70%] animate-[drift_40s_linear_infinite_20s]" />
+        <Cloud variant={1} className="absolute text-white/[0.03] w-56 top-[15%] animate-[drift_50s_linear_infinite_28s]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 w-full">
