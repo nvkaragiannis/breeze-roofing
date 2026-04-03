@@ -65,11 +65,15 @@ export function Hero({
 
       {/* Animated drifting clouds */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <Cloud variant={0} className="absolute text-white/[0.03] w-64 top-[10%] animate-[drift_35s_linear_infinite]" />
-        <Cloud variant={1} className="absolute text-white/[0.05] w-48 top-[25%] animate-[drift_45s_linear_infinite_5s]" />
-        <Cloud variant={2} className="absolute text-white/[0.03] w-72 top-[50%] animate-[drift_55s_linear_infinite_12s]" />
-        <Cloud variant={0} className="absolute text-white/[0.04] w-40 top-[70%] animate-[drift_40s_linear_infinite_20s]" />
-        <Cloud variant={1} className="absolute text-white/[0.03] w-56 top-[15%] animate-[drift_50s_linear_infinite_28s]" />
+        <Cloud variant={0} className="absolute text-white/[0.03] w-64 top-[8%] animate-[drift_35s_linear_infinite]" />
+        <Cloud variant={1} className="absolute text-white/[0.05] w-48 top-[22%] animate-[drift_45s_linear_infinite_5s]" />
+        <Cloud variant={2} className="absolute text-white/[0.03] w-72 top-[48%] animate-[drift_55s_linear_infinite_12s]" />
+        <Cloud variant={0} className="absolute text-white/[0.04] w-40 top-[68%] animate-[drift_40s_linear_infinite_20s]" />
+        <Cloud variant={1} className="absolute text-white/[0.03] w-56 top-[14%] animate-[drift_50s_linear_infinite_28s]" />
+        <Cloud variant={2} className="absolute text-white/[0.04] w-52 top-[35%] animate-[drift_42s_linear_infinite_8s]" />
+        <Cloud variant={0} className="absolute text-white/[0.03] w-44 top-[58%] animate-[drift_48s_linear_infinite_18s]" />
+        <Cloud variant={1} className="absolute text-white/[0.04] w-60 top-[78%] animate-[drift_38s_linear_infinite_25s]" />
+        <Cloud variant={2} className="absolute text-white/[0.03] w-36 top-[42%] animate-[drift_52s_linear_infinite_32s]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 w-full">
