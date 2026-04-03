@@ -67,7 +67,7 @@ export function Header({ transparent = false }: HeaderProps) {
               </Link>
               <a
                 href={company.phoneTel}
-                className="hidden sm:inline-flex items-center gap-1.5 bg-emergency/10 text-emergency border border-emergency/20 text-xs font-semibold px-2.5 py-1 rounded-full hover:bg-emergency hover:text-white transition-colors"
+                className="hidden sm:inline-flex items-center gap-1.5 bg-emergency text-white text-xs font-semibold px-2.5 py-1 rounded-full hover:bg-emergency/80 transition-colors"
               >
                 <Phone className="w-3 h-3" />
                 <span>24/7 Emergency</span>
