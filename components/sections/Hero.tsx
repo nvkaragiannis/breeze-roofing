@@ -15,6 +15,22 @@ interface HeroProps {
   backgroundImage?: string;
 }
 
+function Cloud({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 200 80"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <ellipse cx="70" cy="50" rx="50" ry="25" />
+      <ellipse cx="100" cy="35" rx="40" ry="25" />
+      <ellipse cx="130" cy="50" rx="50" ry="25" />
+      <ellipse cx="90" cy="55" rx="60" ry="20" />
+    </svg>
+  );
+}
+
 export function Hero({
   headline = "Wilmington's Trusted Roofing Contractor",
   subheadline = "Family-owned. Fortified Roof certified. Built for the coast. Free inspections and 24/7 emergency service.",
@@ -39,6 +55,15 @@ export function Hero({
             backgroundSize: "50px 50px",
           }}
         />
+      </div>
+
+      {/* Animated drifting clouds */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <Cloud className="absolute text-white/[0.03] w-64 top-[10%] animate-[drift_35s_linear_infinite]" />
+        <Cloud className="absolute text-white/[0.05] w-48 top-[25%] animate-[drift_45s_linear_infinite_5s]" />
+        <Cloud className="absolute text-white/[0.03] w-72 top-[50%] animate-[drift_55s_linear_infinite_12s]" />
+        <Cloud className="absolute text-white/[0.04] w-40 top-[70%] animate-[drift_40s_linear_infinite_20s]" />
+        <Cloud className="absolute text-white/[0.03] w-56 top-[15%] animate-[drift_50s_linear_infinite_28s]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 w-full">

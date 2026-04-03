@@ -49,3 +49,13 @@ body {
   transform: translateX(-50%);
   top: 0.5rem;
 }
+
+/* Cloud drift animation */
+@keyframes drift {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 120%;
+  }
+}
