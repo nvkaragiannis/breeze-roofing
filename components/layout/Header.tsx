@@ -50,27 +50,29 @@ export function Header({ transparent = false }: HeaderProps) {
           background: "linear-gradient(to right, #7BA7BC, #A3C4D4, #d4e5ec, #ffffff)"
         } : undefined}
       >
-        {/* Emergency Top Bar */}
-        <div className="bg-emergency text-white text-center text-xs sm:text-sm font-medium py-1.5 px-4">
-          <a href={company.phoneTel} className="hover:underline">
-            Available 24/7 for Emergency Services — Call {company.phoneFormatted}
-          </a>
-        </div>
-
         {/* Main Header Bar */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
-            <Link href="/" className="shrink-0">
-              <Image
-                src="/breeze_roofing_logo_white_background.jpeg"
-                alt="Breeze Roofing - Simple as a Breeze"
-                width={220}
-                height={55}
-                priority
-                className="h-10 lg:h-12 w-auto"
-              />
-            </Link>
+            {/* Logo + Emergency Badge */}
+            <div className="flex items-center gap-3">
+              <Link href="/" className="shrink-0">
+                <Image
+                  src="/breeze_roofing_logo_white_background.jpeg"
+                  alt="Breeze Roofing - Simple as a Breeze"
+                  width={220}
+                  height={55}
+                  priority
+                  className="h-10 lg:h-12 w-auto"
+                />
+              </Link>
+              <a
+                href={company.phoneTel}
+                className="hidden sm:inline-flex items-center gap-1.5 bg-emergency/10 text-emergency border border-emergency/20 text-xs font-semibold px-2.5 py-1 rounded-full hover:bg-emergency hover:text-white transition-colors"
+              >
+                <Phone className="w-3 h-3" />
+                <span>24/7 Emergency</span>
+              </a>
+            </div>
 
             {/* Desktop: Trust stats + Phone + CTA */}
             <div className="hidden lg:flex items-center gap-6">
@@ -216,12 +218,12 @@ export function Header({ transparent = false }: HeaderProps) {
 
       {/* Spacer: pushes page content below the fixed header + emergency bar */}
       {!transparent && (
-        <div className="h-24 lg:h-[calc(5rem+75px)]" aria-hidden="true" />
+        <div className="h-16 lg:h-[calc(5rem+44px)]" aria-hidden="true" />
       )}
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 top-[6.5rem] z-40">
+        <div className="lg:hidden fixed inset-0 top-[5rem] z-40">
           <div
             className="absolute inset-0 bg-black/30"
             onClick={() => setMobileOpen(false)}
