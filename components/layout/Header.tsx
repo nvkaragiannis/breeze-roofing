@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Phone, Menu, X, ChevronDown, Star } from "lucide-react";
+import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { company } from "@/lib/data/company";
 import { mainNav } from "@/lib/data/navigation";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { TrustBar } from "@/components/sections/TrustBar";
 
 interface HeaderProps {
   /** true = transparent over hero (homepage). false = solid white (inner pages) */
@@ -74,21 +75,14 @@ export function Header({ transparent = false }: HeaderProps) {
               </a>
             </div>
 
-            {/* Desktop: Trust stats + Phone + CTA */}
+            {/* Desktop: Trust signals + Phone + CTA */}
             <div className="hidden lg:flex items-center gap-6">
-              <div className={cn(
-                "flex items-center gap-1.5 text-sm",
-                isTransparent ? "text-white/70" : "text-gray-600"
-              )}>
-                <Star className="w-4 h-4 text-amber fill-amber" />
-                <span className={cn(
-                  "font-semibold",
-                  isTransparent ? "text-white" : "text-gray-900"
-                )}>
-                  {company.reviewRating}
-                </span>
-                <span>({company.reviewCount}+ reviews)</span>
-              </div>
+              <TrustBar
+                variant="compact"
+                className={cn(
+                  isTransparent ? "text-white/80" : "text-gray-600"
+                )}
+              />
 
               <div className={cn(
                 "w-px h-6",

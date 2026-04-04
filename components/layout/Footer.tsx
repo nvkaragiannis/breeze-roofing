@@ -3,11 +3,17 @@ import Image from "next/image";
 import { company } from "@/lib/data/company";
 import { footerLinks } from "@/lib/data/navigation";
 import Link from "next/link";
+import { TrustBar } from "@/components/sections/TrustBar";
 
 export function Footer() {
   return (
     <footer className="bg-navy text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        {/* Trust signals row */}
+        <div className="mb-12 pb-8 border-b border-white/10">
+          <TrustBar variant="compact" className="text-white/60 justify-center" />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
           {/* Column 1: Logo + Tagline + License */}
           <div>

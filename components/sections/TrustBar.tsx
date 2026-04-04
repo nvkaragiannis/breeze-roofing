@@ -1,5 +1,6 @@
 import { Star, Shield, Users, Award, Clock } from "lucide-react";
 import { company } from "@/lib/data/company";
+import { cn } from "@/lib/utils";
 
 const trustItems = [
   {
@@ -29,7 +30,45 @@ const trustItems = [
   },
 ];
 
-export function TrustBar() {
+const compactTrustItems = [
+  {
+    icon: Star,
+    label: `${company.reviewRating} Google Rating`,
+  },
+  {
+    icon: Shield,
+    label: "Licensed & Insured",
+  },
+  {
+    icon: Award,
+    label: "Fortified Certified",
+  },
+];
+
+interface TrustBarProps {
+  variant?: "section" | "compact";
+  className?: string;
+}
+
+export function TrustBar({ variant = "section", className }: TrustBarProps) {
+  // Compact variant for Header/Footer
+  if (variant === "compact") {
+    return (
+      <div className={cn("flex items-center gap-4", className)}>
+        {compactTrustItems.map((item) => {
+          const Icon = item.icon;
+          return (
+            <div key={item.label} className="flex items-center gap-1.5 shrink-0">
+              <Icon className="w-4 h-4" />
+              <span className="text-sm whitespace-nowrap">{item.label}</span>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+
+  // Section variant for homepage (default)
   return (
     <section className="bg-white border-y border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
