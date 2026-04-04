@@ -21,25 +21,25 @@ progress:
 
 **Core Value:** When someone searches anything roofing-related in Wilmington NC, Breeze Roofing appears first — and they convert within 60 seconds.
 
-**Current Focus:** Content enrichment Phase 5 - Area data model extended with rich local context and validation tests
+**Current Focus:** Content enrichment Phase 6 - Blog validation infrastructure and service-to-blog linking
 
 ## Current Position
 
-**Phase:** 05-content-enrichment-service-areas (COMPLETE - 2 of 2 plans done)
-**Plan:** 05-02 complete
-**Status:** Rich locally-differentiated content written for all 8 areas (500+ words each). Area page template enhanced with local context, coastal conditions, and internal linking sections. TDD GREEN phase complete.
+**Phase:** 06-content-enrichment-storm-insurance-blog (IN PROGRESS - 1 of 3 plans done)
+**Plan:** 06-01 complete
+**Status:** TDD validation tests created for all 6 BLOG requirements (RED phase). Service interface extended with relatedBlogSlugs for bidirectional topic cluster linking. 18 tests created (6 RED, 12 GREEN).
 
-**Progress:** [██████████] 100%
+**Progress:** [██████████░] 93% (14 of 15 plans complete across all phases)
 
 ## Performance Metrics
 
 ### Roadmap Metrics
 - **Phases complete:** 5/6
-- **Phases in progress:** 0 (Phase 6 ready for planning)
+- **Phases in progress:** 1 (Phase 6: 1 of 3 plans complete)
 - **Total v1 requirements:** 38
 - **Requirements complete:** 28 (DESIGN-06, DESIGN-04, DESIGN-01, DESIGN-03, SEO-09, SEO-10, SEO-01, CONV-01, CONV-04, CONV-07, CONV-08, CONV-05, CONV-06, CONV-02, CONV-03, SEO-06, SEO-07, SEO-08, LOCAL-01, LOCAL-02, LOCAL-03, LOCAL-04, AREA-01, AREA-02, AREA-04, AREA-05)
-- **Requirements partial:** AREA-03 (testimonialNames pending location data confirmation)
-- **Requirements remaining:** 10 (BLOG-01 through BLOG-10 in Phase 6)
+- **Requirements partial:** AREA-03 (testimonialNames pending location data confirmation), BLOG-01 through BLOG-06 (validation tests created, content pending)
+- **Requirements remaining:** 4 (BLOG-07 through BLOG-10)
 
 ### Quality Indicators
 - **Coverage:** 38/38 requirements mapped (100%)
@@ -63,6 +63,7 @@ progress:
 | 04    | 02   | 320s     | 2     | 2     | 2       | 2026-04-04 |
 | 05    | 01   | 848s     | 2     | 3     | 2       | 2026-04-04 |
 | 05    | 02   | 704s     | 2     | 3     | 2       | 2026-04-04 |
+| 06    | 01   | 233s     | 2     | 2     | 2       | 2026-04-04 |
 
 ## Accumulated Context
 
@@ -101,6 +102,9 @@ progress:
 32. **Substantive word count expansion (05-02):** Expanded all area content fields with genuine local details (landmarks, hurricane specifics, building characteristics) rather than filler. All areas now 500-700 words with unique, valuable content.
 33. **Priority services visual hierarchy (05-02):** Amber background with "Recommended" badge highlights relevant services per area. Matches existing design system colors and provides clear guidance without overwhelming page design.
 34. **Inline blog title mapping (05-02):** Simple title mapping object avoids build-time blog metadata imports. Clean, maintainable approach for static generation.
+35. **TDD validation contracts before content (06-01):** Created validation tests that intentionally fail (RED phase) before writing blog content. Tests establish clear contract for Plan 02 (content creation) and define "done" criteria before writing begins.
+36. **Forward-referencing blog slugs (06-01):** Service data includes relatedBlogSlugs for posts that don't exist yet. This is intentional — when Plan 02 creates posts, service-to-blog mappings are already in place for Plan 03 wiring.
+37. **Optional relatedBlogSlugs field (06-01):** Added as optional field to Service interface to maintain backward compatibility. No breaking changes to existing service data structure.
 
 ### Open Questions
 1. Do we need competitive analysis before Phase 5 area page content? (Research suggests optional lightweight audit)
@@ -118,6 +122,10 @@ progress:
 None currently. Roadmap approved and ready for phase planning.
 
 ### Recent Changes
+- 2026-04-04: Plan 06-01 complete - TDD validation tests created for all 6 BLOG requirements (RED phase). Service interface extended with relatedBlogSlugs for bidirectional topic cluster linking. 18 tests created (6 RED for content gaps, 12 GREEN for existing compliance).
+- 2026-04-04: Blog content validation tests cover storm damage, insurance claims, educational content, FORTIFIED roofing, seasonal/coastal maintenance, and bidirectional linking requirements
+- 2026-04-04: All 9 services now have 2-3 related blog slugs mapped (includes planned posts that will be created in Plan 02)
+- 2026-04-04: Tests identified 3 existing posts with frontmatter issues (title/description length, unapproved category) to fix in Plan 02
 - 2026-04-04: Plan 05-02 complete - Rich content written for all 8 service areas (500+ words each). Area page template enhanced with local context, coastal conditions, related resources, and priority services sections. TDD GREEN phase complete (11 tests passing, 1 skipped). Phase 5 complete.
 - 2026-04-04: All 8 areas now have unique, locally-differentiated content with real landmarks, hurricane history, and building characteristics
 - 2026-04-04: Area pages include contextual internal links to relevant blog posts and highlighted priority services
@@ -170,21 +178,21 @@ None currently. Roadmap approved and ready for phase planning.
 ## Session Continuity
 
 ### For Next Session
-**Start here:** Phase 5 complete! All 8 area pages now have 500+ words of unique, locally-differentiated content. Area page template enhanced with local context sections.
+**Start here:** Plan 06-01 complete! TDD validation infrastructure established for blog content. Tests are in RED phase (6 failing, 12 passing) — ready for Plan 02 content creation.
 
-**Phase 5 summary (COMPLETE - 2 of 2 plans done):**
-- **Goal:** Enrich area pages with local context, coastal factors, social proof, and internal linking ✓
-- **Requirements:** 5 total (AREA-01 ✓, AREA-02 ✓, AREA-03 ⊙ partial, AREA-04 ✓, AREA-05 ✓)
-- **Progress:** 4/5 requirements complete, 1 partial (testimonials pending location data)
-- **Outcome:** Rich content for 8 areas, enhanced template with 4 new sections, TDD GREEN phase complete
+**Phase 6 summary (IN PROGRESS - 1 of 3 plans done):**
+- **Goal:** Create storm damage, insurance claims, and FORTIFIED blog content with bidirectional service linking
+- **Requirements:** 10 total (BLOG-01 through BLOG-10)
+- **Progress:** BLOG-01 through BLOG-06 validation tests created (RED phase), BLOG-07 through BLOG-10 pending
+- **Outcome:** 18 validation tests created, Service interface extended with blog slug mappings for 9 services
 
 **What you need to know:**
-- All 8 areas have 500+ words with genuine local differentiation (landmarks, hurricane history, building characteristics)
-- Area page template renders local context, coastal conditions, related resources, and priority services sections
-- Content uniqueness validated: all area pairs <30% Jaccard similarity
-- 11 area content tests passing, 1 skipped (testimonials pending data from Brett)
-- AREA-03 partially complete: Need Brett to confirm which reviews came from which areas
-- Ready for Phase 6: Blog content enrichment (10 requirements: BLOG-01 through BLOG-10)
+- Blog validation tests cover 6 requirements: storm/hurricane, insurance claims, educational, FORTIFIED, seasonal/coastal, bidirectional links
+- Current test results: 6 RED (content gaps), 12 GREEN (existing posts comply)
+- Content gaps identified: insurance claims post, maintenance post, material comparison post, hurricane prep post, coastal maintenance post
+- Service-to-blog mappings ready for 9 services (includes forward references to planned posts)
+- 3 existing posts have frontmatter issues to fix: 2 titles too long, 1 description too long, 1 unapproved category
+- Ready for Plan 06-02: Write 5 new blog posts + fix existing post frontmatter (TDD GREEN phase)
 
 ### Session History
 1. **2026-04-03 — Project Initialization & Roadmap Creation**
