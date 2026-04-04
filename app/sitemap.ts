@@ -6,76 +6,85 @@ import { getAllPosts } from "@/lib/blog";
 const BASE_URL = "https://breezeroofingnc.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Use fixed date for all static pages (last content update: Phase 2 completion)
+  const staticLastModified = new Date("2026-04-04");
+
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${BASE_URL}/services`,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/areas`,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
       changeFrequency: "monthly",
-      priority: 0.9,
+      priority: 0.8,
     },
     {
       url: `${BASE_URL}/estimate`,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/about`,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/faq`,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/contact`,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/financing`,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/roofing-products`,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${BASE_URL}/leaf-solutions`,
+      lastModified: staticLastModified,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/blog`,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
       changeFrequency: "weekly",
       priority: 0.7,
     },
     {
       url: `${BASE_URL}/privacy-policy`,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
       changeFrequency: "yearly",
       priority: 0.2,
     },
     {
       url: `${BASE_URL}/terms`,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
       changeFrequency: "yearly",
       priority: 0.2,
     },
@@ -83,16 +92,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
     url: `${BASE_URL}/services/${service.slug}`,
-    lastModified: new Date(),
+    lastModified: staticLastModified,
     changeFrequency: "monthly",
     priority: 0.8,
   }));
 
   const areaPages: MetadataRoute.Sitemap = areas.map((area) => ({
     url: `${BASE_URL}/areas/${area.slug}`,
-    lastModified: new Date(),
+    lastModified: staticLastModified,
     changeFrequency: "monthly",
-    priority: 0.9,
+    priority: 0.8,
   }));
 
   const posts = getAllPosts();
