@@ -57,8 +57,8 @@
 
 ### Local SEO
 
-- [ ] **LOCAL-01**: NAP (Name/Address/Phone) consistent across entire site
-- [ ] **LOCAL-02**: Google Business Profile alignment — schema matches GBP exactly
+- [x] **LOCAL-01**: NAP (Name/Address/Phone) consistent across entire site
+- [x] **LOCAL-02**: Google Business Profile alignment — schema matches GBP exactly
 - [ ] **LOCAL-03**: Local references and context in service page content (not just area pages)
 - [ ] **LOCAL-04**: Citation strategy document for directory listings (Yelp, BBB, Angi, HomeAdvisor, etc.)
 
@@ -124,8 +124,8 @@
 | BLOG-04 | Phase 6 | Pending |
 | BLOG-05 | Phase 6 | Pending |
 | BLOG-06 | Phase 6 | Pending |
-| LOCAL-01 | Phase 4 | Pending |
-| LOCAL-02 | Phase 4 | Pending |
+| LOCAL-01 | Phase 4 | Complete |
+| LOCAL-02 | Phase 4 | Complete |
 | LOCAL-03 | Phase 4 | Pending |
 | LOCAL-04 | Phase 4 | Pending |
 

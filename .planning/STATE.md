@@ -2,43 +2,43 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-last_updated: "2026-04-04T02:20:30.742Z"
+status: executing
+last_updated: "2026-04-04T02:38:58Z"
 progress:
   total_phases: 6
-  completed_phases: 3
-  total_plans: 9
-  completed_plans: 9
-  percent: 89
+  completed_phases: 4
+  total_plans: 11
+  completed_plans: 11
+  percent: 100
 ---
 
 # Project State: Breeze Roofing NC Redesign
 
 **Last updated:** 2026-04-04
-**Status:** Ready to plan
+**Status:** Phase 04 complete
 
 ## Project Reference
 
 **Core Value:** When someone searches anything roofing-related in Wilmington NC, Breeze Roofing appears first — and they convert within 60 seconds.
 
-**Current Focus:** SEO technical foundation - sitemap and metadata optimization (Phase 3 in progress)
+**Current Focus:** Local SEO hardening complete - NAP consistency, service page local context, citation strategy
 
 ## Current Position
 
-**Phase:** 03-seo-technical-foundation (Plan 1 of 2 complete)
-**Plan:** 03-01 complete
-**Status:** Phase 3 Plan 01 complete - Enhanced JSON-LD structured data with image/logo properties and BreadcrumbList schema on 14+ pages
+**Phase:** 04-local-seo-hardening (Plan 2 of 2 complete)
+**Plan:** 04-02 complete
+**Status:** Phase 4 complete - Service pages enhanced with coastal NC local context, citation strategy document created
 
-**Progress:** [█████████░] 89%
+**Progress:** [██████████] 100%
 
 ## Performance Metrics
 
 ### Roadmap Metrics
-- **Phases complete:** 2/6
-- **Phases in progress:** 0 (Phase 02 complete)
+- **Phases complete:** 4/6
+- **Phases in progress:** 0 (Phase 04 complete)
 - **Total v1 requirements:** 38
-- **Requirements complete:** 15 (DESIGN-06, DESIGN-04, DESIGN-01, DESIGN-03, SEO-09, SEO-10, SEO-01, CONV-01, CONV-04, CONV-07, CONV-08, CONV-05, CONV-06, CONV-02, CONV-03)
-- **Requirements in progress:** Ready for Phase 03 planning
+- **Requirements complete:** 19 (DESIGN-06, DESIGN-04, DESIGN-01, DESIGN-03, SEO-09, SEO-10, SEO-01, CONV-01, CONV-04, CONV-07, CONV-08, CONV-05, CONV-06, CONV-02, CONV-03, SEO-06, SEO-07, SEO-08, LOCAL-01, LOCAL-02, LOCAL-03, LOCAL-04)
+- **Requirements in progress:** Ready for Phase 05 planning
 
 ### Quality Indicators
 - **Coverage:** 38/38 requirements mapped (100%)
@@ -55,9 +55,11 @@ progress:
 | 02    | 01   | 149s     | 2     | 5     | 2       | 2026-04-04 |
 | 02    | 02   | 244s     | 2     | 4     | 2       | 2026-04-04 |
 | 02    | 03   | 130s     | 2     | 2     | 2       | 2026-04-04 |
-| Phase 02 P03 | 130 | 2 tasks | 2 files |
-| Phase 03 P02 | 129 | 2 tasks | 1 files |
-| Phase 03 P01 | 304 | 2 tasks | 14 files |
+| 02    | 03   | 130s     | 2     | 2     | 2       | 2026-04-04 |
+| 03    | 01   | 304s     | 2     | 14    | 2       | 2026-04-04 |
+| 03    | 02   | 129s     | 2     | 1     | 2       | 2026-04-04 |
+| 04    | 01   | 330s     | 2     | 13    | 2       | 2026-04-04 |
+| 04    | 02   | 320s     | 2     | 2     | 2       | 2026-04-04 |
 
 ## Accumulated Context
 
@@ -85,6 +87,10 @@ progress:
 21. **Dual CTA strategy (02-03):** Closing section offers both phone and form CTAs to capture users with different conversion preferences
 22. **Fixed date for static pages (03-02):** Using new Date() causes false content updates to Google. Fixed date (2026-04-04) accurately reflects Phase 2 completion when pages were last modified.
 23. **Blog posts retain actual dates (03-02):** Blog posts use post.date from frontmatter (actual publication date). This is correct behavior and should not be changed to fixed date.
+24. **Natural local context approach (04-02):** Added 1-2 local references per section without keyword stuffing. Varied terminology (Wilmington, coastal NC, Cape Fear region) for natural readability. Focused on explaining why location matters rather than inserting keywords.
+25. **Citation tiers reflect priority (04-02):** Organized 15 directories into 3 tiers based on authority (Tier 1), industry relevance (Tier 2), and local/regional value (Tier 3). Recommended starting with free listings before evaluating paid directories.
+26. **Maintenance built into citation strategy (04-02):** Added quarterly/annual maintenance schedule to prevent citation decay. Many businesses build citations once and forget—stale data hurts local SEO.
+27. **Practical over exhaustive citations (04-02):** Focused on top 15 directories rather than exhaustive 100+ directory submission. Research shows diminishing returns after major directories. For single-location business, manual focus on quality over automated quantity.
 
 ### Open Questions
 1. Do we need competitive analysis before Phase 5 area page content? (Research suggests optional lightweight audit)
@@ -102,9 +108,13 @@ progress:
 None currently. Roadmap approved and ready for phase planning.
 
 ### Recent Changes
-- 2026-04-04: Plan 03-01 complete - Enhanced JSON-LD structured data with image/logo properties for RoofingContractor and Article schemas, plus BreadcrumbList JSON-LD added to 14 pages
-- 2026-04-04: RoofingContractor schema enhanced with image and logo properties meeting Google Rich Results requirements
-- 2026-04-04: Article schema enhanced with optional image parameter and publisher logo for blog posts
+- 2026-04-04: Plan 04-02 complete - Service pages enhanced with coastal NC local context, citation strategy document created with 15 directories and NAP checklist
+- 2026-04-04: All 10 service pages now contain natural coastal NC references (salt air, hurricanes, wind zones, building codes)
+- 2026-04-04: Citation strategy document provides actionable directory submission guide organized by priority tiers
+- 2026-04-04: Phase 4 (Local SEO Hardening) fully complete - all 4 requirements fulfilled (LOCAL-01, LOCAL-02, LOCAL-03, LOCAL-04)
+- 2026-04-04: Plan 04-01 complete - NAP data completed in company.ts, schema enhanced for GBP alignment with opening hours and service areas
+- 2026-04-04: Plan 03-02 complete - Sitemap fixed with realistic dates, leaf-solutions page added, all 43+ pages verified with unique metadata
+- 2026-04-04: Plan 03-01 complete - Enhanced JSON-LD structured data with image/logo properties for RoofingContractor and Article schemas
 - 2026-04-04: BreadcrumbList JSON-LD added to all pages (13 static pages + 1 dynamic blog post page) for complete structured data coverage
 - 2026-04-04: Hero image used as fallback for schema image properties to provide professional default while allowing future customization
 - 2026-04-04: Plan 03-02 complete - Sitemap fixed with realistic dates, leaf-solutions page added, all 43+ pages verified with unique metadata and canonical URLs
@@ -142,21 +152,21 @@ None currently. Roadmap approved and ready for phase planning.
 ## Session Continuity
 
 ### For Next Session
-**Start here:** Phase 3 Plan 02 complete! SEO technical foundation progressing (sitemap & metadata done)
+**Start here:** Phase 4 complete! Local SEO foundation hardened with NAP consistency, local context, and citation strategy.
 
-**Phase 3 context (IN PROGRESS - 2 of 2 plans complete):**
-- **Goal:** Establish SEO technical foundation for Google discovery and indexing
-- **Requirements:** 3 total (SEO-06, SEO-07, SEO-08)
-- **Progress:** 3/3 requirements complete (SEO-06, SEO-07, SEO-08)
-- **Success criteria:** Sitemap complete with accurate dates, unique metadata across all pages, canonical URLs set
+**Phase 4 context (COMPLETE - 2 of 2 plans done):**
+- **Goal:** Harden local SEO foundation for "near me" searches and location-based queries
+- **Requirements:** 4 total (LOCAL-01, LOCAL-02, LOCAL-03, LOCAL-04)
+- **Progress:** 4/4 requirements complete (LOCAL-01, LOCAL-02, LOCAL-03, LOCAL-04)
+- **Success criteria:** NAP consistent across site, schema aligned with GBP, service pages have local context, citation strategy documented
 
 **What you need to know:**
-- Sitemap uses fixed date (2026-04-04) for static pages, actual dates for blog posts
-- All 43+ pages verified with unique meta titles and descriptions
-- Canonical URLs present on all pages
-- Homepage internal linking confirmed (services, areas, blog, estimate)
-- leaf-solutions page now included in sitemap
-- Phase 3 complete! Next: Phase 4 planning (Local SEO - NAP, schema markup, location optimization)
+- NAP data completed in company.ts (address, phone, email all set - license/year still placeholder pending Brett input)
+- RoofingContractor schema enhanced with opening hours and service areas for GBP alignment
+- All 10 service pages now contain coastal NC local references (salt air, hurricanes, building codes)
+- Citation strategy document created with 15 directories organized by priority tiers
+- Maintenance schedule built into citation strategy (quarterly checks, annual audit)
+- Phase 4 complete! Next: Phase 5 planning (Area page content enrichment) or Phase 6 (Blog content)
 
 ### Session History
 1. **2026-04-03 — Project Initialization & Roadmap Creation**
