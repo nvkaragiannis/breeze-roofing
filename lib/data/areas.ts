@@ -10,6 +10,32 @@ export interface ServiceArea {
   intro: string;
   challenges: string;
   neighborhoods?: string[];
+
+  // NEW: Rich local context (AREA-02)
+  localContext?: {
+    landmarks: string[];            // Famous local landmarks (verifiable, real places)
+    geographicPosition: string;     // Barrier island vs mainland, riverfront, etc. (paragraph)
+    buildingCharacteristics: string; // Typical building stock (paragraph)
+    communityProfile: string;       // What makes this area unique (paragraph)
+  };
+
+  // NEW: Coastal/building specifics (AREA-04)
+  coastalFactors?: {
+    windZone: string;               // e.g., "130+ mph design wind speed"
+    saltAirExposure: "high" | "moderate" | "low";
+    hurricaneHistory: string;       // Notable storms affecting this area (paragraph)
+    buildingConsiderations: string;  // Code and prep guidance (paragraph)
+  };
+
+  // NEW: Social proof (AREA-03)
+  testimonialNames?: string[];      // Names from reviews.ts for this area
+
+  // NEW: Featured project (AREA-03)
+  featuredProjectDescription?: string;
+
+  // NEW: Internal linking (AREA-05)
+  relatedBlogSlugs?: string[];     // 2-3 most relevant blog post slugs
+  priorityServices?: string[];     // Service slugs especially relevant to this area
 }
 
 export const areas: ServiceArea[] = [

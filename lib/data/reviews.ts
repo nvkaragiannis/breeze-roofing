@@ -3,6 +3,7 @@ export interface Review {
   text: string;
   rating: number;
   source: "google";
+  location?: string; // Optional location field (e.g., "Wilmington", "Carolina Beach")
 }
 
 export const reviews: Review[] = [
