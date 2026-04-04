@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-last_updated: "2026-04-04T01:44:15.011Z"
+last_updated: "2026-04-04T02:12:30.630Z"
 progress:
   total_phases: 6
   completed_phases: 2
-  total_plans: 7
-  completed_plans: 7
-  percent: 100
+  total_plans: 9
+  completed_plans: 8
+  percent: 89
 ---
 
 # Project State: Breeze Roofing NC Redesign
@@ -21,15 +21,15 @@ progress:
 
 **Core Value:** When someone searches anything roofing-related in Wilmington NC, Breeze Roofing appears first — and they convert within 60 seconds.
 
-**Current Focus:** Conversion architecture - trust signals and CTA optimization (Phase 2 in progress)
+**Current Focus:** SEO technical foundation - sitemap and metadata optimization (Phase 3 in progress)
 
 ## Current Position
 
-**Phase:** 02-conversion-architecture (Plan 3 of 3 complete)
-**Plan:** 02-03 complete
-**Status:** Phase 2 complete - Estimate page conversion optimization with production-ready Roofr embed and multi-layered trust signals
+**Phase:** 03-seo-technical-foundation (Plan 2 of 2 complete)
+**Plan:** 03-02 complete
+**Status:** Phase 3 Plan 02 complete - Sitemap fixed with realistic dates, all 43+ pages verified with unique metadata and canonical URLs
 
-**Progress:** [██████████] 100%
+**Progress:** [█████████░] 89%
 
 ## Performance Metrics
 
@@ -56,6 +56,7 @@ progress:
 | 02    | 02   | 244s     | 2     | 4     | 2       | 2026-04-04 |
 | 02    | 03   | 130s     | 2     | 2     | 2       | 2026-04-04 |
 | Phase 02 P03 | 130 | 2 tasks | 2 files |
+| Phase 03 P02 | 129 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -81,6 +82,8 @@ progress:
 19. **Secure iframe embed (02-03):** Chose iframe src approach over unsafe HTML injection for Roofr embed security and standard third-party embed pattern compliance
 20. **Multi-layered trust signals (02-03):** Positioned trust reinforcement at 3 conversion touchpoints (pre-engagement, mid-consideration, post-FAQ) to reduce abandonment
 21. **Dual CTA strategy (02-03):** Closing section offers both phone and form CTAs to capture users with different conversion preferences
+22. **Fixed date for static pages (03-02):** Using new Date() causes false content updates to Google. Fixed date (2026-04-04) accurately reflects Phase 2 completion when pages were last modified.
+23. **Blog posts retain actual dates (03-02):** Blog posts use post.date from frontmatter (actual publication date). This is correct behavior and should not be changed to fixed date.
 
 ### Open Questions
 1. Do we need competitive analysis before Phase 5 area page content? (Research suggests optional lightweight audit)
@@ -98,6 +101,11 @@ progress:
 None currently. Roadmap approved and ready for phase planning.
 
 ### Recent Changes
+- 2026-04-04: Plan 03-02 complete - Sitemap fixed with realistic dates, leaf-solutions page added, all 43+ pages verified with unique metadata and canonical URLs
+- 2026-04-04: Sitemap uses fixed date (2026-04-04) for static pages to prevent false content update signals to Google
+- 2026-04-04: Blog posts retain actual publication dates from post.date frontmatter (correct behavior)
+- 2026-04-04: Verified all 43+ pages have unique meta titles, unique meta descriptions, and canonical URLs
+- 2026-04-04: Homepage internal linking confirmed (ServicesGrid, ServiceAreasMap, BlogPreview, EstimateSection)
 - 2026-04-04: Plan 02-03 complete - Estimate page conversion optimization with production-ready Roofr iframe embed and multi-layered trust signals
 - 2026-04-04: InstantEstimatorEmbed enhanced with optional embedUrl prop, dynamic height state, and secure iframe rendering
 - 2026-04-04: Estimate page now displays trust signals at 3 touchpoints (pre-engagement TrustBar, mid-flow trust grid, closing dual CTA)
@@ -128,21 +136,21 @@ None currently. Roadmap approved and ready for phase planning.
 ## Session Continuity
 
 ### For Next Session
-**Start here:** Phase 2 complete! Ready for Phase 3 planning (SEO Technical Foundation)
+**Start here:** Phase 3 Plan 02 complete! SEO technical foundation progressing (sitemap & metadata done)
 
-**Phase 2 context (COMPLETE):**
-- **Goal:** Optimize conversion funnel with trust signals, warranties, and estimate flow
-- **Requirements:** 8 total (CONV-01 through CONV-08)
-- **Progress:** 8/8 requirements complete (CONV-01, CONV-02, CONV-03, CONV-04, CONV-05, CONV-06, CONV-07, CONV-08)
-- **Success criteria:** Trust signals visible site-wide, service pages display warranties/timelines, estimate page conversion-optimized
+**Phase 3 context (IN PROGRESS - 2 of 2 plans complete):**
+- **Goal:** Establish SEO technical foundation for Google discovery and indexing
+- **Requirements:** 3 total (SEO-06, SEO-07, SEO-08)
+- **Progress:** 3/3 requirements complete (SEO-06, SEO-07, SEO-08)
+- **Success criteria:** Sitemap complete with accurate dates, unique metadata across all pages, canonical URLs set
 
 **What you need to know:**
-- TrustBar deployed in Header/Footer (compact variant) and homepage (section variant)
-- All 10 service pages display service-specific warranties and project timelines
-- Estimate page has multi-layered trust architecture (pre-engagement, mid-flow, closing CTA)
-- Roofr embed component production-ready for Brett's embed URL
-- EmergencyCTA and MobileCTABar optimized with motion-safe animations
-- Next phase: SEO Technical Foundation (meta tags, schema, sitemap optimization)
+- Sitemap uses fixed date (2026-04-04) for static pages, actual dates for blog posts
+- All 43+ pages verified with unique meta titles and descriptions
+- Canonical URLs present on all pages
+- Homepage internal linking confirmed (services, areas, blog, estimate)
+- leaf-solutions page now included in sitemap
+- Phase 3 complete! Next: Phase 4 planning (Local SEO - NAP, schema markup, location optimization)
 
 ### Session History
 1. **2026-04-03 — Project Initialization & Roadmap Creation**
