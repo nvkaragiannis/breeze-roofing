@@ -50,7 +50,7 @@ progress:
 |-------|------|----------|-------|-------|---------|-----------|
 | 01    | 01   | 157s     | 2     | 5     | 3       | 2026-04-04 |
 | 01    | 02   | 327s     | 2     | 22    | 2       | 2026-04-04 |
-| 01    | 03   | 159s     | 2     | 5     | 1       | 2026-04-04 |
+| 01    | 03   | 159s     | 2     | 5     | 2       | 2026-04-04 |
 | 01    | 04   | 137s     | 2     | 2     | 1       | 2026-04-04 |
 
 ## Accumulated Context
@@ -66,8 +66,11 @@ progress:
 8. **AVIF-first image strategy (01-02):** AVIF prioritized over WebP for 20-50% size reduction; Next.js Image component handles automatic fallback
 9. **Analytics placement (01-02):** Vercel Analytics and Speed Insights placed at end of body tag for non-blocking performance monitoring
 10. **Image organization (01-02):** Directory structure by content type (hero, projects, services, areas, brand) for better scalability
-11. **Gallery placeholder design (01-04):** Professional placeholder cards show location name and "Photos coming soon" for intentional appearance
-12. **Project data flexibility (01-04):** Optional beforeImage/afterImage fields allow incremental photo addition without code changes
+11. **Hero dual-mode design (01-03):** Hero supports photo background (with priority Image) OR gradient fallback with clouds for flexible content staging
+12. **Staggered animations (01-03):** Sequential entrance delays (0.1-0.15s per item) create polished reveal effect across homepage sections
+13. **Accessibility-first animations (01-03):** All homepage section animations include motion-reduce:opacity-100 for reduced-motion user preference
+14. **Gallery placeholder design (01-04):** Professional placeholder cards show location name and "Photos coming soon" for intentional appearance
+15. **Project data flexibility (01-04):** Optional beforeImage/afterImage fields allow incremental photo addition without code changes
 
 ### Open Questions
 1. Do we need competitive analysis before Phase 5 area page content? (Research suggests optional lightweight audit)
@@ -86,6 +89,9 @@ None currently. Roadmap approved and ready for phase planning.
 
 ### Recent Changes
 - 2026-04-04: Plan 01-04 complete - Data-driven project gallery with 6 typed project entries and professional placeholder state
+- 2026-04-04: Plan 01-03 complete - Hero photo background support and homepage section animations with coastal branding
+- 2026-04-04: Hero enhanced with priority Image loading and dual-mode operation (photo OR gradient fallback)
+- 2026-04-04: Homepage sections animated with staggered entrance effects and motion-safe/motion-reduce accessibility
 - 2026-04-04: Phase 1 visual foundation fully complete (all 4 plans executed)
 - 2026-04-04: Plan 01-02 complete - Image optimization and performance monitoring established
 - 2026-04-04: AVIF format enabled with WebP fallback, Vercel Analytics and Speed Insights installed
