@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
@@ -13,6 +14,7 @@ interface HeroProps {
   secondaryCTA?: HeroCTA;
   trustItems?: string[];
   backgroundImage?: string;
+  backgroundAlt?: string;
 }
 
 function Cloud({ variant = 0, className }: { variant?: number; className?: string }) {
@@ -48,43 +50,62 @@ export function Hero({
     "Fortified Roof Certified",
     "24/7 Emergency Service",
   ],
+  backgroundImage,
+  backgroundAlt = "Breeze Roofing project in Wilmington NC",
 }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-navy via-navy to-navy-light overflow-hidden">
-      {/* Background pattern overlay */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 25% 25%, white 1px, transparent 1px)",
-            backgroundSize: "50px 50px",
-          }}
-        />
-      </div>
+      {/* Conditional background: photo or gradient pattern */}
+      {backgroundImage ? (
+        <>
+          <Image
+            src={backgroundImage}
+            alt={backgroundAlt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-navy/60" />
+        </>
+      ) : (
+        <>
+          {/* Background pattern overlay */}
+          <div className="absolute inset-0 opacity-5">
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle at 25% 25%, white 1px, transparent 1px)",
+                backgroundSize: "50px 50px",
+              }}
+            />
+          </div>
 
-      {/* Animated drifting clouds */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <Cloud variant={0} className="absolute text-white/[0.03] w-64 top-[8%] animate-[drift_35s_linear_infinite]" />
-        <Cloud variant={1} className="absolute text-white/[0.05] w-48 top-[22%] animate-[drift_45s_linear_infinite_5s]" />
-        <Cloud variant={2} className="absolute text-white/[0.03] w-72 top-[48%] animate-[drift_55s_linear_infinite_12s]" />
-        <Cloud variant={0} className="absolute text-white/[0.04] w-40 top-[68%] animate-[drift_40s_linear_infinite_20s]" />
-        <Cloud variant={1} className="absolute text-white/[0.03] w-56 top-[14%] animate-[drift_50s_linear_infinite_28s]" />
-        <Cloud variant={2} className="absolute text-white/[0.04] w-52 top-[35%] animate-[drift_42s_linear_infinite_8s]" />
-        <Cloud variant={0} className="absolute text-white/[0.03] w-44 top-[58%] animate-[drift_48s_linear_infinite_18s]" />
-        <Cloud variant={1} className="absolute text-white/[0.04] w-60 top-[78%] animate-[drift_38s_linear_infinite_25s]" />
-        <Cloud variant={2} className="absolute text-white/[0.03] w-36 top-[42%] animate-[drift_52s_linear_infinite_32s]" />
-      </div>
+          {/* Animated drifting clouds */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <Cloud variant={0} className="absolute text-white/[0.03] w-64 top-[8%] animate-[drift_35s_linear_infinite]" />
+            <Cloud variant={1} className="absolute text-white/[0.05] w-48 top-[22%] animate-[drift_45s_linear_infinite_5s]" />
+            <Cloud variant={2} className="absolute text-white/[0.03] w-72 top-[48%] animate-[drift_55s_linear_infinite_12s]" />
+            <Cloud variant={0} className="absolute text-white/[0.04] w-40 top-[68%] animate-[drift_40s_linear_infinite_20s]" />
+            <Cloud variant={1} className="absolute text-white/[0.03] w-56 top-[14%] animate-[drift_50s_linear_infinite_28s]" />
+            <Cloud variant={2} className="absolute text-white/[0.04] w-52 top-[35%] animate-[drift_42s_linear_infinite_8s]" />
+            <Cloud variant={0} className="absolute text-white/[0.03] w-44 top-[58%] animate-[drift_48s_linear_infinite_18s]" />
+            <Cloud variant={1} className="absolute text-white/[0.04] w-60 top-[78%] animate-[drift_38s_linear_infinite_25s]" />
+            <Cloud variant={2} className="absolute text-white/[0.03] w-36 top-[42%] animate-[drift_52s_linear_infinite_32s]" />
+          </div>
+        </>
+      )}
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 w-full">
         <div className="max-w-3xl">
           <p className="text-sm md:text-base text-white/60 font-medium tracking-wide mb-4">
             4.9 Stars &middot; 50+ Google Reviews &middot; NC Licensed &middot; Fortified Certified
           </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight motion-safe:animate-fade-in">
             {headline}
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl">
+          <p className="mt-6 text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl opacity-0 motion-safe:animate-slide-up motion-reduce:opacity-100" style={{ animationDelay: '0.2s' }}>
             {subheadline}
           </p>
 
