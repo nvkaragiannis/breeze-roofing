@@ -69,8 +69,8 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Trust signals in Header/Footer and CTA enhancement (CONV-01, CONV-04, CONV-07, CONV-08)
-- [ ] 02-02-PLAN.md — Service page warranty and timeline sections (CONV-05, CONV-06)
+- [x] 02-01-PLAN.md — Trust signals in Header/Footer and CTA enhancement (CONV-01, CONV-04, CONV-07, CONV-08) ✓ 2026-04-04
+- [x] 02-02-PLAN.md — Service page warranty and timeline sections (CONV-05, CONV-06) ✓ 2026-04-04
 - [ ] 02-03-PLAN.md — Estimate page conversion optimization and Roofr embed (CONV-02, CONV-03)
 
 ---
