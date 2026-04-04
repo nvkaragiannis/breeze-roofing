@@ -27,7 +27,7 @@
 
 ### SEO Technical
 
-- [ ] **SEO-01**: Core Web Vitals passing on all pages (LCP <2.5s, CLS <0.1, INP <200ms)
+- [x] **SEO-01**: Core Web Vitals passing on all pages (LCP <2.5s, CLS <0.1, INP <200ms)
 - [ ] **SEO-02**: RoofingContractor JSON-LD schema on all pages (not generic LocalBusiness)
 - [ ] **SEO-03**: FAQPage schema on FAQ page and service pages with FAQ sections
 - [ ] **SEO-04**: Article schema on all blog posts with proper author, date, image markup
@@ -35,8 +35,8 @@
 - [ ] **SEO-06**: Optimized meta title and description unique to every page (no duplicates)
 - [ ] **SEO-07**: XML sitemap with proper priority and changefreq
 - [ ] **SEO-08**: Canonical URLs and proper internal linking architecture
-- [ ] **SEO-09**: Image optimization: WebP/AVIF format, lazy loading, proper alt text on all images
-- [ ] **SEO-10**: @vercel/analytics and @vercel/speed-insights installed for Core Web Vitals monitoring
+- [x] **SEO-09**: Image optimization: WebP/AVIF format, lazy loading, proper alt text on all images
+- [x] **SEO-10**: @vercel/analytics and @vercel/speed-insights installed for Core Web Vitals monitoring
 
 ### Content — Area Pages
 
@@ -103,7 +103,7 @@
 | CONV-06 | Phase 2 | Pending |
 | CONV-07 | Phase 2 | Pending |
 | CONV-08 | Phase 2 | Pending |
-| SEO-01 | Phase 1 | Pending |
+| SEO-01 | Phase 1 | Complete |
 | SEO-02 | Phase 3 | Pending |
 | SEO-03 | Phase 3 | Pending |
 | SEO-04 | Phase 3 | Pending |
@@ -111,8 +111,8 @@
 | SEO-06 | Phase 3 | Pending |
 | SEO-07 | Phase 3 | Pending |
 | SEO-08 | Phase 3 | Pending |
-| SEO-09 | Phase 1 | Pending |
-| SEO-10 | Phase 1 | Pending |
+| SEO-09 | Phase 1 | Complete |
+| SEO-10 | Phase 1 | Complete |
 | AREA-01 | Phase 5 | Pending |
 | AREA-02 | Phase 5 | Pending |
 | AREA-03 | Phase 5 | Pending |
