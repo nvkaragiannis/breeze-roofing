@@ -106,7 +106,7 @@ export default function LeafSolutionsPage() {
             <div className="space-y-8">
               <div className="bg-white rounded-xl overflow-hidden border border-gray-200">
                 <Image
-                  src="/SELF+SHEDDING+with+shingles+Xtreme+USE+copy-1920w.webp"
+                  src="/images/services/leaf-solution-self-shedding-xtreme.webp"
                   alt="XTreme Gutter Guard — aluminum gutter guard shedding leaves and debris from shingles"
                   width={960}
                   height={720}
@@ -126,7 +126,7 @@ export default function LeafSolutionsPage() {
 
               <div className="bg-white rounded-xl overflow-hidden border border-gray-200">
                 <Image
-                  src="/Leaf+Solution+SELF+SHED+DEBRIS+USE-1920w.webp"
+                  src="/images/services/leaf-solution-self-shed-debris.webp"
                   alt="Leaf Solution Gutter Guard — stainless steel mesh blocking debris while water flows through"
                   width={960}
                   height={720}
@@ -146,7 +146,7 @@ export default function LeafSolutionsPage() {
 
               <div className="bg-white rounded-xl overflow-hidden border border-gray-200">
                 <Image
-                  src="/56843992-0-new-wave-miter-1-1000x516-1920w.webp"
+                  src="/images/services/leaf-solution-new-wave-miter.webp"
                   alt="Leaf Solution New Wave Gutter Guard — low-profile miter corner design blending with roofline"
                   width={960}
                   height={500}

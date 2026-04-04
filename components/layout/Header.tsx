@@ -57,7 +57,7 @@ export function Header({ transparent = false }: HeaderProps) {
             <div className="flex items-center gap-3">
               <Link href="/" className="shrink-0">
                 <Image
-                  src="/breeze_roofing_logo_white_background.jpeg"
+                  src="/images/brand/breeze_roofing_logo_white_background.jpeg"
                   alt="Breeze Roofing - Simple as a Breeze"
                   width={220}
                   height={55}

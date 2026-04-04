@@ -13,7 +13,7 @@ export function Footer() {
           <div>
             <Link href="/" className="inline-block">
               <Image
-                src="/breeze_roofing_logo_white_background.jpeg"
+                src="/images/brand/breeze_roofing_logo_white_background.jpeg"
                 alt="Breeze Roofing - Simple as a Breeze"
                 width={200}
                 height={50}

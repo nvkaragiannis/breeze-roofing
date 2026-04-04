@@ -186,7 +186,7 @@ export default function FinancingPage() {
             {/* Momnt Financing Partner Banner */}
             <div className="mt-10">
               <Image
-                src="/momnt-web-banner-1650x320-statement.webp"
+                src="/images/services/momnt-financing-banner.webp"
                 alt="Momnt - Affordable financing options. Pre-qualify for financing today without impacting your credit score."
                 width={825}
                 height={160}
