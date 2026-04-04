@@ -4,8 +4,10 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { BreadcrumbNav } from "@/components/ui/BreadcrumbNav";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import { SchemaScript } from "@/components/ui/SchemaScript";
 import { Button } from "@/components/ui/Button";
 import { company } from "@/lib/data/company";
+import { getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "About Breeze Roofing — A Local Family Business",
@@ -17,8 +19,14 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: company.url },
+    { name: "About", url: `${company.url}/about` },
+  ]);
+
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <Header />
       <main id="main-content">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

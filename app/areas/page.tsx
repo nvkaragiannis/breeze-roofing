@@ -3,8 +3,11 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { BreadcrumbNav } from "@/components/ui/BreadcrumbNav";
+import { SchemaScript } from "@/components/ui/SchemaScript";
 import { AreaCard } from "@/components/ui/AreaCard";
 import { areas } from "@/lib/data/areas";
+import { getBreadcrumbSchema } from "@/lib/schema";
+import { company } from "@/lib/data/company";
 
 export const metadata: Metadata = {
   title: "Service Areas — Wilmington NC & Cape Fear Coast",
@@ -16,8 +19,14 @@ export const metadata: Metadata = {
 };
 
 export default function AreasPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: company.url },
+    { name: "Service Areas", url: `${company.url}/areas` },
+  ]);
+
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <Header />
       <main id="main-content">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

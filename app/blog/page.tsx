@@ -3,8 +3,11 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { BreadcrumbNav } from "@/components/ui/BreadcrumbNav";
+import { SchemaScript } from "@/components/ui/SchemaScript";
 import { BlogCard } from "@/components/ui/BlogCard";
 import { getAllPosts } from "@/lib/blog";
+import { getBreadcrumbSchema } from "@/lib/schema";
+import { company } from "@/lib/data/company";
 
 export const metadata: Metadata = {
   title: "Roofing Blog | Breeze Roofing Wilmington NC",
@@ -17,9 +20,14 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const posts = getAllPosts();
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: company.url },
+    { name: "Blog", url: `${company.url}/blog` },
+  ]);
 
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <Header />
       <main id="main-content">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

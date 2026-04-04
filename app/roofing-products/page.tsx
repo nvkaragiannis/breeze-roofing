@@ -3,7 +3,10 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { BreadcrumbNav } from "@/components/ui/BreadcrumbNav";
+import { SchemaScript } from "@/components/ui/SchemaScript";
 import { Button } from "@/components/ui/Button";
+import { getBreadcrumbSchema } from "@/lib/schema";
+import { company } from "@/lib/data/company";
 
 export const metadata: Metadata = {
   title: "Roofing Materials & Products | Breeze Roofing Wilmington NC",
@@ -67,8 +70,14 @@ const products = [
 ];
 
 export default function RoofingProductsPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: company.url },
+    { name: "Roofing Products", url: `${company.url}/roofing-products` },
+  ]);
+
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <Header />
       <main id="main-content">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -4,7 +4,10 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { InstantEstimatorEmbed } from "@/components/roofr/InstantEstimatorEmbed";
 import { TrustBar } from "@/components/sections/TrustBar";
+import { BreadcrumbNav } from "@/components/ui/BreadcrumbNav";
+import { SchemaScript } from "@/components/ui/SchemaScript";
 import { company } from "@/lib/data/company";
+import { getBreadcrumbSchema } from "@/lib/schema";
 import { Shield, Award, Star, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -54,10 +57,19 @@ const faqs = [
 ];
 
 export default function EstimatePage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: company.url },
+    { name: "Free Estimate", url: `${company.url}/estimate` },
+  ]);
+
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <Header />
       <main id="main-content">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BreadcrumbNav items={[{ name: "Home", href: "/" }, { name: "Free Estimate" }]} />
+        </div>
         <section className="py-12 md:py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">

@@ -5,8 +5,10 @@ import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { BreadcrumbNav } from "@/components/ui/BreadcrumbNav";
 import { EmergencyCTA } from "@/components/sections/EmergencyCTA";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import { SchemaScript } from "@/components/ui/SchemaScript";
 import { ContactForm } from "@/components/ContactForm";
 import { company } from "@/lib/data/company";
+import { getBreadcrumbSchema } from "@/lib/schema";
 import { Phone, Mail, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -19,8 +21,14 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: company.url },
+    { name: "Contact", url: `${company.url}/contact` },
+  ]);
+
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <Header />
       <main id="main-content">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

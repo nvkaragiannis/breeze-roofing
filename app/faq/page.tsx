@@ -4,7 +4,8 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { BreadcrumbNav } from "@/components/ui/BreadcrumbNav";
 import { SchemaScript } from "@/components/ui/SchemaScript";
-import { getFAQSchema } from "@/lib/schema";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { company } from "@/lib/data/company";
 
 export const metadata: Metadata = {
   title: "Roofing FAQ — Wilmington, NC",
@@ -70,10 +71,15 @@ const faqs = [
 
 export default function FAQPage() {
   const faqSchema = getFAQSchema(faqs);
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: company.url },
+    { name: "FAQ", url: `${company.url}/faq` },
+  ]);
 
   return (
     <>
       <SchemaScript schema={faqSchema} />
+      <SchemaScript schema={breadcrumbSchema} />
       <Header />
       <main id="main-content">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

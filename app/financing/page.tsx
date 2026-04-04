@@ -5,8 +5,10 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { BreadcrumbNav } from "@/components/ui/BreadcrumbNav";
+import { SchemaScript } from "@/components/ui/SchemaScript";
 import { Button } from "@/components/ui/Button";
 import { company } from "@/lib/data/company";
+import { getBreadcrumbSchema } from "@/lib/schema";
 
 const MOMNT_APPLY_URL =
   "https://app.momnt.com/widgets/?merchantId=51f213da-b9bc-4d76-bf95-e898abb76252&widget=ConsumerLoanApplicationWizard";
@@ -40,8 +42,14 @@ const faqs = [
 ];
 
 export default function FinancingPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: company.url },
+    { name: "Financing", url: `${company.url}/financing` },
+  ]);
+
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <Header />
       <main id="main-content">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

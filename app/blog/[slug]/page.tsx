@@ -9,7 +9,7 @@ import { SchemaScript } from "@/components/ui/SchemaScript";
 import { Button } from "@/components/ui/Button";
 import { MarkdownContent } from "@/components/ui/MarkdownContent";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
-import { getArticleSchema } from "@/lib/schema";
+import { getArticleSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { company } from "@/lib/data/company";
 import { services } from "@/lib/data/services";
 
@@ -100,9 +100,16 @@ export default async function BlogPostPage({
     url: `${company.url}/blog/${slug}`,
   });
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: company.url },
+    { name: "Blog", url: `${company.url}/blog` },
+    { name: post.title, url: `${company.url}/blog/${slug}` },
+  ]);
+
   return (
     <>
       <SchemaScript schema={articleSchema} />
+      <SchemaScript schema={breadcrumbSchema} />
       <Header />
       <main id="main-content">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
