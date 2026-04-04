@@ -18,7 +18,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Visual Foundation & Performance | 0/4 | Planned | - |
+| 1. Visual Foundation & Performance | 1/4 | In progress | - |
 | 2. Conversion Architecture | 0/TBD | Not started | - |
 | 3. SEO Technical Foundation | 0/TBD | Not started | - |
 | 4. Local SEO Hardening | 0/TBD | Not started | - |
@@ -44,7 +44,7 @@
 **Plans:** 4 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Design system tokens, brand animations, and test infrastructure (DESIGN-06, DESIGN-04, DESIGN-01)
+- [x] 01-01-PLAN.md — Design system tokens, brand animations, and test infrastructure (DESIGN-06, DESIGN-04, DESIGN-01) ✓ 2026-04-04
 - [ ] 01-02-PLAN.md — Image optimization infrastructure and performance monitoring (SEO-09, SEO-10, SEO-01)
 - [ ] 01-03-PLAN.md — Hero photo support and coastal visual identity for homepage sections (DESIGN-02, DESIGN-05)
 - [ ] 01-04-PLAN.md — Data-driven project gallery with visual checkpoint (DESIGN-03)
