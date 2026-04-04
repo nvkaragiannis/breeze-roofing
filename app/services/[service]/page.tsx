@@ -11,6 +11,8 @@ import { SchemaScript } from "@/components/ui/SchemaScript";
 import { MarkdownContent } from "@/components/ui/MarkdownContent";
 import { EmergencyCTA } from "@/components/sections/EmergencyCTA";
 import { EstimateSection } from "@/components/sections/EstimateSection";
+import { WarrantyCallout } from "@/components/sections/WarrantyCallout";
+import { TimelineCallout } from "@/components/sections/TimelineCallout";
 import { services, getServiceBySlug } from "@/lib/data/services";
 import { areas } from "@/lib/data/areas";
 import { getBreadcrumbSchema, getFAQSchema, getServiceSchema } from "@/lib/schema";
@@ -149,6 +151,19 @@ export default async function ServicePage({
               </div>
             </div>
           </section>
+        )}
+
+        {/* Warranty Section */}
+        {service.warranties && service.warranties.length > 0 && (
+          <WarrantyCallout warranties={service.warranties} />
+        )}
+
+        {/* Timeline Section */}
+        {service.timeline && (
+          <TimelineCallout
+            duration={service.timeline.duration}
+            steps={service.timeline.steps}
+          />
         )}
 
         {service.showEmergency && <EmergencyCTA />}

@@ -16,6 +16,11 @@ export interface Service {
   metaDescription: string;
   content: string;
   faqs: ServiceFAQ[];
+  warranties?: string[];
+  timeline?: {
+    duration: string;
+    steps: { phase: string; time: string }[];
+  };
 }
 
 export const services: Service[] = [
@@ -61,6 +66,22 @@ Standard roofing practices from inland areas don't hold up on the coast. Salt ai
         answer: "Yes. Homeowners often ask us about the paperwork side of things. We pull all necessary permits and can work within HOA material and color guidelines. Communities like Landfall and Wrightsville Beach have specific requirements, and we are experienced navigating those.",
       },
     ],
+    warranties: [
+      "Lifetime workmanship guarantee on all installations",
+      "Manufacturer warranty coverage (25-50 years depending on material)",
+      "New roof certification letter for insurance providers",
+      "Annual courtesy inspection for the first 5 years",
+      "Storm damage priority service for warranty customers",
+    ],
+    timeline: {
+      duration: "2-5 days",
+      steps: [
+        { phase: "Free Inspection", time: "1 hour" },
+        { phase: "Material Ordering", time: "3-7 days" },
+        { phase: "Installation", time: "1-3 days" },
+        { phase: "Final Inspection", time: "Same day" },
+      ],
+    },
   },
   {
     slug: "commercial-roofing",
@@ -93,6 +114,23 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
         answer: "We recommend at least twice a year, ideally in spring and fall, plus after any major storm. Flat roofs are more susceptible to ponding water and membrane damage than sloped roofs, so catching issues early saves significant money. Our maintenance programs include scheduled inspections.",
       },
     ],
+    warranties: [
+      "10-year workmanship guarantee on all installations",
+      "Manufacturer warranty coverage (15-30 years depending on system)",
+      "Preventive maintenance program available",
+      "Annual courtesy inspection for the first 3 years",
+      "Storm damage priority service for warranty customers",
+    ],
+    timeline: {
+      duration: "1-3 weeks",
+      steps: [
+        { phase: "Site Assessment", time: "1-2 hours" },
+        { phase: "Proposal & Planning", time: "3-5 days" },
+        { phase: "Material Delivery", time: "1-2 weeks" },
+        { phase: "Installation", time: "3-10 days" },
+        { phase: "Final Inspection & Documentation", time: "1 day" },
+      ],
+    },
   },
   {
     slug: "roof-replacement",
@@ -136,6 +174,22 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
         answer: "It is one of the best investments you can make. Homeowners often ask us this when they are preparing to sell. A new roof removes a major buyer objection, speeds up the sale, and national data shows an average return of 60-70% of the cost at resale. In coastal NC, a Fortified Roof designation adds even more value.",
       },
     ],
+    warranties: [
+      "Lifetime workmanship guarantee on all installations",
+      "Manufacturer warranty coverage (25-50 years depending on material)",
+      "New roof certification letter for insurance providers",
+      "Annual courtesy inspection for the first 5 years",
+      "Storm damage priority service for warranty customers",
+    ],
+    timeline: {
+      duration: "2-5 days",
+      steps: [
+        { phase: "Free Inspection", time: "1 hour" },
+        { phase: "Material Selection & Ordering", time: "3-7 days" },
+        { phase: "Tear-off & Installation", time: "1-3 days" },
+        { phase: "Final Inspection & Cleanup", time: "Same day" },
+      ],
+    },
   },
   {
     slug: "roof-repair",
@@ -165,6 +219,19 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
         answer: "For active leaks, we offer same-day emergency service. For non-emergency repairs, we typically schedule within a few days. Homeowners often ask us about turnaround time, and we prioritize getting leaks stopped fast to prevent interior damage.",
       },
     ],
+    warranties: [
+      "1-year workmanship guarantee on repairs",
+      "Material warranty on all replaced components",
+      "Follow-up inspection within 30 days",
+    ],
+    timeline: {
+      duration: "1-2 days",
+      steps: [
+        { phase: "Inspection & Diagnosis", time: "30-60 minutes" },
+        { phase: "Repair Work", time: "2-6 hours" },
+        { phase: "Testing & Verification", time: "30 minutes" },
+      ],
+    },
   },
   {
     slug: "emergency-repair",
@@ -204,6 +271,21 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
         answer: "Place buckets under active leaks, move valuables away from water, and take photos for insurance documentation. Do not climb on the roof yourself, especially during storms. We will get to you as quickly as possible and handle the tarping and temporary repair.",
       },
     ],
+    warranties: [
+      "Emergency response within 2 hours",
+      "1-year workmanship guarantee on emergency repairs",
+      "Material warranty on all replaced components",
+      "Follow-up inspection within 7 days",
+    ],
+    timeline: {
+      duration: "Same day - 48 hours",
+      steps: [
+        { phase: "Emergency Call & Assessment", time: "Immediate" },
+        { phase: "Emergency Tarping", time: "Within 2 hours" },
+        { phase: "Temporary Stabilization", time: "2-4 hours" },
+        { phase: "Permanent Repair Scheduling", time: "1-2 days" },
+      ],
+    },
   },
   {
     slug: "storm-damage",
@@ -252,6 +334,23 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
         answer: "As soon as it is safe. Call us right away even if you do not see obvious damage from the ground. Many storm damage issues, like bruised shingles or lifted flashing, are not visible without a close inspection. Early detection prevents secondary water damage.",
       },
     ],
+    warranties: [
+      "Lifetime workmanship guarantee on storm repairs",
+      "Manufacturer warranty coverage on replaced materials",
+      "Insurance claim documentation support",
+      "Emergency tarping warranty",
+      "Annual courtesy inspection for the first 5 years",
+    ],
+    timeline: {
+      duration: "3-7 days",
+      steps: [
+        { phase: "Emergency Assessment", time: "Same day" },
+        { phase: "Insurance Documentation", time: "1-2 days" },
+        { phase: "Adjuster Meeting", time: "2-4 days" },
+        { phase: "Repair Work", time: "1-3 days" },
+        { phase: "Final Documentation", time: "Same day" },
+      ],
+    },
   },
   {
     slug: "roof-inspection",
@@ -290,6 +389,15 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
         answer: "A typical inspection takes about 30-45 minutes. Homeowners often ask us if they need to be home. We prefer you to be there so we can walk you through the findings in person, but we can also send a detailed written report with drone photos if needed.",
       },
     ],
+    timeline: {
+      duration: "30-45 minutes",
+      steps: [
+        { phase: "Exterior Inspection", time: "15-20 minutes" },
+        { phase: "Drone Photography", time: "10-15 minutes" },
+        { phase: "Attic Check (if accessible)", time: "5-10 minutes" },
+        { phase: "Report & Recommendations", time: "10-15 minutes" },
+      ],
+    },
   },
   {
     slug: "new-construction",
@@ -319,6 +427,23 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
         answer: "Absolutely, and it is the best time to do it. Building Fortified from day one is more cost-effective than retrofitting later. Homeowners often ask us about this when planning a custom build. We coordinate with your builder to integrate Fortified specifications from the design phase.",
       },
     ],
+    warranties: [
+      "Lifetime workmanship guarantee on all new construction",
+      "Manufacturer warranty coverage (25-50 years depending on material)",
+      "Builder partnership warranty coordination",
+      "Annual courtesy inspection for the first 5 years",
+      "Storm damage priority service for warranty customers",
+    ],
+    timeline: {
+      duration: "1-3 days per home",
+      steps: [
+        { phase: "Pre-Construction Consultation", time: "1-2 hours" },
+        { phase: "Material Scheduling", time: "Coordinated with build" },
+        { phase: "Deck Inspection & Prep", time: "Same day" },
+        { phase: "Roof Installation", time: "1-2 days" },
+        { phase: "Final Inspection", time: "Same day" },
+      ],
+    },
   },
   {
     slug: "fortified-roof",
@@ -379,6 +504,24 @@ A Fortified Roof costs somewhat more than a standard installation — typically 
         answer: "Yes. Brett is IBHS Fortified certified, meaning we are trained and approved to install Fortified Roof systems to IBHS standards. We handle the entire process, including the third-party inspection and the certification paperwork for your insurer.",
       },
     ],
+    warranties: [
+      "Lifetime workmanship guarantee on all Fortified installations",
+      "Manufacturer warranty coverage (30-50 years depending on material)",
+      "IBHS Fortified designation documentation for insurance discounts",
+      "Annual courtesy inspection for the first 5 years",
+      "Storm damage priority service for warranty customers",
+      "Insurance certification support",
+    ],
+    timeline: {
+      duration: "3-6 days",
+      steps: [
+        { phase: "Fortified Design Review", time: "1-2 hours" },
+        { phase: "Material Ordering", time: "5-10 days" },
+        { phase: "Enhanced Installation", time: "2-4 days" },
+        { phase: "IBHS Third-Party Inspection", time: "1-2 days" },
+        { phase: "Certification & Documentation", time: "1-2 days" },
+      ],
+    },
   },
   {
     slug: "maintenance",
@@ -415,6 +558,20 @@ A Fortified Roof costs somewhat more than a standard installation — typically 
         answer: "If we find something that needs attention, we document it with photos and give you a clear recommendation and estimate. Minor repairs like resealing a pipe boot or replacing a few shingles are often handled on the spot. Homeowners often ask us if they are committed to repairs by signing up for maintenance. You are not. The decision is always yours.",
       },
     ],
+    warranties: [
+      "1-year workmanship guarantee on maintenance-related repairs",
+      "Material warranty on replaced components",
+      "Priority scheduling for maintenance program members",
+    ],
+    timeline: {
+      duration: "2-3 hours per visit",
+      steps: [
+        { phase: "Complete Roof Inspection", time: "45-60 minutes" },
+        { phase: "Debris & Gutter Cleaning", time: "30-45 minutes" },
+        { phase: "Minor Repairs", time: "30-60 minutes" },
+        { phase: "Documentation & Report", time: "15-30 minutes" },
+      ],
+    },
   },
 ];
 
