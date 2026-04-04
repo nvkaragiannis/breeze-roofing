@@ -57,11 +57,15 @@ export function WhyBreeze() {
 
           {/* Pillars */}
           <div className="order-1 lg:order-2 grid sm:grid-cols-2 gap-8">
-            {pillars.map((pillar) => {
+            {pillars.map((pillar, index) => {
               const Icon = pillar.icon;
               return (
-                <div key={pillar.title} className="flex flex-col gap-3">
-                  <div className="w-12 h-12 rounded-lg bg-navy/5 flex items-center justify-center">
+                <div
+                  key={pillar.title}
+                  className="flex flex-col gap-3 opacity-0 motion-safe:animate-slide-up motion-reduce:opacity-100"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="w-12 h-12 rounded-lg bg-navy/5 flex items-center justify-center motion-safe:transition-transform motion-safe:hover:scale-105">
                     <Icon className="w-6 h-6 text-navy" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">

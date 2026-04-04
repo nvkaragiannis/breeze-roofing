@@ -18,15 +18,20 @@ export function ServicesGrid() {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {homepageServices.map((service) => (
-            <ServiceCard
+          {homepageServices.map((service, index) => (
+            <div
               key={service.slug}
-              title={service.shortTitle}
-              description={service.description}
-              href={`/services/${service.slug}`}
-              icon={service.icon}
-              featured={service.featured}
-            />
+              className="opacity-0 motion-safe:animate-breeze-in motion-reduce:opacity-100"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <ServiceCard
+                title={service.shortTitle}
+                description={service.description}
+                href={`/services/${service.slug}`}
+                icon={service.icon}
+                featured={service.featured}
+              />
+            </div>
           ))}
         </div>
       </div>

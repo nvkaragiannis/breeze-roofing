@@ -22,7 +22,7 @@ export function ServiceCard({
     <a
       href={href}
       className={cn(
-        "bg-white rounded-xl shadow-sm hover:shadow-md border border-gray-100 p-6 flex flex-col transition-all duration-200 group",
+        "bg-white rounded-xl shadow-sm hover:shadow-md border border-gray-100 p-6 flex flex-col transition-all duration-200 group motion-safe:hover:-translate-y-1 motion-safe:transition-transform",
         featured && "ring-2 ring-amber border-amber"
       )}
     >

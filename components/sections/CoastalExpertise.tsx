@@ -32,7 +32,7 @@ export function CoastalExpertise() {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 motion-safe:animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             Built for the Coast
           </h2>
@@ -44,12 +44,13 @@ export function CoastalExpertise() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature) => {
+          {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div
                 key={feature.title}
-                className="bg-white rounded-xl shadow-sm hover:shadow-md border border-gray-100 p-8 text-center transition-all duration-200"
+                className="bg-white rounded-xl shadow-sm hover:shadow-md border border-gray-100 p-8 text-center transition-all duration-200 opacity-0 motion-safe:animate-fade-in motion-reduce:opacity-100"
+                style={{ animationDelay: `${(index + 1) * 0.15}s` }}
               >
                 <div className="w-14 h-14 rounded-full bg-navy/5 flex items-center justify-center mx-auto mb-5">
                   <Icon className="w-7 h-7 text-navy" />
