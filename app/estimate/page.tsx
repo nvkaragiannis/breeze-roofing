@@ -3,7 +3,9 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { InstantEstimatorEmbed } from "@/components/roofr/InstantEstimatorEmbed";
+import { TrustBar } from "@/components/sections/TrustBar";
 import { company } from "@/lib/data/company";
+import { Shield, Award, Star, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Free Instant Roof Estimate | Breeze Roofing Wilmington NC",
@@ -65,6 +67,7 @@ export default function EstimatePage() {
               <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
                 Enter your address below to get a ballpark estimate in about 60 seconds. No obligation. No pressure.
               </p>
+              <TrustBar variant="compact" className="justify-center mt-6 mb-8 text-gray-600" />
             </div>
             <InstantEstimatorEmbed />
           </div>
@@ -86,6 +89,45 @@ export default function EstimatePage() {
                   <p className="text-sm text-gray-600">{step.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Breeze Roofing Trust Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">
+              Why Breeze Roofing?
+            </h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <Shield className="w-8 h-8 text-navy mx-auto mb-3" />
+                <h3 className="font-semibold text-gray-900 mb-2">Licensed & Insured</h3>
+                <p className="text-sm text-gray-600">
+                  Fully licensed and insured for your protection and peace of mind.
+                </p>
+              </div>
+              <div className="text-center">
+                <Award className="w-8 h-8 text-navy mx-auto mb-3" />
+                <h3 className="font-semibold text-gray-900 mb-2">Fortified Certified</h3>
+                <p className="text-sm text-gray-600">
+                  IBHS Fortified certified for superior hurricane protection.
+                </p>
+              </div>
+              <div className="text-center">
+                <Star className="w-8 h-8 text-navy mx-auto mb-3" />
+                <h3 className="font-semibold text-gray-900 mb-2">4.9 Star Rating</h3>
+                <p className="text-sm text-gray-600">
+                  Rated 4.9/5 by hundreds of satisfied Wilmington area customers.
+                </p>
+              </div>
+              <div className="text-center">
+                <Clock className="w-8 h-8 text-navy mx-auto mb-3" />
+                <h3 className="font-semibold text-gray-900 mb-2">24/7 Emergency</h3>
+                <p className="text-sm text-gray-600">
+                  Emergency repair service available around the clock when you need it.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -126,6 +168,32 @@ export default function EstimatePage() {
                   {company.phoneFormatted}
                 </a>
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Closing CTA */}
+        <section className="py-12 md:py-16 bg-navy text-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
+              Get your instant estimate above, or call Brett directly to schedule your free inspection. No obligation, no pressure—just honest advice and expert service.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={company.phoneTel}
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-navy transition-colors duration-300"
+              >
+                Call {company.phoneFormatted}
+              </a>
+              <a
+                href="#main-content"
+                className="inline-flex items-center justify-center px-6 py-3 bg-amber text-navy font-semibold rounded-lg hover:bg-amber-light transition-colors duration-300"
+              >
+                Get Free Estimate
+              </a>
             </div>
           </div>
         </section>
