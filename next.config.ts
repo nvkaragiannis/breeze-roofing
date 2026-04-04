@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   turbopack: {},
   images: {
-    formats: ["image/webp"],
+    formats: ["image/avif", "image/webp"],
   },
   async headers() {
     return [
