@@ -89,51 +89,51 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DESIGN-01 | TBD | Pending |
-| DESIGN-02 | TBD | Pending |
-| DESIGN-03 | TBD | Pending |
-| DESIGN-04 | TBD | Pending |
-| DESIGN-05 | TBD | Pending |
-| DESIGN-06 | TBD | Pending |
-| CONV-01 | TBD | Pending |
-| CONV-02 | TBD | Pending |
-| CONV-03 | TBD | Pending |
-| CONV-04 | TBD | Pending |
-| CONV-05 | TBD | Pending |
-| CONV-06 | TBD | Pending |
-| CONV-07 | TBD | Pending |
-| CONV-08 | TBD | Pending |
-| SEO-01 | TBD | Pending |
-| SEO-02 | TBD | Pending |
-| SEO-03 | TBD | Pending |
-| SEO-04 | TBD | Pending |
-| SEO-05 | TBD | Pending |
-| SEO-06 | TBD | Pending |
-| SEO-07 | TBD | Pending |
-| SEO-08 | TBD | Pending |
-| SEO-09 | TBD | Pending |
-| SEO-10 | TBD | Pending |
-| AREA-01 | TBD | Pending |
-| AREA-02 | TBD | Pending |
-| AREA-03 | TBD | Pending |
-| AREA-04 | TBD | Pending |
-| AREA-05 | TBD | Pending |
-| BLOG-01 | TBD | Pending |
-| BLOG-02 | TBD | Pending |
-| BLOG-03 | TBD | Pending |
-| BLOG-04 | TBD | Pending |
-| BLOG-05 | TBD | Pending |
-| BLOG-06 | TBD | Pending |
-| LOCAL-01 | TBD | Pending |
-| LOCAL-02 | TBD | Pending |
-| LOCAL-03 | TBD | Pending |
-| LOCAL-04 | TBD | Pending |
+| DESIGN-01 | Phase 1 | Pending |
+| DESIGN-02 | Phase 1 | Pending |
+| DESIGN-03 | Phase 1 | Pending |
+| DESIGN-04 | Phase 1 | Pending |
+| DESIGN-05 | Phase 1 | Pending |
+| DESIGN-06 | Phase 1 | Pending |
+| CONV-01 | Phase 2 | Pending |
+| CONV-02 | Phase 2 | Pending |
+| CONV-03 | Phase 2 | Pending |
+| CONV-04 | Phase 2 | Pending |
+| CONV-05 | Phase 2 | Pending |
+| CONV-06 | Phase 2 | Pending |
+| CONV-07 | Phase 2 | Pending |
+| CONV-08 | Phase 2 | Pending |
+| SEO-01 | Phase 1 | Pending |
+| SEO-02 | Phase 3 | Pending |
+| SEO-03 | Phase 3 | Pending |
+| SEO-04 | Phase 3 | Pending |
+| SEO-05 | Phase 3 | Pending |
+| SEO-06 | Phase 3 | Pending |
+| SEO-07 | Phase 3 | Pending |
+| SEO-08 | Phase 3 | Pending |
+| SEO-09 | Phase 1 | Pending |
+| SEO-10 | Phase 1 | Pending |
+| AREA-01 | Phase 5 | Pending |
+| AREA-02 | Phase 5 | Pending |
+| AREA-03 | Phase 5 | Pending |
+| AREA-04 | Phase 5 | Pending |
+| AREA-05 | Phase 5 | Pending |
+| BLOG-01 | Phase 6 | Pending |
+| BLOG-02 | Phase 6 | Pending |
+| BLOG-03 | Phase 6 | Pending |
+| BLOG-04 | Phase 6 | Pending |
+| BLOG-05 | Phase 6 | Pending |
+| BLOG-06 | Phase 6 | Pending |
+| LOCAL-01 | Phase 4 | Pending |
+| LOCAL-02 | Phase 4 | Pending |
+| LOCAL-03 | Phase 4 | Pending |
+| LOCAL-04 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 38 total
-- Mapped to phases: 0
-- Unmapped: 38 ⚠️
+- Mapped to phases: 38
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-04-03*
-*Last updated: 2026-04-03 after initial definition*
+*Last updated: 2026-04-03 after roadmap creation*
