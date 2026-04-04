@@ -18,8 +18,8 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Visual Foundation & Performance | 1/4 | In progress | - |
-| 2. Conversion Architecture | 0/TBD | Not started | - |
+| 1. Visual Foundation & Performance | 4/4 | Complete | 2026-04-04 |
+| 2. Conversion Architecture | 0/3 | Not started | - |
 | 3. SEO Technical Foundation | 0/TBD | Not started | - |
 | 4. Local SEO Hardening | 0/TBD | Not started | - |
 | 5. Content Enrichment — Service Areas | 0/TBD | Not started | - |
@@ -45,9 +45,9 @@
 
 Plans:
 - [x] 01-01-PLAN.md — Design system tokens, brand animations, and test infrastructure (DESIGN-06, DESIGN-04, DESIGN-01) ✓ 2026-04-04
-- [ ] 01-02-PLAN.md — Image optimization infrastructure and performance monitoring (SEO-09, SEO-10, SEO-01)
-- [ ] 01-03-PLAN.md — Hero photo support and coastal visual identity for homepage sections (DESIGN-02, DESIGN-05)
-- [ ] 01-04-PLAN.md — Data-driven project gallery with visual checkpoint (DESIGN-03)
+- [x] 01-02-PLAN.md — Image optimization infrastructure and performance monitoring (SEO-09, SEO-10, SEO-01) ✓ 2026-04-04
+- [x] 01-03-PLAN.md — Hero photo support and coastal visual identity for homepage sections (DESIGN-02, DESIGN-05) ✓ 2026-04-04
+- [x] 01-04-PLAN.md — Data-driven project gallery with visual checkpoint (DESIGN-03) ✓ 2026-04-04
 
 ---
 
@@ -66,7 +66,12 @@ Plans:
 5. User sees warranty/guarantee information and expected project timeline on service pages
 6. User encounters 24/7 emergency service CTA prominently on all pages
 
-**Plans:** TBD
+**Plans:** 3 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Trust signals in Header/Footer and CTA enhancement (CONV-01, CONV-04, CONV-07, CONV-08)
+- [ ] 02-02-PLAN.md — Service page warranty and timeline sections (CONV-05, CONV-06)
+- [ ] 02-03-PLAN.md — Estimate page conversion optimization and Roofr embed (CONV-02, CONV-03)
 
 ---
 
@@ -162,4 +167,4 @@ Plans:
 
 ---
 
-*Last updated: 2026-04-03 after Phase 1 planning*
+*Last updated: 2026-04-04 after Phase 2 planning*
