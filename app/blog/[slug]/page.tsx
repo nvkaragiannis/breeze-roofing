@@ -8,10 +8,47 @@ import { BreadcrumbNav } from "@/components/ui/BreadcrumbNav";
 import { SchemaScript } from "@/components/ui/SchemaScript";
 import { Button } from "@/components/ui/Button";
 import { MarkdownContent } from "@/components/ui/MarkdownContent";
-import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { getAllPosts, getPostBySlug, type BlogPost } from "@/lib/blog";
 import { getArticleSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { company } from "@/lib/data/company";
 import { services } from "@/lib/data/services";
+
+function getRelatedPosts(currentSlug: string, tags?: string[]): BlogPost[] {
+  const allPosts = getAllPosts();
+  const otherPosts = allPosts.filter((p) => p.slug !== currentSlug);
+
+  if (!tags || tags.length === 0) {
+    return otherPosts.slice(0, 3);
+  }
+
+  const scored = otherPosts.map((post) => {
+    const postTags = post.tags || [];
+    let score = 0;
+
+    for (const tag of tags) {
+      if (postTags.some((pt) => pt.toLowerCase() === tag.toLowerCase())) {
+        score += 2;
+      }
+    }
+
+    return { post, score };
+  });
+
+  scored.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return new Date(b.post.date).getTime() - new Date(a.post.date).getTime();
+  });
+
+  const matched = scored.filter((s) => s.score > 0).slice(0, 3);
+
+  if (matched.length >= 3) {
+    return matched.map((s) => s.post);
+  }
+
+  const result = matched.map((s) => s.post);
+  const remaining = scored.filter((s) => s.score === 0).slice(0, 3 - result.length);
+  return [...result, ...remaining.map((s) => s.post)];
+}
 
 function getRelatedServices(tags?: string[]) {
   if (!tags || tags.length === 0) {
@@ -181,6 +218,39 @@ export default async function BlogPostPage({
                 ))}
               </div>
             </div>
+
+            {/* Related Posts */}
+            {(() => {
+              const relatedPosts = getRelatedPosts(post.slug, post.tags);
+              return relatedPosts.length > 0 ? (
+                <div className="mt-12">
+                  <h2 className="text-xl font-bold text-gray-900 mb-4">
+                    Related Posts
+                  </h2>
+                  <div className="grid sm:grid-cols-3 gap-4">
+                    {relatedPosts.map((relatedPost) => (
+                      <Link
+                        key={relatedPost.slug}
+                        href={`/blog/${relatedPost.slug}`}
+                        className="block bg-white border border-gray-200 rounded-lg p-5 hover:border-navy hover:shadow-md transition-all duration-200 group"
+                      >
+                        {relatedPost.category && (
+                          <span className="text-xs font-semibold text-amber uppercase tracking-wide">
+                            {relatedPost.category}
+                          </span>
+                        )}
+                        <h3 className="font-semibold text-gray-900 group-hover:text-navy transition-colors mb-1 mt-1">
+                          {relatedPost.title}
+                        </h3>
+                        <p className="text-sm text-gray-600 line-clamp-2">
+                          {relatedPost.description}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : null;
+            })()}
           </div>
         </article>
       </main>

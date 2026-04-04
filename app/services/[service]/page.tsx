@@ -17,6 +17,7 @@ import { services, getServiceBySlug } from "@/lib/data/services";
 import { areas } from "@/lib/data/areas";
 import { getBreadcrumbSchema, getFAQSchema, getServiceSchema } from "@/lib/schema";
 import { company } from "@/lib/data/company";
+import { getPostBySlug, type BlogPost } from "@/lib/blog";
 
 export function generateStaticParams() {
   return services.map((service) => ({ service: service.slug }));
@@ -60,6 +61,11 @@ export default async function ServicePage({
 
   const serviceSchema = getServiceSchema(service);
   const faqSchema = service.faqs.length > 0 ? getFAQSchema(service.faqs) : null;
+
+  const relatedPosts = (service.relatedBlogSlugs || [])
+    .map((slug) => getPostBySlug(slug))
+    .filter((p): p is BlogPost => p !== undefined)
+    .slice(0, 3);
 
   return (
     <>
@@ -164,6 +170,39 @@ export default async function ServicePage({
             duration={service.timeline.duration}
             steps={service.timeline.steps}
           />
+        )}
+
+        {/* Related Resources */}
+        {relatedPosts.length > 0 && (
+          <section className="py-12 md:py-16">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Related Resources
+              </h2>
+              <div className="space-y-4">
+                {relatedPosts.map((post) => (
+                  <Link
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    className="block bg-white border border-gray-200 rounded-lg p-5 hover:border-navy hover:shadow-md transition-all duration-200 group"
+                  >
+                    {post.category && (
+                      <span className="text-xs font-semibold text-amber uppercase tracking-wide">
+                        {post.category}
+                      </span>
+                    )}
+                    <h3 className="font-semibold text-gray-900 group-hover:text-navy transition-colors mb-1 mt-1">
+                      {post.title}
+                    </h3>
+                    <p className="text-sm text-gray-600">{post.description}</p>
+                    <span className="text-sm text-navy mt-2 inline-block">
+                      {post.readingTime} min read
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
         )}
 
         {service.showEmergency && <EmergencyCTA />}
