@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { company } from "@/lib/data/company";
 
 interface HeroCTA {
   text: string;
@@ -43,7 +44,7 @@ export function Hero({
   headline = "Wilmington's Trusted Roofing Contractor",
   subheadline = "Family-owned. Fortified Roof certified. Built for the coast. Free inspections and 24/7 emergency service.",
   primaryCTA = { text: "Get Your Free Estimate", href: "/estimate" },
-  secondaryCTA = { text: "Call (910) 665-5277", href: "tel:+19106655277" },
+  secondaryCTA = { text: `Call ${company.phoneFormatted}`, href: company.phoneTel },
   trustItems = [
     "4.9 Stars on Google",
     "NC Licensed & Insured",

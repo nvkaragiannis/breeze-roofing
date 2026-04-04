@@ -14,7 +14,7 @@ import { Phone, Mail, Clock } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact Breeze Roofing — Wilmington, NC",
   description:
-    "Contact Breeze Roofing in Wilmington, NC. Call (910) 665-5277 or send us a message. Free estimates, 24/7 emergency service.",
+    `Contact Breeze Roofing in Wilmington, NC. Call ${company.phoneFormatted} or send us a message. Free estimates, 24/7 emergency service.`,
   alternates: {
     canonical: "https://breezeroofingnc.com/contact",
   },

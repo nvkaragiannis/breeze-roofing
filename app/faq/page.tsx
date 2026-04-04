@@ -60,7 +60,7 @@ const faqs = [
   {
     question: "Do you provide emergency roof repair?",
     answer:
-      "Yes, we offer 24/7 emergency roof repair service. When you call (910) 665-5277, Brett answers — not a call center. We provide emergency tarping, temporary repairs to prevent further damage, and documentation for insurance claims.",
+      `Yes, we offer 24/7 emergency roof repair service. When you call ${company.phoneFormatted}, Brett answers — not a call center. We provide emergency tarping, temporary repairs to prevent further damage, and documentation for insurance claims.`,
   },
   {
     question: "What areas do you serve?",

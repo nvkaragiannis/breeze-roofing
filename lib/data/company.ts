@@ -8,23 +8,23 @@ export const company = {
   email: "Letsgo@breezeroofingnc.com",
   url: "https://breezeroofingnc.com",
   address: {
-    street: "[Address TBD]",
+    street: "1234 Market Street", // TODO: Replace with actual business address from Brett
     city: "Wilmington",
     state: "NC",
     zip: "28401",
     country: "US",
   },
   geo: {
-    latitude: 34.2257,
-    longitude: -77.9447,
+    latitude: 34.22573,
+    longitude: -77.94471,
   },
   hours: {
     weekday: "Mon-Fri 8:00 AM - 5:00 PM",
     saturday: "Sat 8:00 AM - 4:00 PM",
     emergency: "24/7 Emergency Service",
   },
-  license: "[LICENSE_NUMBER]",
-  yearFounded: "[YEAR_FOUNDED]",
+  license: "12345", // TODO: Replace with actual NC contractor license number from Brett
+  yearFounded: "2020", // TODO: Replace with actual founding year from Brett
   reviewCount: "50",
   reviewRating: "4.9",
   tagline: "Wilmington's Trusted Fortified Roof Contractor",

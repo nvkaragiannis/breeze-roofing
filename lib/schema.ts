@@ -68,9 +68,13 @@ export function getLocalBusinessSchema() {
       reviewCount: company.reviewCount,
       bestRating: "5",
     },
+    foundingDate: company.yearFounded,
     priceRange: "$$",
-    paymentAccepted: "Cash, Check, Credit Card, Financing Available",
+    paymentAccepted: "Cash, Credit Card, Check, Financing",
     currenciesAccepted: "USD",
+    slogan: company.tagline,
+    knowsLanguage: "English",
+    sameAs: [], // TODO: Add social media profile URLs when available
   };
 }
 
