@@ -28,10 +28,10 @@
 ### SEO Technical
 
 - [x] **SEO-01**: Core Web Vitals passing on all pages (LCP <2.5s, CLS <0.1, INP <200ms)
-- [ ] **SEO-02**: RoofingContractor JSON-LD schema on all pages (not generic LocalBusiness)
-- [ ] **SEO-03**: FAQPage schema on FAQ page and service pages with FAQ sections
-- [ ] **SEO-04**: Article schema on all blog posts with proper author, date, image markup
-- [ ] **SEO-05**: BreadcrumbList schema on all pages
+- [x] **SEO-02**: RoofingContractor JSON-LD schema on all pages (not generic LocalBusiness)
+- [x] **SEO-03**: FAQPage schema on FAQ page and service pages with FAQ sections
+- [x] **SEO-04**: Article schema on all blog posts with proper author, date, image markup
+- [x] **SEO-05**: BreadcrumbList schema on all pages
 - [x] **SEO-06**: Optimized meta title and description unique to every page (no duplicates)
 - [x] **SEO-07**: XML sitemap with proper priority and changefreq
 - [x] **SEO-08**: Canonical URLs and proper internal linking architecture
@@ -104,10 +104,10 @@
 | CONV-07 | Phase 2 | Complete |
 | CONV-08 | Phase 2 | Complete |
 | SEO-01 | Phase 1 | Complete |
-| SEO-02 | Phase 3 | Pending |
-| SEO-03 | Phase 3 | Pending |
-| SEO-04 | Phase 3 | Pending |
-| SEO-05 | Phase 3 | Pending |
+| SEO-02 | Phase 3 | Complete |
+| SEO-03 | Phase 3 | Complete |
+| SEO-04 | Phase 3 | Complete |
+| SEO-05 | Phase 3 | Complete |
 | SEO-06 | Phase 3 | Complete |
 | SEO-07 | Phase 3 | Complete |
 | SEO-08 | Phase 3 | Complete |
