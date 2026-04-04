@@ -23,6 +23,7 @@ export interface Service {
     duration: string;
     steps: { phase: string; time: string }[];
   };
+  relatedBlogSlugs?: string[];
 }
 
 export const services: Service[] = [
@@ -84,6 +85,11 @@ Standard roofing practices from inland areas don't hold up on the coast. Salt ai
         { phase: "Final Inspection", time: "Same day" },
       ],
     },
+    relatedBlogSlugs: [
+      "best-roofing-materials-coastal-north-carolina",
+      "how-much-does-a-new-roof-cost-wilmington-nc",
+      "how-long-does-a-roof-last-coastal-nc",
+    ],
   },
   {
     slug: "commercial-roofing",
@@ -137,6 +143,10 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
         { phase: "Final Inspection & Documentation", time: "1 day" },
       ],
     },
+    relatedBlogSlugs: [
+      "how-long-does-a-roof-last-coastal-nc",
+      "roof-maintenance-schedule-coastal-nc-homeowners",
+    ],
   },
   {
     slug: "roof-replacement",
@@ -198,6 +208,11 @@ Coastal NC roofs don't last as long as roofs inland. The combination of salt air
         { phase: "Final Inspection & Cleanup", time: "Same day" },
       ],
     },
+    relatedBlogSlugs: [
+      "how-much-does-a-new-roof-cost-wilmington-nc",
+      "best-roofing-materials-coastal-north-carolina",
+      "when-to-repair-vs-replace-your-roof-wilmington",
+    ],
   },
   {
     slug: "roof-repair",
@@ -244,6 +259,10 @@ Roof repairs in Wilmington require a different approach than repairs inland. Sal
         { phase: "Testing & Verification", time: "30 minutes" },
       ],
     },
+    relatedBlogSlugs: [
+      "signs-your-roof-has-storm-damage-wilmington",
+      "when-to-repair-vs-replace-your-roof-wilmington",
+    ],
   },
   {
     slug: "emergency-repair",
@@ -298,6 +317,10 @@ Roof repairs in Wilmington require a different approach than repairs inland. Sal
         { phase: "Permanent Repair Scheduling", time: "1-2 days" },
       ],
     },
+    relatedBlogSlugs: [
+      "signs-your-roof-has-storm-damage-wilmington",
+      "when-to-repair-vs-replace-your-roof-wilmington",
+    ],
   },
   {
     slug: "storm-damage",
@@ -363,6 +386,11 @@ Roof repairs in Wilmington require a different approach than repairs inland. Sal
         { phase: "Final Documentation", time: "Same day" },
       ],
     },
+    relatedBlogSlugs: [
+      "signs-your-roof-has-storm-damage-wilmington",
+      "how-to-file-roof-insurance-claim-hurricane-nc",
+      "hurricane-season-roof-preparation-wilmington-nc",
+    ],
   },
   {
     slug: "roof-inspection",
@@ -414,6 +442,10 @@ Our inspections in the Wilmington area look for problems specific to coastal NC 
         { phase: "Report & Recommendations", time: "10-15 minutes" },
       ],
     },
+    relatedBlogSlugs: [
+      "signs-your-roof-has-storm-damage-wilmington",
+      "roof-maintenance-schedule-coastal-nc-homeowners",
+    ],
   },
   {
     slug: "new-construction",
@@ -464,6 +496,10 @@ Wilmington's population growth has brought a construction boom to the Cape Fear 
         { phase: "Final Inspection", time: "Same day" },
       ],
     },
+    relatedBlogSlugs: [
+      "best-roofing-materials-coastal-north-carolina",
+      "what-is-ibhs-fortified-roof-nc-insurance-savings",
+    ],
   },
   {
     slug: "fortified-roof",
@@ -542,6 +578,10 @@ A Fortified Roof costs somewhat more than a standard installation — typically 
         { phase: "Certification & Documentation", time: "1-2 days" },
       ],
     },
+    relatedBlogSlugs: [
+      "what-is-ibhs-fortified-roof-nc-insurance-savings",
+      "fortified-roof-vs-regular-roof-comparison",
+    ],
   },
   {
     slug: "maintenance",
@@ -594,6 +634,11 @@ Roofs here on the coast wear out faster than roofs inland. It's not your imagina
         { phase: "Documentation & Report", time: "15-30 minutes" },
       ],
     },
+    relatedBlogSlugs: [
+      "roof-maintenance-schedule-coastal-nc-homeowners",
+      "salt-air-roof-protection-guide-coastal-nc",
+      "signs-your-roof-has-storm-damage-wilmington",
+    ],
   },
 ];
 
