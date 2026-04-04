@@ -148,7 +148,10 @@ describe('Area Content Validation', () => {
   });
 
   describe('AREA-03: Social Proof', () => {
-    it('should have at least 2 areas with testimonialNames', () => {
+    it.skip('should have at least 2 areas with testimonialNames (PENDING: location data confirmation)', () => {
+      // SKIPPED: Per plan 05-02 writing guidelines, testimonialNames are omitted
+      // until we have confirmed location data for reviews from Brett.
+      // This test will be enabled once location attribution is added to reviews.ts
       const areasWithTestimonials = areas.filter(
         (area) => area.testimonialNames && area.testimonialNames.length > 0
       );
