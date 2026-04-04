@@ -13,7 +13,7 @@ import { getBreadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Leaf Solution Gutter Guards | Breeze Roofing Wilmington NC",
   description:
-    "Professional-grade Leaf Solution gutter guards installed by Breeze Roofing in Wilmington, NC. Lifetime warranty, high-flow design, superior debris protection. (910) 665-5277.",
+    `Professional-grade Leaf Solution gutter guards installed by Breeze Roofing in Wilmington, NC. Lifetime warranty, high-flow design, superior debris protection. ${company.phoneFormatted}.`,
   alternates: {
     canonical: "https://breezeroofingnc.com/leaf-solutions",
   },

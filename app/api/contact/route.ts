@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { company } from "@/lib/data/company";
 
 function getResend() {
   const key = process.env.RESEND_API_KEY;
@@ -118,7 +119,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: "Breeze Roofing Website <noreply@breezeroofingnc.com>",
-      to: "Letsgo@breezeroofingnc.com",
+      to: company.email,
       replyTo: email || undefined,
       subject: `New Contact Form Submission from ${safeName}`,
       html: `

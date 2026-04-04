@@ -106,6 +106,8 @@ export function Footer() {
               <li className="flex items-start gap-3 text-white/70 text-sm">
                 <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
                 <span>
+                  {company.address.street}
+                  <br />
                   {company.address.city}, {company.address.state}{" "}
                   {company.address.zip}
                 </span>

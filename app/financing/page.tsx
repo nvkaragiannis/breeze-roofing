@@ -16,7 +16,7 @@ const MOMNT_APPLY_URL =
 export const metadata: Metadata = {
   title: "Financing Your New Roof | Breeze Roofing Wilmington NC",
   description:
-    "Flexible roof financing options from Breeze Roofing in Wilmington, NC. Pre-qualify in seconds without affecting your credit score. Terms up to 12 years. (910) 665-5277.",
+    `Flexible roof financing options from Breeze Roofing in Wilmington, NC. Pre-qualify in seconds without affecting your credit score. Terms up to 12 years. ${company.phoneFormatted}.`,
   alternates: {
     canonical: "https://breezeroofingnc.com/financing",
   },

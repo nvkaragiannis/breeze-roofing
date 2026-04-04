@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getLocalBusinessSchema } from "@/lib/schema";
+import { company } from "@/lib/data/company";
 import "./globals.css";
 
 const inter = Inter({
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Breeze Roofing",
   },
   description:
-    "Breeze Roofing — Wilmington NC's trusted family-owned roofer. Specializing in IBHS Fortified Roofs that lower your insurance. Free inspections, 24/7 emergency. (910) 665-5277",
+    `Breeze Roofing — Wilmington NC's trusted family-owned roofer. Specializing in IBHS Fortified Roofs that lower your insurance. Free inspections, 24/7 emergency. ${company.phoneFormatted}`,
   metadataBase: new URL("https://breezeroofingnc.com"),
   openGraph: {
     title: "Breeze Roofing | Wilmington NC Roofing Contractor",

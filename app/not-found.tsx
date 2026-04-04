@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTABar } from "@/components/layout/MobileCTABar";
 import { Button } from "@/components/ui/Button";
+import { company } from "@/lib/data/company";
 
 export default function NotFound() {
   return (
@@ -44,10 +45,10 @@ export default function NotFound() {
           <p className="mt-8 text-gray-500 text-sm">
             Need immediate help? Call us at{" "}
             <a
-              href="tel:+19106655277"
+              href={company.phoneTel}
               className="text-navy font-semibold hover:text-amber transition-colors"
             >
-              (910) 665-5277
+              {company.phoneFormatted}
             </a>
           </p>
         </div>
