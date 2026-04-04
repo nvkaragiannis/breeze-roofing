@@ -18,7 +18,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Visual Foundation & Performance | 0/TBD | Not started | - |
+| 1. Visual Foundation & Performance | 0/4 | Planned | - |
 | 2. Conversion Architecture | 0/TBD | Not started | - |
 | 3. SEO Technical Foundation | 0/TBD | Not started | - |
 | 4. Local SEO Hardening | 0/TBD | Not started | - |
@@ -41,7 +41,13 @@
 4. All pages load with LCP <2.5s on 3G mobile connection (Core Web Vitals passing)
 5. User perceives coastal NC visual storytelling through imagery and local references
 
-**Plans:** TBD
+**Plans:** 4 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Design system tokens, brand animations, and test infrastructure (DESIGN-06, DESIGN-04, DESIGN-01)
+- [ ] 01-02-PLAN.md — Image optimization infrastructure and performance monitoring (SEO-09, SEO-10, SEO-01)
+- [ ] 01-03-PLAN.md — Hero photo support and coastal visual identity for homepage sections (DESIGN-02, DESIGN-05)
+- [ ] 01-04-PLAN.md — Data-driven project gallery with visual checkpoint (DESIGN-03)
 
 ---
 
@@ -156,4 +162,4 @@
 
 ---
 
-*Last updated: 2026-04-03 after roadmap creation*
+*Last updated: 2026-04-03 after Phase 1 planning*
