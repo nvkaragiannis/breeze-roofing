@@ -59,8 +59,8 @@
 
 - [x] **LOCAL-01**: NAP (Name/Address/Phone) consistent across entire site
 - [x] **LOCAL-02**: Google Business Profile alignment — schema matches GBP exactly
-- [ ] **LOCAL-03**: Local references and context in service page content (not just area pages)
-- [ ] **LOCAL-04**: Citation strategy document for directory listings (Yelp, BBB, Angi, HomeAdvisor, etc.)
+- [x] **LOCAL-03**: Local references and context in service page content (not just area pages)
+- [x] **LOCAL-04**: Citation strategy document for directory listings (Yelp, BBB, Angi, HomeAdvisor, etc.)
 
 ## v2 Requirements
 
@@ -126,8 +126,8 @@
 | BLOG-06 | Phase 6 | Pending |
 | LOCAL-01 | Phase 4 | Complete |
 | LOCAL-02 | Phase 4 | Complete |
-| LOCAL-03 | Phase 4 | Pending |
-| LOCAL-04 | Phase 4 | Pending |
+| LOCAL-03 | Phase 4 | Complete |
+| LOCAL-04 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 38 total
