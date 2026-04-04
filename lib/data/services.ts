@@ -1,3 +1,5 @@
+import { company } from "./company";
+
 export interface ServiceFAQ {
   question: string;
   answer: string;
@@ -32,7 +34,7 @@ export const services: Service[] = [
     icon: "Home",
     image: { src: "/images/services/residential_roofing_pic.jpeg", alt: "Aerial view of residential roof installation in Wilmington NC with crew working" },
     metaTitle: "Residential Roofing Wilmington NC | Roof Replacement | Breeze Roofing",
-    metaDescription: "Breeze Roofing provides expert residential roofing in Wilmington, NC. Roof replacement, installation, and repair for coastal homes. Free estimates. (910) 665-5277",
+    metaDescription: "Breeze Roofing provides expert residential roofing in Wilmington, NC. Roof replacement, installation, and repair for coastal homes. Free estimates. ${company.phoneFormatted}",
     content: `Breeze Roofing provides complete residential roofing services for homeowners across Wilmington and the Cape Fear coast. Whether you need a full roof replacement, new construction installation, or an upgrade to hurricane-rated materials, Brett and the Breeze team deliver quality workmanship built for coastal NC conditions.
 
 ## Our Residential Roofing Services
@@ -91,8 +93,12 @@ Standard roofing practices from inland areas don't hold up on the coast. Salt ai
     icon: "Building2",
     image: { src: "/images/services/commericla_roofing_pic.webp", alt: "Aerial view of commercial flat roof system on large building" },
     metaTitle: "Commercial Roofing Wilmington NC | Flat Roof Repair | Breeze Roofing",
-    metaDescription: "Commercial roofing services in Wilmington NC. Flat roof repair, TPO, EPDM, and metal systems for businesses. Licensed & insured. (910) 665-5277",
+    metaDescription: "Commercial roofing services in Wilmington NC. Flat roof repair, TPO, EPDM, and metal systems for businesses. Licensed & insured. ${company.phoneFormatted}",
     content: `Breeze Roofing serves commercial property owners and managers across the Wilmington area with professional flat and low-slope roofing solutions. From retail storefronts to industrial facilities, we install and maintain commercial roofing systems built for the coastal NC climate.
+
+## Why Coastal Commercial Roofs Need Special Attention
+
+Flat commercial roofs in the Wilmington area face a unique combination of challenges. Hurricane-force winds create uplift forces that can tear membrane systems from their attachments. Salt air accelerates corrosion on HVAC penetrations, metal flashing, and fastener systems. And coastal humidity combined with flat roof design means proper drainage and moisture barriers aren't optional—they're critical to preventing catastrophic failure. Our commercial installations account for all of these factors.
 
 ## Commercial Roofing Systems
 
@@ -140,8 +146,10 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
     icon: "RefreshCcw",
     image: { src: "/images/services/roof_replacement_pic.jpg", alt: "Roofing crew installing underlayment during a roof replacement" },
     metaTitle: "Roof Replacement Wilmington NC | Free Estimates | Breeze Roofing",
-    metaDescription: "Need a new roof in Wilmington NC? Breeze Roofing provides expert roof replacement with hurricane-rated materials. Free estimates, financing available. (910) 665-5277",
+    metaDescription: "Need a new roof in Wilmington NC? Breeze Roofing provides expert roof replacement with hurricane-rated materials. Free estimates, financing available. ${company.phoneFormatted}",
     content: `When your roof reaches the end of its life — or storm damage makes repair impractical — Breeze Roofing delivers complete roof replacements built for coastal NC conditions. A typical residential roof replacement in Wilmington costs between $8,000 and $20,000 depending on size, materials, and complexity.
+
+Coastal NC roofs don't last as long as roofs inland. The combination of salt air, high humidity, and hurricane exposure accelerates wear on shingles and underlayment. What might be a 25-year roof in Raleigh often needs replacement after 15-20 years here on the Cape Fear coast. We account for this when recommending materials—choosing products specifically rated for coastal wind zones and corrosive environments.
 
 ## When to Replace vs. Repair
 
@@ -198,8 +206,12 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
     description: "Fast, reliable roof repair for leaks, storm damage, and wear across coastal NC.",
     icon: "Wrench",
     metaTitle: "Roof Repair Wilmington NC | Leak Repair | Breeze Roofing",
-    metaDescription: "Professional roof repair in Wilmington NC. Leak repair, flashing, shingle replacement, and storm damage fixes. Same-day service available. (910) 665-5277",
+    metaDescription: "Professional roof repair in Wilmington NC. Leak repair, flashing, shingle replacement, and storm damage fixes. Same-day service available. ${company.phoneFormatted}",
     content: `Not every roofing problem requires a full replacement. Breeze Roofing provides professional roof repairs that address the specific issue and extend your roof's useful life. Brett will give you an honest assessment — if a repair will solve the problem, that's what we'll recommend.
+
+## Why Coastal NC Repairs Differ
+
+Roof repairs in Wilmington require a different approach than repairs inland. Salt air corrodes metal flashing faster, meaning what looks like a simple flashing repair often reveals rust-through that requires complete replacement. Wind-lifted shingles from coastal storms expose adhesive patterns that don't reseal properly without proper technique. And moisture infiltration from humid air means we inspect the underlying deck carefully—what starts as a surface leak often hides rot beneath.
 
 ## Common Repairs We Handle
 
@@ -237,12 +249,12 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
     slug: "emergency-repair",
     title: "Emergency Roof Repair — Wilmington, NC",
     shortTitle: "Emergency Repair",
-    description: "24/7 emergency response. Call Brett directly at (910) 665-5277 — he picks up.",
+    description: "24/7 emergency response. Call Brett directly at ${company.phoneFormatted} — he picks up.",
     icon: "Clock",
     image: { src: "/images/services/emergency_repairs_pic.jpeg", alt: "Emergency blue tarps covering damaged roof sections after storm" },
     showEmergency: true,
     metaTitle: "Emergency Roof Repair Wilmington NC | 24/7 Service | Breeze Roofing",
-    metaDescription: "24/7 emergency roof repair in Wilmington NC. Storm damage, leaks, tarping. Call (910) 665-5277 now. Same-day response from Breeze Roofing.",
+    metaDescription: "24/7 emergency roof repair in Wilmington NC. Storm damage, leaks, tarping. Call ${company.phoneFormatted} now. Same-day response from Breeze Roofing.",
     content: `When your roof fails in the middle of a storm — or you wake up to water coming through the ceiling — you need someone who answers the phone. Brett picks up. Breeze Roofing provides 24/7 emergency roof repair across Wilmington and the Cape Fear coast.
 
 ## What We Do in an Emergency
@@ -264,7 +276,7 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
     faqs: [
       {
         question: "Do you offer 24/7 emergency roof repair?",
-        answer: "Yes. Homeowners often ask us if they will reach a real person. When you call (910) 665-5277, Brett answers directly, not a call center. We respond to emergencies around the clock, including nights, weekends, and during storms.",
+        answer: "Yes. Homeowners often ask us if they will reach a real person. When you call ${company.phoneFormatted}, Brett answers directly, not a call center. We respond to emergencies around the clock, including nights, weekends, and during storms.",
       },
       {
         question: "What should I do while waiting for emergency roof repair?",
@@ -296,14 +308,14 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
     image: { src: "/images/services/storm_damage_repair_pic.webp", alt: "Storm-damaged roof with missing shingles and exposed decking" },
     showEmergency: true,
     metaTitle: "Storm Damage Roof Repair Wilmington NC | Hurricane Damage | Breeze Roofing",
-    metaDescription: "Storm damage roof repair in Wilmington NC. Hurricane, wind, and hail damage assessment and repair. Insurance claim assistance. (910) 665-5277",
+    metaDescription: "Storm damage roof repair in Wilmington NC. Hurricane, wind, and hail damage assessment and repair. Insurance claim assistance. ${company.phoneFormatted}",
     content: `Wilmington sits in the path of Atlantic hurricanes. When a storm damages your roof, you need a local contractor who understands both the repair work and the insurance process. Breeze Roofing provides complete storm damage assessment, emergency tarping, insurance documentation, and permanent repair.
 
 ## After the Storm: What to Do
 
 1. **Stay Safe** — Don't climb on your roof. Look for visible damage from the ground.
 2. **Document What You See** — Photos of damage from the ground, interior water stains
-3. **Call Breeze Roofing** — We provide free storm damage assessments: (910) 665-5277
+3. **Call Breeze Roofing** — We provide free storm damage assessments: ${company.phoneFormatted}
 4. **File Your Insurance Claim** — We can help you with the process
 5. **Beware Storm Chasers** — Out-of-town contractors who appear after storms often do substandard work and disappear
 
@@ -360,8 +372,12 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
     icon: "Search",
     image: { src: "/images/services/roof_inspections_pic.webp", alt: "Roof inspector on ladder with clipboard examining metal roof" },
     metaTitle: "Free Roof Inspection Wilmington NC | Drone Inspection | Breeze Roofing",
-    metaDescription: "Free roof inspections in Wilmington NC with drone-assisted technology. Get a complete picture of your roof's condition. Call (910) 665-5277.",
+    metaDescription: "Free roof inspections in Wilmington NC with drone-assisted technology. Get a complete picture of your roof's condition. Call ${company.phoneFormatted}.",
     content: `Before you spend a dollar on roofing, you should know exactly what you're dealing with. Breeze Roofing provides free roof inspections using drone-assisted technology to give you a complete, honest picture of your roof's condition.
+
+## Coastal-Specific Inspection Concerns
+
+Our inspections in the Wilmington area look for problems specific to coastal NC environments. We check for salt damage on metal components—flashing, drip edges, and fasteners show corrosion patterns you won't find inland. We assess wind uplift potential using your roof's exposure to prevailing weather patterns off the Atlantic. And we use moisture detection techniques to identify hidden water intrusion from humidity and wind-driven rain, conditions that make coastal roofs fail differently than roofs 50 miles inland.
 
 ## What Our Inspection Covers
 
@@ -407,8 +423,12 @@ Regular maintenance extends your commercial roof's lifespan by years. We offer s
     icon: "HardHat",
     image: { src: "/images/services/new_construction_pic.webp", alt: "Roofer installing shingles on new construction home" },
     metaTitle: "New Construction Roofing Wilmington NC | Builder Services | Breeze Roofing",
-    metaDescription: "New construction roofing in Wilmington NC for builders and homeowners. Quality installation, coastal-rated materials, Fortified Roof options. (910) 665-5277",
+    metaDescription: "New construction roofing in Wilmington NC for builders and homeowners. Quality installation, coastal-rated materials, Fortified Roof options. ${company.phoneFormatted}",
     content: `Breeze Roofing works with builders and homeowners across the Wilmington area on new construction roofing projects. Whether you're building a custom home or developing a multi-unit project, we deliver quality installation with materials chosen for coastal NC conditions.
+
+## Building in the Wilmington Area Construction Boom
+
+Wilmington's population growth has brought a construction boom to the Cape Fear region. With that growth comes increased scrutiny from building departments on coastal wind zone requirements. New homes in our area must meet higher wind-load standards than inland construction—we're talking 130+ mph wind ratings, enhanced roof-to-wall connections, and proper hurricane strapping. We coordinate with your builder to ensure every new roof meets or exceeds these coastal building code requirements from day one.
 
 ## Builder Services
 
@@ -531,8 +551,10 @@ A Fortified Roof costs somewhat more than a standard installation — typically 
     icon: "Settings",
     image: { src: "/images/services/maintenance_programs.webp", alt: "Roofing professional with safety harness inspecting shingle roof" },
     metaTitle: "Roof Maintenance Wilmington NC | Preventive Care | Breeze Roofing",
-    metaDescription: "Roof maintenance programs in Wilmington NC. Regular inspections, cleaning, and preventive repairs to extend your roof's lifespan. (910) 665-5277",
+    metaDescription: "Roof maintenance programs in Wilmington NC. Regular inspections, cleaning, and preventive repairs to extend your roof's lifespan. ${company.phoneFormatted}",
     content: `The best way to avoid a $15,000 roof replacement is a $300 annual maintenance visit. Breeze Roofing offers maintenance programs designed to catch small problems before they become expensive ones — especially important in coastal NC where salt air, humidity, and storms take a toll.
+
+Roofs here on the coast wear out faster than roofs inland. It's not your imagination—the combination of salt spray, high humidity, and frequent storm exposure accelerates deterioration of every roof component. What might be "good for another 5 years" in Charlotte needs attention now in Wilmington. Regular maintenance isn't just a good idea in our climate—it's the difference between getting full roof life and premature failure.
 
 ## What's Included
 
