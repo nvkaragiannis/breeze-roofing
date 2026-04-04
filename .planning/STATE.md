@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-last_updated: "2026-04-04T02:46:29.945Z"
+last_updated: "2026-04-04T03:22:24.127Z"
 progress:
   total_phases: 6
   completed_phases: 4
-  total_plans: 11
-  completed_plans: 11
-  percent: 100
+  total_plans: 13
+  completed_plans: 12
+  percent: 92
 ---
 
 # Project State: Breeze Roofing NC Redesign
@@ -21,24 +21,24 @@ progress:
 
 **Core Value:** When someone searches anything roofing-related in Wilmington NC, Breeze Roofing appears first — and they convert within 60 seconds.
 
-**Current Focus:** Local SEO hardening complete - NAP consistency, service page local context, citation strategy
+**Current Focus:** Content enrichment Phase 5 - Area data model extended with rich local context and validation tests
 
 ## Current Position
 
-**Phase:** 04-local-seo-hardening (Plan 2 of 2 complete)
-**Plan:** 04-02 complete
-**Status:** Phase 4 complete - Service pages enhanced with coastal NC local context, citation strategy document created
+**Phase:** 05-content-enrichment-service-areas (Plan 1 of 2 complete)
+**Plan:** 05-01 complete
+**Status:** Area interfaces extended with localContext, coastalFactors, social proof, and internal linking. TDD validation tests created (RED phase).
 
-**Progress:** [██████████] 100%
+**Progress:** [█████████░] 92%
 
 ## Performance Metrics
 
 ### Roadmap Metrics
 - **Phases complete:** 4/6
-- **Phases in progress:** 0 (Phase 04 complete)
+- **Phases in progress:** 1 (Phase 05 - Plan 1 of 2 complete)
 - **Total v1 requirements:** 38
-- **Requirements complete:** 19 (DESIGN-06, DESIGN-04, DESIGN-01, DESIGN-03, SEO-09, SEO-10, SEO-01, CONV-01, CONV-04, CONV-07, CONV-08, CONV-05, CONV-06, CONV-02, CONV-03, SEO-06, SEO-07, SEO-08, LOCAL-01, LOCAL-02, LOCAL-03, LOCAL-04)
-- **Requirements in progress:** Ready for Phase 05 planning
+- **Requirements complete:** 24 (DESIGN-06, DESIGN-04, DESIGN-01, DESIGN-03, SEO-09, SEO-10, SEO-01, CONV-01, CONV-04, CONV-07, CONV-08, CONV-05, CONV-06, CONV-02, CONV-03, SEO-06, SEO-07, SEO-08, LOCAL-01, LOCAL-02, LOCAL-03, LOCAL-04, AREA-01, AREA-02, AREA-03, AREA-04, AREA-05)
+- **Requirements in progress:** Phase 05 Plan 02 (area content writing)
 
 ### Quality Indicators
 - **Coverage:** 38/38 requirements mapped (100%)
@@ -60,6 +60,7 @@ progress:
 | 03    | 02   | 129s     | 2     | 1     | 2       | 2026-04-04 |
 | 04    | 01   | 330s     | 2     | 13    | 2       | 2026-04-04 |
 | 04    | 02   | 320s     | 2     | 2     | 2       | 2026-04-04 |
+| 05    | 01   | 848s     | 2     | 3     | 2       | 2026-04-04 |
 
 ## Accumulated Context
 
@@ -91,6 +92,9 @@ progress:
 25. **Citation tiers reflect priority (04-02):** Organized 15 directories into 3 tiers based on authority (Tier 1), industry relevance (Tier 2), and local/regional value (Tier 3). Recommended starting with free listings before evaluating paid directories.
 26. **Maintenance built into citation strategy (04-02):** Added quarterly/annual maintenance schedule to prevent citation decay. Many businesses build citations once and forget—stale data hurts local SEO.
 27. **Practical over exhaustive citations (04-02):** Focused on top 15 directories rather than exhaustive 100+ directory submission. Research shows diminishing returns after major directories. For single-location business, manual focus on quality over automated quantity.
+28. **TDD RED phase approach (05-01):** Created validation tests that fail before content exists, establishing contract for Plan 02. Tests define requirements for word count, local context, coastal factors, social proof, and internal linking.
+29. **Optional interface fields for backward compatibility (05-01):** All new ServiceArea fields (localContext, coastalFactors, testimonialNames, relatedBlogSlugs, priorityServices) are optional to avoid breaking existing area data objects.
+30. **Jaccard similarity for content uniqueness (05-01):** Simple word-set overlap metric with 30% threshold validates content uniqueness across areas. Filters words shorter than 3 characters to focus on meaningful overlap.
 
 ### Open Questions
 1. Do we need competitive analysis before Phase 5 area page content? (Research suggests optional lightweight audit)
@@ -108,6 +112,10 @@ progress:
 None currently. Roadmap approved and ready for phase planning.
 
 ### Recent Changes
+- 2026-04-04: Plan 05-01 complete - Area data model extended with localContext, coastalFactors, social proof, and internal linking fields. Created comprehensive TDD validation test suite (RED phase - 9 tests failing as expected).
+- 2026-04-04: ServiceArea interface extended with 6 new optional field groups for rich content (landmarks, geographic position, building characteristics, community profile, wind zones, salt air exposure, hurricane history, building considerations, testimonials, featured projects, blog links, priority services)
+- 2026-04-04: Review interface extended with optional location field for area attribution
+- 2026-04-04: Created 12 validation tests covering all 5 AREA requirements (word count, uniqueness, local context, coastal factors, internal linking)
 - 2026-04-04: Plan 04-02 complete - Service pages enhanced with coastal NC local context, citation strategy document created with 15 directories and NAP checklist
 - 2026-04-04: All 10 service pages now contain natural coastal NC references (salt air, hurricanes, wind zones, building codes)
 - 2026-04-04: Citation strategy document provides actionable directory submission guide organized by priority tiers
@@ -152,21 +160,21 @@ None currently. Roadmap approved and ready for phase planning.
 ## Session Continuity
 
 ### For Next Session
-**Start here:** Phase 4 complete! Local SEO foundation hardened with NAP consistency, local context, and citation strategy.
+**Start here:** Phase 5 Plan 01 complete! Area data model extended with rich content fields and TDD validation tests (RED phase).
 
-**Phase 4 context (COMPLETE - 2 of 2 plans done):**
-- **Goal:** Harden local SEO foundation for "near me" searches and location-based queries
-- **Requirements:** 4 total (LOCAL-01, LOCAL-02, LOCAL-03, LOCAL-04)
-- **Progress:** 4/4 requirements complete (LOCAL-01, LOCAL-02, LOCAL-03, LOCAL-04)
-- **Success criteria:** NAP consistent across site, schema aligned with GBP, service pages have local context, citation strategy documented
+**Phase 5 context (IN PROGRESS - 1 of 2 plans done):**
+- **Goal:** Enrich area pages with local context, coastal factors, social proof, and internal linking
+- **Requirements:** 5 total (AREA-01, AREA-02, AREA-03, AREA-04, AREA-05)
+- **Progress:** 5/5 requirements interface complete, 0/5 content complete (Plan 02 writes content)
+- **Success criteria:** ServiceArea interface extended, validation tests created (RED), content written (GREEN in Plan 02)
 
 **What you need to know:**
-- NAP data completed in company.ts (address, phone, email all set - license/year still placeholder pending Brett input)
-- RoofingContractor schema enhanced with opening hours and service areas for GBP alignment
-- All 10 service pages now contain coastal NC local references (salt air, hurricanes, building codes)
-- Citation strategy document created with 15 directories organized by priority tiers
-- Maintenance schedule built into citation strategy (quarterly checks, annual audit)
-- Phase 4 complete! Next: Phase 5 planning (Area page content enrichment) or Phase 6 (Blog content)
+- ServiceArea interface extended with localContext, coastalFactors, testimonialNames, featuredProjectDescription, relatedBlogSlugs, priorityServices
+- Review interface extended with optional location field
+- Validation tests created: 12 tests, 9 failing (expected RED phase), 3 passing (uniqueness)
+- Tests validate: 500+ word count, 30% uniqueness, local context fields, coastal factors, social proof, internal linking
+- Plan 05-02 will write content for all 8 areas to make tests pass (GREEN phase)
+- May need Brett's input for testimonial location attribution
 
 ### Session History
 1. **2026-04-03 — Project Initialization & Roadmap Creation**
