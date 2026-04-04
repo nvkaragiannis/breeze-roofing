@@ -6,7 +6,10 @@ import Link from "next/link";
 
 export function MobileCTABar() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgb(0,0,0,0.1)]">
+    <div
+      className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgb(0,0,0,0.1)]"
+      style={{ willChange: 'transform' }}
+    >
       <div className="flex items-center h-[60px] px-2 gap-2">
         <a
           href={company.phoneTel}
