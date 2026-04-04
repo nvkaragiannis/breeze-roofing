@@ -11,6 +11,8 @@ export function getLocalBusinessSchema() {
     url: company.url,
     telephone: `+1${company.phone}`,
     email: company.email,
+    image: `${company.url}/images/hero/hero-bg.jpg`,
+    logo: `${company.url}/images/brand/logo.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: company.address.street,
@@ -93,6 +95,7 @@ export function getArticleSchema(article: {
   dateModified?: string;
   description: string;
   url: string;
+  image?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -100,6 +103,7 @@ export function getArticleSchema(article: {
     headline: article.title,
     description: article.description,
     url: article.url,
+    image: article.image || `${company.url}/images/hero/hero-bg.jpg`,
     author: {
       "@type": "Person",
       name: `Brett, ${company.name}`,
@@ -107,6 +111,10 @@ export function getArticleSchema(article: {
     publisher: {
       "@type": "Organization",
       name: company.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${company.url}/images/brand/logo.png`,
+      },
     },
     datePublished: article.datePublished,
     dateModified: article.dateModified || article.datePublished,
