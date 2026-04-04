@@ -22,7 +22,7 @@
 | 2. Conversion Architecture | 3/3 | Complete | 2026-04-04 |
 | 3. SEO Technical Foundation | 0/2 | Not started | - |
 | 4. Local SEO Hardening | 2/2 | Complete   | 2026-04-04 |
-| 5. Content Enrichment — Service Areas | 0/TBD | Not started | - |
+| 5. Content Enrichment — Service Areas | 0/2 | Not started | - |
 | 6. Content Enrichment — Storm/Insurance Blog | 0/TBD | Not started | - |
 
 ## Phase Details
@@ -134,7 +134,11 @@ Plans:
 4. Area pages reference local building codes and coastal-specific concerns (hurricane prep, salt air, flood zones)
 5. User can navigate from area pages to relevant service pages and blog posts via contextual internal links
 
-**Plans:** TBD
+**Plans:** 2 plans
+
+Plans:
+- [ ] 05-01-PLAN.md — Extend ServiceArea data model and create content validation tests (AREA-01, AREA-02, AREA-03, AREA-04, AREA-05)
+- [ ] 05-02-PLAN.md — Write unique area content and enhance page template with new sections (AREA-01, AREA-02, AREA-03, AREA-04, AREA-05)
 
 ---
 
@@ -175,4 +179,4 @@ Plans:
 
 ---
 
-*Last updated: 2026-04-04 after Phase 4 planning*
+*Last updated: 2026-04-04 after Phase 5 planning*
