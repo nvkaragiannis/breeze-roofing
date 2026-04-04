@@ -17,8 +17,8 @@
 ### Conversion Optimization
 
 - [x] **CONV-01**: Persistent click-to-call button visible on every page (mobile: sticky bottom bar, desktop: header)
-- [ ] **CONV-02**: Estimate request form accessible within 1 click from any page
-- [ ] **CONV-03**: Roofr instant estimator embedded on estimate page with proper mobile UX
+- [x] **CONV-02**: Estimate request form accessible within 1 click from any page
+- [x] **CONV-03**: Roofr instant estimator embedded on estimate page with proper mobile UX
 - [x] **CONV-04**: Trust signals on every page: Google rating, review count, certifications, license number
 - [x] **CONV-05**: Warranty/guarantee sections on each service page
 - [x] **CONV-06**: Expected project timeline for each service type
@@ -96,8 +96,8 @@
 | DESIGN-05 | Phase 1 | Complete |
 | DESIGN-06 | Phase 1 | Complete (01-01) |
 | CONV-01 | Phase 2 | Complete |
-| CONV-02 | Phase 2 | Pending |
-| CONV-03 | Phase 2 | Pending |
+| CONV-02 | Phase 2 | Complete |
+| CONV-03 | Phase 2 | Complete |
 | CONV-04 | Phase 2 | Complete |
 | CONV-05 | Phase 2 | Complete |
 | CONV-06 | Phase 2 | Complete |
