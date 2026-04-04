@@ -21,7 +21,7 @@
 | 1. Visual Foundation & Performance | 4/4 | Complete | 2026-04-04 |
 | 2. Conversion Architecture | 3/3 | Complete | 2026-04-04 |
 | 3. SEO Technical Foundation | 0/2 | Not started | - |
-| 4. Local SEO Hardening | 0/TBD | Not started | - |
+| 4. Local SEO Hardening | 0/2 | Not started | - |
 | 5. Content Enrichment — Service Areas | 0/TBD | Not started | - |
 | 6. Content Enrichment — Storm/Insurance Blog | 0/TBD | Not started | - |
 
@@ -112,7 +112,11 @@ Plans:
 3. Service page content includes local context references (Wilmington, coastal NC, hurricane zone)
 4. Citation strategy document exists listing all directories with NAP verification checklist (Yelp, BBB, Angi, HomeAdvisor, Yellow Pages)
 
-**Plans:** TBD
+**Plans:** 2 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — NAP data completion and schema GBP alignment (LOCAL-01, LOCAL-02)
+- [ ] 04-02-PLAN.md — Service page local context and citation strategy document (LOCAL-03, LOCAL-04)
 
 ---
 
@@ -171,4 +175,4 @@ Plans:
 
 ---
 
-*Last updated: 2026-04-04 after Phase 3 planning*
+*Last updated: 2026-04-04 after Phase 4 planning*
