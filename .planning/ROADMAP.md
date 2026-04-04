@@ -23,7 +23,7 @@
 | 3. SEO Technical Foundation | 0/2 | Not started | - |
 | 4. Local SEO Hardening | 2/2 | Complete   | 2026-04-04 |
 | 5. Content Enrichment — Service Areas | 0/2 | Not started | - |
-| 6. Content Enrichment — Storm/Insurance Blog | 0/TBD | Not started | - |
+| 6. Content Enrichment — Storm/Insurance Blog | 0/3 | Not started | - |
 
 ## Phase Details
 
@@ -156,7 +156,12 @@ Plans:
 4. Each blog post has Article schema markup validated by Google Rich Results Test
 5. User can discover related blog posts via recommendations section at bottom of each post
 
-**Plans:** TBD
+**Plans:** 3 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — TDD validation tests and Service interface extension for blog linking (BLOG-01, BLOG-02, BLOG-03, BLOG-04, BLOG-05, BLOG-06)
+- [ ] 06-02-PLAN.md — Write 4 new blog posts: hurricane prep, maintenance schedule, salt air guide, repair vs replace (BLOG-01, BLOG-03, BLOG-05)
+- [ ] 06-03-PLAN.md — Related Posts section, service page blog links, and existing post link retrofit (BLOG-06)
 
 ---
 
@@ -179,4 +184,4 @@ Plans:
 
 ---
 
-*Last updated: 2026-04-04 after Phase 5 planning*
+*Last updated: 2026-04-04 after Phase 6 planning*
