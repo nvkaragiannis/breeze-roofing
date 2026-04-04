@@ -48,11 +48,11 @@
 
 ### Content — Blog Strategy
 
-- [ ] **BLOG-01**: Storm/hurricane damage content targeting high-intent post-storm searches
+- [x] **BLOG-01**: Storm/hurricane damage content targeting high-intent post-storm searches
 - [ ] **BLOG-02**: Insurance claim process guides for roofing (NC-specific)
-- [ ] **BLOG-03**: Educational content: roof maintenance, signs of damage, material comparisons
+- [x] **BLOG-03**: Educational content: roof maintenance, signs of damage, material comparisons
 - [ ] **BLOG-04**: Fortified Roof certification explainer content (differentiator)
-- [ ] **BLOG-05**: Seasonal/coastal maintenance guides (hurricane prep, salt air protection)
+- [x] **BLOG-05**: Seasonal/coastal maintenance guides (hurricane prep, salt air protection)
 - [x] **BLOG-06**: Blog posts link to relevant service pages and estimate form (topic cluster model)
 
 ### Local SEO
@@ -118,11 +118,11 @@
 | AREA-03 | Phase 5 | Partial (pending location data) |
 | AREA-04 | Phase 5 | Complete |
 | AREA-05 | Phase 5 | Complete |
-| BLOG-01 | Phase 6 | Pending |
+| BLOG-01 | Phase 6 | Complete |
 | BLOG-02 | Phase 6 | Pending |
-| BLOG-03 | Phase 6 | Pending |
+| BLOG-03 | Phase 6 | Complete |
 | BLOG-04 | Phase 6 | Pending |
-| BLOG-05 | Phase 6 | Pending |
+| BLOG-05 | Phase 6 | Complete |
 | BLOG-06 | Phase 6 | Complete (06-03) |
 | LOCAL-01 | Phase 4 | Complete |
 | LOCAL-02 | Phase 4 | Complete |
