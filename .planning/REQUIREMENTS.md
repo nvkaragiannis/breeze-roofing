@@ -16,14 +16,14 @@
 
 ### Conversion Optimization
 
-- [ ] **CONV-01**: Persistent click-to-call button visible on every page (mobile: sticky bottom bar, desktop: header)
+- [x] **CONV-01**: Persistent click-to-call button visible on every page (mobile: sticky bottom bar, desktop: header)
 - [ ] **CONV-02**: Estimate request form accessible within 1 click from any page
 - [ ] **CONV-03**: Roofr instant estimator embedded on estimate page with proper mobile UX
-- [ ] **CONV-04**: Trust signals on every page: Google rating, review count, certifications, license number
-- [ ] **CONV-05**: Warranty/guarantee sections on each service page
-- [ ] **CONV-06**: Expected project timeline for each service type
-- [ ] **CONV-07**: Dual CTA strategy — phone and estimate form equally prominent, not one buried
-- [ ] **CONV-08**: Emergency service CTA prominently visible (24/7 availability)
+- [x] **CONV-04**: Trust signals on every page: Google rating, review count, certifications, license number
+- [x] **CONV-05**: Warranty/guarantee sections on each service page
+- [x] **CONV-06**: Expected project timeline for each service type
+- [x] **CONV-07**: Dual CTA strategy — phone and estimate form equally prominent, not one buried
+- [x] **CONV-08**: Emergency service CTA prominently visible (24/7 availability)
 
 ### SEO Technical
 
@@ -95,14 +95,14 @@
 | DESIGN-04 | Phase 1 | Complete (01-01) |
 | DESIGN-05 | Phase 1 | Complete |
 | DESIGN-06 | Phase 1 | Complete (01-01) |
-| CONV-01 | Phase 2 | Pending |
+| CONV-01 | Phase 2 | Complete |
 | CONV-02 | Phase 2 | Pending |
 | CONV-03 | Phase 2 | Pending |
-| CONV-04 | Phase 2 | Pending |
-| CONV-05 | Phase 2 | Pending |
-| CONV-06 | Phase 2 | Pending |
-| CONV-07 | Phase 2 | Pending |
-| CONV-08 | Phase 2 | Pending |
+| CONV-04 | Phase 2 | Complete |
+| CONV-05 | Phase 2 | Complete |
+| CONV-06 | Phase 2 | Complete |
+| CONV-07 | Phase 2 | Complete |
+| CONV-08 | Phase 2 | Complete |
 | SEO-01 | Phase 1 | Complete |
 | SEO-02 | Phase 3 | Pending |
 | SEO-03 | Phase 3 | Pending |
