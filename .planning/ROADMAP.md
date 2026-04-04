@@ -19,8 +19,8 @@
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Visual Foundation & Performance | 4/4 | Complete | 2026-04-04 |
-| 2. Conversion Architecture | 0/3 | Not started | - |
-| 3. SEO Technical Foundation | 0/TBD | Not started | - |
+| 2. Conversion Architecture | 3/3 | Complete | 2026-04-04 |
+| 3. SEO Technical Foundation | 0/2 | Not started | - |
 | 4. Local SEO Hardening | 0/TBD | Not started | - |
 | 5. Content Enrichment — Service Areas | 0/TBD | Not started | - |
 | 6. Content Enrichment — Storm/Insurance Blog | 0/TBD | Not started | - |
@@ -71,7 +71,7 @@ Plans:
 Plans:
 - [x] 02-01-PLAN.md — Trust signals in Header/Footer and CTA enhancement (CONV-01, CONV-04, CONV-07, CONV-08) ✓ 2026-04-04
 - [x] 02-02-PLAN.md — Service page warranty and timeline sections (CONV-05, CONV-06) ✓ 2026-04-04
-- [ ] 02-03-PLAN.md — Estimate page conversion optimization and Roofr embed (CONV-02, CONV-03)
+- [x] 02-03-PLAN.md — Estimate page conversion optimization and Roofr embed (CONV-02, CONV-03) ✓ 2026-04-04
 
 ---
 
@@ -91,7 +91,11 @@ Plans:
 6. XML sitemap at /sitemap.xml with proper priority and changefreq values
 7. Google Search Console shows all pages indexed with canonical URLs properly recognized
 
-**Plans:** TBD
+**Plans:** 2 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Schema enhancement: RoofingContractor image/logo, Article image/publisher, BreadcrumbList JSON-LD on all pages (SEO-02, SEO-03, SEO-04, SEO-05)
+- [ ] 03-02-PLAN.md — Sitemap fix, metadata uniqueness audit, and canonical URL verification (SEO-06, SEO-07, SEO-08)
 
 ---
 
@@ -167,4 +171,4 @@ Plans:
 
 ---
 
-*Last updated: 2026-04-04 after Phase 2 planning*
+*Last updated: 2026-04-04 after Phase 3 planning*
